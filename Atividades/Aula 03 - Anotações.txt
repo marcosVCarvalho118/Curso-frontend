@@ -1,0 +1,41 @@
+Goblin tools é uma coleção de ferramentas pequenas, simples e focadas em uma única tarefa, projetadas principalmente para ajudar pessoas neurodivergentes com tarefas que consideram complexas ou difíceis. Acreditamos que todos merecem ter acesso a ferramentas úteis que facilitem o dia a dia.
+
+Link citado:
+https://goblin.tools/
+ (IA para atividade do dia a dia)
+
+Prompt de comparação de concorrentes
+
+Veja esses dois sites de competidores e me diga os elementos em comum entre eles que eu possa utilizar ou aprender para utilizar no site que irei fazer da Inovahub e sugestões de algo diferente, ou único para esta empresa.
+
+1 — Objetivo
+
+Propaganda dos benefícios de integração da IA nas empresas, com a função de tornar os visitantes clientes.
+
+2 — Público-Alvo
+
+Pequenas e médias empresas, profissionais liberais, que tenham processos de automações e querem melhorar o processo com a IA, sendo assim aumentado a produtividade.
+
+3 — Funcionalidades necessárias
+Landing page de alta conversão
+Integração com WhatsApp
+Chatbot inteligente para atendimento
+Sugestão automática de layout e conteúdo
+4 — Referências Visuais
+Minimalista e tecnológico
+Animações suaves (microinterações)
+Layout clean com foco em conversão
+Interfaces geradas por Lovable (simples e rápidas)
+5 — Análise de Concorrentes
+
+Wix
+Webflow
+
+6 — Posicionamento Estratégico
+Combinação de IA + estratégia humana
+Entrega rápida + personalização real
+Final do documento
+
+Trabalho de casa:
+
+(sem conteúdo escrito após isso)
