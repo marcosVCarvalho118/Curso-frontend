@@ -14,3 +14,14 @@ navbar = barra de navegação de celular
 nave-xpand-lg = barra de navegação de computador
 navbar brand = Icone vai para direita na barra de navegação
 fw bold = negrito
+Outline = Fundo transparente(para botões)
+<styles> e root()
+    criamos variaveis de cores. Para criar tem que colocar -- e o nome
+
+    Para chamar a variavel é com var (--)
+Table bourder = Coloca borda(linha vertical) entre as colunas
+Table-stripped = alternar a cor das colunas entre cinza e branco
+Table-responsive = Inclui a barra de rolagem na tabela(com muitos itens)
+Table-dark - O Fundo da tabela é escura
+Table- info. Table-warning = Cores do fundo da tabela.
+Table-sm: Para economizar espaço das linhas em uma tabela
