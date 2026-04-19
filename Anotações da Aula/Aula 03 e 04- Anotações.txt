@@ -1,0 +1,103 @@
+                                         AULA 03
+
+Goblin tools é uma coleção de ferramentas pequenas, simples e focadas em uma única tarefa, projetadas principalmente para ajudar pessoas neurodivergentes com tarefas que consideram complexas ou difíceis. Acreditamos que todos merecem ter acesso a ferramentas úteis que facilitem o dia a dia.
+
+Link citado:
+https://goblin.tools/
+ (IA para atividade do dia a dia)
+
+Prompt de comparação de concorrentes
+
+Veja esses dois sites de competidores e me diga os elementos em comum entre eles que eu possa utilizar ou aprender para utilizar no site que irei fazer da Inovahub e sugestões de algo diferente, ou único para esta empresa.
+
+1 — Objetivo
+
+Propaganda dos benefícios de integração da IA nas empresas, com a função de tornar os visitantes clientes.
+
+2 — Público-Alvo
+
+Pequenas e médias empresas, profissionais liberais, que tenham processos de automações e querem melhorar o processo com a IA, sendo assim aumentado a produtividade.
+
+3 — Funcionalidades necessárias
+Landing page de alta conversão
+Integração com WhatsApp
+Chatbot inteligente para atendimento
+Sugestão automática de layout e conteúdo
+4 — Referências Visuais
+Minimalista e tecnológico
+Animações suaves (microinterações)
+Layout clean com foco em conversão
+Interfaces geradas por Lovable (simples e rápidas)
+5 — Análise de Concorrentes
+
+Wix
+Webflow
+
+6 — Posicionamento Estratégico
+Combinação de IA + estratégia humana
+Entrega rápida + personalização real
+Final do documento
+
+______________________________________________________________________________________________
+______________________________________________________________________________________________                                           
+______________________________________________________________________________________________ 
+                                              AULA 04
+
+Dicas: https://www.w3schools.com/ - Site para estudar html, css, javascript
+
+Lista de Código(tags):
+- Configurações Gerais:
+
+Index.htm : Início de uma site do html
+Lang = Língua principal do site
+<p> = Paragrafo
+<h1> a <h6>: São níveis de títulos da seção, o <h1> seção mais alta e o <h6> seção mais baixa.
+<Head>: providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
+<body>: <body> no HTML define o corpo e todo o conteúdo visível de uma página web, incluindo textos, imagens, vídeos e links, situando-se após o <head>.
+
+Lista de Itens:
+
+Title - Titulo da página na guia.
+img sc = Imagem
+<ul> :  representa uma lista de itens sem ordem rígida
+<ol>: representa uma lista de itens com ordem rígida
+<li>: São os itens de uma lista.
+
+Tabela:
+
+<table class>: É uma tabela bidimensional composta por linhas e colunas de células contendo dados, estando nela toda configuração de aparência e margem.
+
+<Thead>: agrupa o conteúdo de cabeçalho (títulos das colunas - elementos `<tr>) em uma tabela, garantindo estrutura semântica, indicando que elas compõem o cabeçalho de uma tabela com informações sobre as colunas da tabela.
+
+<tr> (Table Row- Linha da Tabela): cria um novo conjunto de células que formam uma linha dentro da tabela
+
+<Th> (Table Header - Cabeçalho da Tabela): é usada para definir o cabeçalho de uma tabela, ou seja, ela identifica as células que servem como títulos para colunas ou linhas.
+
+ <td> (Table Data - Dados da Tabela):  é usada para definir as células que contêm os dados dentro de uma tabela.
+
+<tbody>: O Corpo de texto de uma tabela (tudo menos o cabeçalho)
+
+<table border>: Adicionar uma borda na tabela.
+
+<caption>:  especifica a legenda (ou título) de uma tabela, fornecendo à tabela um nome ou descrição acessível
+
+
+
+alt =""> : texto alternativo para imagem(acessibilidade)
+width = ""> : largura da imagem
+<hr> representa uma quebra temática entre elementos de nível de parágrafo (por exemplo 
+<br>:  produz uma quebra de linha em um texto
+
+Formulário:
+<label>: representa uma legenda para um item em uma interface de usuário.
+
+<input type ="">: são usados ​​para permitir que o usuário insira ou edite no espaço destinado no formulário: e-mail("email"), mensagem , texto(text) ou botão(submit).
+
+"name =" no input serve para especificar um nome para o elemento da tag input
+
+"id =": serve para identificarmos controles e aplicarmos estilos CSS e para manipularmos elementos via Javascript.
+
+<textarea>: representa um controle de edição de texto simples com várias linhas, útil quando se deseja permitir que os usuários insiram uma quantidade considerável de texto livre
+
+
+

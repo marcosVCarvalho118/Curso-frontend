@@ -1,0 +1,69 @@
+                                         AULA 1
+
+1. Papel (personagem)
+Você é um programador web front-end
+
+2. Tarefa
+Sua tarefa é me auxiliar a criar uma landing page para a inovaweb
+
+3. Objetivo
+
+Afim de fazer a propaganda do novo produto da empresa
+
+4. Detalhes
+
+* Cores
+* Produto
+* Quantidade de seções, fotos
+* Animações
+* Localização de objetos específicos
+* Público alvo
+
+* Macete para o Ia: Me pergunte o que mais precisar ajudar esse negócio com sucesso.
+
+Fazem em casa: Pesquise exemplos de sites que usam Ia no design ou na experiência do usuário?
+
+Exemplos de Sites com Design Adaptativo:
+Diferente de sites estáticos, estes usam IA para mudar o que o usuário vê:
+
+Netflix: É o exemplo clássico de design orientado por dados. A interface (as capas dos filmes que você vê) é gerada e selecionada por IA para ser visualmente mais atraente especificamente para o seu perfil de gosto.
+
+Airbnb: Utiliza IA para organizar o layout das fotos e os resultados de busca de forma que a interface "aprenda" quais designs convertem melhor para cada tipo de viajante.
+
+Spotify (Web Player): A interface muda dinamicamente (cores, cards e banners) com base no humor e nas descobertas musicais processadas pelos algoritmos de recomendação.
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+________________________________________________________________________________________________
+
+                                          AULA 2
+
+Leonard e SORA:
+
+Prompt de Imagem: Celular (de frente e desligado) inserido em uma capa azul em formato retangular. Na lateral direita da capa, ele possui três botões(de cima para baixo), onde os dois primeiros botões são pequenos e o terceiro botão é de um tamanho médio. Na parte de cima, tem um ponto pequeno com função de filmadora.
+
+Gamma (criado pelo professor) Apresentação de Slides
+
+Prompt: Crie uma apresentação de 6 slides sobre uma startup de tecnologia chamada Inova Web que desenvolve sites modernos e responsivos usando inteligência artificial. Inclua: visão geral, serviços, diferenciais, tecnologias, cases de sucesso e chamada para ação. Tom profissional e moderno.
+
+Sora IA:
+
+Prompt Ruim
+"Uma imagem para site de tecnologia" 
+
+Prompt Bom
+"Banner para site de startup de tecnologia chamada inovaweb, fundo abstrato com rede digital, gradiente azul e ciano, estilo minimalista, sem texto, proporção 16:9, visual profissional".
+
+
+
+ChatGPT:
+
+Prompt para Chatgpt: Cria uma apresentação de 10 slides para o gamma sobre um restaurante, onde Sou Chef de comida brasileiro. sua tarefa é me ajudar a criar um restaurante com loja física em Copacabana, Rio de Janeiro. com cardápio de comida mineira e nordestina para mostrar a comida nacional para turistas estrangeiros. Será entregue por aplicativo do Ifood e Uber eats
+
+Dever de Casa:
+
+Tarefa: Acesse o color.adobe.com e explore combinações de cores.
+Traga uma paleta de 3 a 5 cores que representariam a identidade visual da inova web.
+
+Cursos e Editor para observar:
+Editor de imagem (Photoshop): Affinity
+Curso: Freecode camp
