@@ -2,6 +2,7 @@
 
 Tag do CSS
 
+1. Cor/Fonte:
 Color: Cor da fonte
 Accent- Color: Cor de destaque
 Bg-light: é uma utilidade para definir um fundo de cor clara (cinza muito claro/branco) em elementos HTML
@@ -10,27 +11,31 @@ Text-Muted: usada para estilizar texto com uma cor cinza-clara e discreta, geral
 Font-main: Fonte do texto principal
 Font-Title: Fonte do Titulo
 Font-size: tamanho da fonte (n° pt)
+Background: É a configuração do estilo de fundo
 Border-Color: define a cor da borda de um elemento, permitindo valores de cor únicos ou múltiplos para todos os quatro lados.
+font-weight: especifica o peso ou a intensidade da fonte
+root:seleciona o elemento raiz de um documento, que em HTML é sempre <html>. Ela é principalmente utilizada para definir variáveis CSS(tema, cores,fonte).
+
+2. Elementos e Bordas:
 Padding: define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente
 "box-sizing: border-box" é uma propriedade CSS que define o tamanho total de um elemento incluindo seu conteúdo, padding e bordas, sem alterar a largura (width) ou altura (height) definida
-<link rel="stylesheet" href="Css/Styles.css">: Linkando a pasta "styles.css" dentro da "Css"
-
-:Root{}: É a configuração principal da página HTML, declarando variáveis CSS (propriedades personalizadas) que precisam estar disponíveis em todo o site.
-
-<Nav>: representa uma seção/barra de navegação de uma página, onde você pode fazer alterações apenas em determinadas barra de navegação.
-
-<a>(ancora):é fundamental para criar hiperlinks, conectando páginas, arquivos ou seções dentro de um site.
-
+Overflow-y:scroll (Caso os elementos sejam muitos grandes na tela, será criado uma barra de rolamento).
 Margin: Distancia entre os objeto para outro
-A var(): função é usada para inserir o valor de uma variável já inserida na CSS declarada.
-Button: hover : Cor do botão ao passar o mouse.
-
-*: Configuração da Base inteira
-
-
+A var(): função é usada para inserir o valor de uma variável já inserida na CSS declarada
+height: determina a altura da área do conteúdo de um elemento
+<Nav>: representa uma seção/barra de navegação de uma página, onde você pode fazer alterações apenas em determinadas barra de navegação.
+row: É referência a linha de alguma seção, divisão
 
 
-Prompt: Torne o meu html mais semântico
+3. Link:
+<link rel="stylesheet" href="Css/Styles.css">: Linkando a pasta "styles.css" dentro da "Css"
+<a>(ancora):é fundamental para criar hiperlinks, conectando páginas, arquivos ou seções dentro de um site.
+:Root{}: É a configuração principal da página HTML, declarando variáveis CSS (propriedades personalizadas) que precisam estar disponíveis em todo o site.
+ <a href=#> é usada para criar hiperlinks que conectam uma página a outra.
+<i class> : Inserir ícones no texto em Bootstrap
+
+
+4. Prompt: Torne o meu html mais semântico
 avalie o meu css e o reorganize para fácil leitura e elimine qualquer redundância. Estilie também a minha tabela com todas bordar de 1px, pretas 
 
 ________________________________________________________________________________________________
@@ -52,27 +57,36 @@ b) Absoluto: Remove o elemento do fluxo. Posiciona em relação ao ancestral pos
 c) Fixed: Remove o fluxo e fixa na viewport(a janela do navegador). não se move ao rolar a página.
 d) Sticky: Hibrido entre relative e fixed. Age como relative até atingir o ponto definido - então gruda como fixed, mas apenas dentro do seu conteiner(cabeçalho) pai.
 
-Clearfix: é uma técnica CSS essencial usada para garantir que um elemento pai envolva totalmente seus filhos flutuantes (float), impedindo que o layout "quebre" ou colapse.
+3. Clearfix: é uma técnica CSS essencial usada para garantir que um elemento pai envolva totalmente seus filhos flutuantes (float), impedindo que o layout "quebre" ou colapse.
 
+4. Margin/Border:
 Margin: define o espaçamento externo ao redor de um elemento, fora de qualquer borda
 - ordem dos números no Sentido horário da contagem: Cima, direita, baixo, esquerda
 margin-bottom: define a margem área na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima.
-
+"align-middle (= <center>)": Alinhamento no centro 
 Border -radius: Arredonda as bordas do elemento
 - ordem dos números no Sentido horário da contagem: Cima, direita, baixo, esquerda
 
-Padding:A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente
+5. Padding:A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente
 
 a) padding-left: é um elemento que define o espaço de preenchimento obrigatório no lado esquerda de um elemento.
 b) padding-Right: é um elemento que define o espaço de preenchimento obrigatório no lado direita de um elemento
 c) padding -top: é um elemento que define o espaço de preenchimento obrigatório em relação a parte superior de um elemento.
 d) padding - bottom:é um elemento que define o espaço de preenchimento obrigatório em relação a parte inferior de um elemento.
 
-Background: É a configuração do estilo de fundo.
-Overflow-y:scroll (Caso os elementos sejam muitos grandes na tela, será criado uma barra de rolamento.
-height: determina a altura da área do conteúdo de um elemento
-font-weight: especifica o peso ou a intensidade da fonte
+6. Botão/Mouse:
+Button: hover : Cor do botão ao passar o mouse.
+btn = Button
 Hover: A ação de algo ao passar o mouse sobre o elemento.
 Transition: É a mudança de cor ao passar o mouse sobre elemento
 Transform: scale(1.2) Mudança de tamanho no icone selecionado pelo mouse
-Caixa Flutuante
+"(<a>)" para que se pareça com um botão atribuindo a ela a classe "button"
+
+6.1. Estilo do Botão:
+
+fw bold = negrito
+Outline = Fundo transparente(para botões)
+<styles> e root()
+    criamos variaveis de cores. Para criar tem que colocar -- e o nome
+
+    Para chamar a variavel é com var (--)

@@ -1,7 +1,7 @@
                                         AULA 07
 
 
-Bootstrap- Site de classe e formatação do css
+1. Bootstrap- Site de classe e formatação do css
 - Link do Bootstrap: 
 Referência: O link de referência será inserido antes do termino do </head>
 Script: O link do script será inserido antes do termino do </Body>
@@ -19,44 +19,52 @@ Col-lg-n° é identificando a quantidade de colunas usadas par telas grandes.
 Col-md-n° é identificando a quantidade de colunas usadas par telas grandes.
 nav = define uma seção de links de navegação, sendo fundamental para semântica, acessibilidade e SEO. Ela é usada para blocos principais de links, como menus, índices ou breadcrumbs.
 
-Barra de navegação:
+3. Barra de navegação:
 navbar = barra de navegação de celular
 navbar-expand-lg = barra de navegação de computador
 navbar brand = Ícone vai para direita na barra de navegação
 Navbar-dark: A cor da barra de navegação será preta.
 <div class="container">: é um elemento não semântico usado para agrupar outros elementos para fins de estilo ou layout.
 <button class="navbar-toggler"> é um componente do Bootstrap usado para criar um botão de menu "hambúrguer" que aciona uma barra de navegação recolhível em telas menores. Ele funciona com data-bs-toggle="collapse" e data-bs-target para mostrar ou ocultar links do menu, geralmente usando <span class="navbar-toggler-icon"> para aparecer um ícone ao recolher a barra de navegação.
+<section> representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo..
 
-Espaçamento de barra de navegação:
-"(<a>)" para que se pareça com um botão atribuindo a ela a classe "button"
+4. Espaçamento de barra de navegação:
+
 "gap-n°": define o espaçamento (gutters) entre linhas e colunas em contêineres
 "ms-auto" no Bootstrap 5 é uma utilidade de espaçamento (margin-start: auto) usada para alinhar elementos à direita dentro de um contêiner flexbox.
 
-<section> representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo..
-py-5:. É uma forma rápida de adicionar espaçamento vertical responsivo.
+
+5. Organização de seção e cartão:
+
+<span class> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza.
+
+"h-100" no Bootstrap define a altura (height) de um elemento como 100% em relação ao seu elemento pai
+
+"d-flex" é um utilitário de CSS que aplica display: flex a um elemento, transformando-o em um contêiner flexbox. Isso alinha automaticamente os elementos filhos (flex items) lado a lado.
+
+flex-direction (column): você pode organizar itens em uma coluna definindo a propriedade. Isso altera o eixo principal de horizontal (padrão) para vertical.
+
+"card-body"  é a seção principal de um card (contêiner flexível) utilizada para adicionar espaçamento interno (padding) ao conteúdo, como textos e títulos.
+
+
+6. Formatação do elemento:
+
+py-5: P = Padding(preenchimento), y = O Eixo Vertical, 5 = o incremento do tamanho.  é uma classe utilitária CSS usada principalmente em frameworks como Bootstrap e Tailwind CSS para aplicar preenchimento vertical a um elemento.
+
 mb-3 no Bootstrap é uma utilidade CSS que define a margem inferior (margin-bottom) de um elemento.
 display é utilizada para indicar a forma como os elementos HTML serão dispostos na página ou em espaços delimitados. Por essa característica, é um recurso essencial para manter a organização dos elementos na página.
-Organização de seção e cartão:
-<span class> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza.
-<i class> : Inserir ícones no texto
-"h-100" no Bootstrap define a altura (height) de um elemento como 100% em relação ao seu elemento pai
-"d-flex" é um utilitário de CSS que aplica display: flex a um elemento, transformando-o em um contêiner flexbox. Isso alinha automaticamente os elementos filhos (flex items) lado a lado.
-flex-direction (column): você pode organizar itens em uma coluna definindo a propriedade. Isso altera o eixo principal de horizontal (padrão) para vertical.
-"card-body"  é a seção principal de um card (contêiner flexível) utilizada para adicionar espaçamento interno (padding) ao conteúdo, como textos e títulos.
- <a href=#> é usada para criar hiperlinks que conectam uma página a outra.
 <footer class>, situa-se no final da página ou seção, contendo informações de direitos autorais, links de navegação, contatos e redes sociais.
 
-Estilo do Botão:
 
-fw bold = negrito
-Outline = Fundo transparente(para botões)
-<styles> e root()
-    criamos variaveis de cores. Para criar tem que colocar -- e o nome
 
-    Para chamar a variavel é com var (--)
-Table bourder = Coloca borda(linha vertical) entre as colunas
-Table-stripped = alternar a cor das colunas entre cinza e branco
-Table-responsive = Inclui a barra de rolagem na tabela(com muitos itens)
-Table-dark - O Fundo da tabela é escura
-Table- info. Table-warning = Cores do fundo da tabela.
-Table-sm: Para economizar espaço das linhas em uma tabela
+
+7. Imagem/figura:
+
+width = ""> : largura da imagem
+.img-fluid: Torna a imagem responsiva, garantindo que ela não ultrapasse a largura do contêiner pai.
+.rounded: Adiciona cantos arredondados suaves à imagem.
+.rounded-circle: Transforma a imagem em um círculo perfeito (ideal para imagens quadradas).
+.shadow: Adiciona uma sombra à imagem para efeito de profundidade
+.alt (texto alternativo): descreve o conteúdo de uma imagem, sendo crucial para acessibilidade (leitores de tela) e SEO. Ele aparece se a imagem falhar ao carregar e ajuda motores de busca a indexar o site.
+<figcaption (fig caption/legenda da figura)>: é usado para fornecer uma legenda, título ou descrição para uma imagem, vídeo, gráfico ou outra mídia contida no elemento pai.
+<caption>:  especifica a legenda (ou título) de uma tabela, fornecendo à tabela um nome ou descrição acessível

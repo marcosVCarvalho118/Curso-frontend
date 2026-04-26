@@ -45,7 +45,7 @@ ________________________________________________________________________________
 
 Dicas: https://www.w3schools.com/ - Site para estudar html, css, javascript
 
-Lista de Código(tags):
+1. Lista de Código(tags):
 - Configurações Gerais:
 
 Index.htm : Início de uma site do html
@@ -55,7 +55,7 @@ Lang = Língua principal do site
 <Head>: providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
 <body>: <body> no HTML define o corpo e todo o conteúdo visível de uma página web, incluindo textos, imagens, vídeos e links, situando-se após o <head>.
 
-Lista de Itens:
+2. Lista de Itens:
 
 Title - Titulo da página na guia.
 img sc = Imagem
@@ -63,7 +63,7 @@ img sc = Imagem
 <ol>: representa uma lista de itens com ordem rígida
 <li>: São os itens de uma lista.
 
-Tabela:
+3. Tabela:
 
 <table class>: É uma tabela bidimensional composta por linhas e colunas de células contendo dados, estando nela toda configuração de aparência e margem.
 
@@ -72,32 +72,38 @@ Tabela:
 <tr> (Table Row- Linha da Tabela): cria um novo conjunto de células que formam uma linha dentro da tabela
 
 <Th> (Table Header - Cabeçalho da Tabela): é usada para definir o cabeçalho de uma tabela, ou seja, ela identifica as células que servem como títulos para colunas ou linhas.
-
+th scope: O atributo `scope` é usado dentro da tag `<th>` (cabeçalho da tabela) para definir explicitamente a quais células o cabeçalho se aplica.
+th scope "col": Especifica que a célula é um cabeçalho para toda a coluna em que se encontra.
+th scope "row": Especifica que a célula é um cabeçalho para toda a linha em que se encontra
  <td> (Table Data - Dados da Tabela):  é usada para definir as células que contêm os dados dentro de uma tabela.
 
 <tbody>: O Corpo de texto de uma tabela (tudo menos o cabeçalho)
 
 <table border>: Adicionar uma borda na tabela.
 
-<caption>:  especifica a legenda (ou título) de uma tabela, fornecendo à tabela um nome ou descrição acessível
+Table bourder = Coloca borda(linha vertical) entre as colunas
+Table-stripped = alternar a cor das colunas entre cinza e branco
+Table-responsive = Inclui a barra de rolagem na tabela(com muitos itens)
+Table-dark - O Fundo da tabela é escura
+Table- info. Table-warning = Cores do fundo da tabela.
+Table-sm: Para economizar espaço das linhas em uma tabela
 
 
+4. Texto:
+<textarea>: representa um controle de edição de texto simples com várias linhas, útil quando se deseja permitir que os usuários insiram uma quantidade considerável de texto livre
 
-alt =""> : texto alternativo para imagem(acessibilidade)
-width = ""> : largura da imagem
-<hr> representa uma quebra temática entre elementos de nível de parágrafo (por exemplo 
+Text muted: "texto oculto" geralmente se refere a um texto que aparece em tons de cinza para parecer menos proeminente que o conteúdo ao redor
+<hr> representa uma quebra temática entre elementos de nível de parágrafo (por exemplo) 
 <br>:  produz uma quebra de linha em um texto
+"lead": refere-se geralmente a um parágrafo introdutório destacado (estilo de tipografia) ou à captura de dados de visitantes.
 
-Formulário:
+5. Formulário:
 <label>: representa uma legenda para um item em uma interface de usuário.
-
 <input type ="">: são usados ​​para permitir que o usuário insira ou edite no espaço destinado no formulário: e-mail("email"), mensagem , texto(text) ou botão(submit).
-
 "name =" no input serve para especificar um nome para o elemento da tag input
-
 "id =": serve para identificarmos controles e aplicarmos estilos CSS e para manipularmos elementos via Javascript.
 
-<textarea>: representa um controle de edição de texto simples com várias linhas, útil quando se deseja permitir que os usuários insiram uma quantidade considerável de texto livre
+
 
 
 
