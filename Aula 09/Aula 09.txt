@@ -1,0 +1,11 @@
+Placehold -O termo placeholder refere-se a um elemento visual utilizado em formulários e campos de entrada de dados em websites e aplicativos. Ele serve como uma dica ou sugestão para o usuário, indicando o que deve ser inserido naquele campo específico
+
+gutter = é espaço entre as colunas
+rounded-start = arredondada apenas a esquerda
+rounded-end = arredondada apenas a direita
+Active = É o item que começará um slide, item e etc.
+<kbd(Keyboard)> - Tag para tecla(imagem) do teclado
+
+https://github.com/Mudows/curso-frontend
+
+Pesquisar em casa - W3C (Boas práticas de código e verifica a semântica do código e também ensina as normas mais corretas)
