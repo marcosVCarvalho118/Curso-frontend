@@ -1,0 +1,36 @@
+Bootstrap
+
+1. Organização de seção e cartão:
+
+<span class> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza.
+
+"h-100" no Bootstrap define a altura (height) de um elemento como 100% em relação ao seu elemento pai
+
+"d-flex" é um utilitário de CSS que aplica display: flex a um elemento, transformando-o em um contêiner flexbox. Isso alinha automaticamente os elementos filhos (flex items) lado a lado.
+
+flex-direction (column): você pode organizar itens em uma coluna definindo a propriedade. Isso altera o eixo principal de horizontal (padrão) para vertical.
+
+"card-body"  é a seção principal de um card (contêiner flexível) utilizada para adicionar espaçamento interno (padding) ao conteúdo, como textos e títulos.
+
+
+2. Formatação do elemento:
+
+py-5: P = Padding(preenchimento), y = O Eixo Vertical, 5 = o incremento do tamanho.  é uma classe utilitária CSS usada principalmente em frameworks como Bootstrap e Tailwind CSS para aplicar preenchimento vertical a um elemento.
+
+mb-3 no Bootstrap é uma utilidade CSS que define a margem inferior (margin-bottom) de um elemento.
+
+display é utilizada para indicar a forma como os elementos HTML serão dispostos na página ou em espaços delimitados. Por essa característica, é um recurso essencial para manter a organização dos elementos na página.
+
+3. Footer:
+<footer class>, situa-se no final da página ou seção, contendo informações de direitos autorais, links de navegação, contatos e redes sociais.
+
+4. Imagem/figura:
+
+width = ""> : largura da imagem
+.img-fluid: Torna a imagem responsiva, garantindo que ela não ultrapasse a largura do contêiner pai.
+.rounded: Adiciona cantos arredondados suaves à imagem.
+.rounded-circle: Transforma a imagem em um círculo perfeito (ideal para imagens quadradas).
+.shadow: Adiciona uma sombra à imagem para efeito de profundidade
+.alt (texto alternativo): descreve o conteúdo de uma imagem, sendo crucial para acessibilidade (leitores de tela) e SEO. Ele aparece se a imagem falhar ao carregar e ajuda motores de busca a indexar o site.
+<figcaption (fig caption/legenda da figura)>: é usado para fornecer uma legenda, título ou descrição para uma imagem, vídeo, gráfico ou outra mídia contida no elemento pai.
+<caption>:  especifica a legenda (ou título) de uma tabela, fornecendo à tabela um nome ou descrição acessível

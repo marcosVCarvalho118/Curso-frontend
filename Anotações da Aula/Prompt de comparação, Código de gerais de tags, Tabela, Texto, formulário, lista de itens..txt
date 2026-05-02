@@ -48,20 +48,23 @@ Dicas: https://www.w3schools.com/ - Site para estudar html, css, javascript
 1. Lista de Código(tags):
 - Configurações Gerais:
 
+! (exclamação)+ TAB dá as configurações iniciais do html
 Index.htm : Início de uma site do html
 Lang = Língua principal do site
 <p> = Paragrafo
 <h1> a <h6>: São níveis de títulos da seção, o <h1> seção mais alta e o <h6> seção mais baixa.
 <Head>: providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
 <body>: <body> no HTML define o corpo e todo o conteúdo visível de uma página web, incluindo textos, imagens, vídeos e links, situando-se após o <head>.
+img sc = Imagem
+:Root{}: É a configuração principal da página HTML, declarando variáveis CSS (propriedades personalizadas) que precisam estar disponíveis em todo o site.
 
 2. Lista de Itens:
 
 Title - Titulo da página na guia.
-img sc = Imagem
 <ul> :  representa uma lista de itens sem ordem rígida
 <ol>: representa uma lista de itens com ordem rígida
 <li>: São os itens de uma lista.
+row: É referência a linha de alguma seção, divisão
 
 3. Tabela:
 

@@ -1,0 +1,43 @@
+                                        AULA 07
+ Bootstrap- Site de classe e formatação do css
+
+View - Word wrap = Quebra de página automática
+
+1. Link do Bootstrap: 
+Referência: O link de referência será inserido antes do termino do </head>
+Script: O link do script será inserido antes do termino do </Body>
+Ícones: O link do ícone será inserido antes do inicio do <title>.
+
+
+
+2. Margem:
+M-4: Margem do nível 4
+MT-4 = Margem do topo é nível 4
+MB: Fundo do elemento
+MS = Margem para esquerda(start)
+ME = Margem para direita(end)
+
+3. Botão:
+outline = Mudança de aparencia de botão(geralmente)
+
+4. Coluna:
+Um Bootstrap tem o total de 12 colunas, o col-n° é identificando quantas colunas será ocupada. o col-12 fará os itens ficarem um embaixo do outro
+Col-lg-n° é identificando a quantidade de colunas usadas par telas grandes.
+Col-md-n° é identificando a quantidade de colunas usadas par telas grandes.
+nav = define uma seção de links de navegação, sendo fundamental para semântica, acessibilidade e SEO. Ela é usada para blocos principais de links, como menus, índices ou breadcrumbs.
+
+5. Barra de navegação:
+navbar = barra de navegação de celular
+navbar-expand-lg = barra de navegação de computador
+navbar brand = Ícone vai para direita na barra de navegação
+Navbar-dark: A cor da barra de navegação será preta.
+<div class="container">: é um elemento não semântico usado para agrupar outros elementos para fins de estilo ou layout.
+<button class="navbar-toggler"> é um componente do Bootstrap usado para criar um botão de menu "hambúrguer" que aciona uma barra de navegação recolhível em telas menores. Ele funciona com data-bs-toggle="collapse" e data-bs-target para mostrar ou ocultar links do menu, geralmente usando <span class="navbar-toggler-icon"> para aparecer um ícone ao recolher a barra de navegação.
+<section> representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo..
+
+6. Espaçamento de barra de navegação:
+
+"gap-n°": define o espaçamento (gutters) entre linhas e colunas em contêineres
+"ms-auto" no Bootstrap 5 é uma utilidade de espaçamento (margin-start: auto) usada para alinhar elementos à direita dentro de um contêiner flexbox.
+
+

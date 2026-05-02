@@ -1,0 +1,29 @@
+Aula 10
+
+JavaScript
+
+
+Manipulação:
+
+O Css é manipulado pelo html (solicita estilização), por isso vem antes da página html
+
+Java script manipula os dados do html, por isso será inserido depois da página no body.
+
+Mensagem/Comentário::
+Console.log = Ele escreve uma mensagem no console do java script
+// ...... - Comentário em Java script
+
+Variável:
+
+let "variável" - Está declarando uma variável na java script. 
+Obs: A variável não pode ter espaço e a 2°palavra tem que ser iniciada por letra maiúscula.
+${variável} é a forma de resgatar uma variável no let para o console java script
+If é um valor de variável e o else é o valor contrario a variável do If
+
+Configuração Geral
+"" somente para texto
+= está retomando o valor indicado
+== é o igual(comparando) ignorando o tipo da informação (número, texto, etc.)
+=== é o igual(comparando) exatamente
+! - é o valor contrario da sentença.
++ para texto concatena e para números soma

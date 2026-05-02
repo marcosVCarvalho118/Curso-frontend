@@ -53,6 +53,3 @@ verExtrato()
 depositar(100)
 sacar(4600)
 verExtrato()
-
-
-

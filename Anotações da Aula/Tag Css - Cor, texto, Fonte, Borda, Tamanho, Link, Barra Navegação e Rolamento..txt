@@ -1,0 +1,46 @@
+                                    AULA 05
+
+Tag do CSS
+
+1. Cor:
+
+Color: Cor da fonte
+Accent- Color: Cor de destaque
+Bg-light: é uma utilidade para definir um fundo de cor clara (cinza muito claro/branco) em elementos HTML
+A var(): função é usada para inserir o valor de uma variável já inserida na CSS declarada
+
+2. Texto e Fonte:
+
+Text-Main: define a configuração do texto principal de um documento ou aplicação web
+Text-Muted: usada para estilizar texto com uma cor cinza-clara e discreta, geralmente indicando informações desativadas, menos importantes ou sutis.
+Font-main: Fonte do texto principal
+Font-Title: Fonte do Titulo
+Font-size: tamanho da fonte (n° pt)
+Background: É a configuração do estilo de fundo
+
+
+font-weight: especifica o peso ou a intensidade da fonte
+root:seleciona o elemento raiz de um documento, que em HTML é sempre <html>. Ela é principalmente utilizada para definir variáveis CSS(tema, cores,fonte).
+
+3. Borda:
+Border-Color: define a cor da borda de um elemento, permitindo valores de cor únicos ou múltiplos para todos os quatro lados.
+
+4. Tamanho:
+
+"box-sizing: border-box" é uma propriedade CSS que define o tamanho total de um elemento incluindo seu conteúdo, padding e bordas, sem alterar a largura (width) ou altura (height) definida
+height: determina a altura da área do conteúdo de um elemento
+
+5. Barra de Navegação e Rolamento:
+Overflow-y:scroll (Caso os elementos sejam muitos grandes na tela, será criado uma barra de rolamento).
+<Nav>: representa uma seção/barra de navegação de uma página, onde você pode fazer alterações apenas em determinadas barra de navegação.
+
+6. Link:
+<link rel="stylesheet" href="Css/Styles.css">: Linkando a pasta "styles.css" dentro da "Css"
+<a>(ancora):é fundamental para criar hiperlinks, conectando páginas, arquivos ou seções dentro de um site.
+
+ <a href=#> é usada para criar hiperlinks que conectam uma página a outra.
+<i class> : Inserir ícones no texto em Bootstrap
+
+
+4. Prompt: Torne o meu html mais semântico
+avalie o meu css e o reorganize para fácil leitura e elimine qualquer redundância. Estilie também a minha tabela com todas bordar de 1px, pretas 
