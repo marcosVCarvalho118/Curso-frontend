@@ -7,7 +7,7 @@ function verExtrato() {
     if (contaAtiva) {
         statusConta = "Ativa"
     } else {
-        statusConta = "bloqueado"
+        statusConta = "Bloqueado"
     }
 
 

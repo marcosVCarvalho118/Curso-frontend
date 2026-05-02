@@ -2,6 +2,7 @@ Aula 10
 
 JavaScript
 
+Ler Java script: Toggle Painel - Run Code(Aplicativo)
 
 Manipulação:
 
