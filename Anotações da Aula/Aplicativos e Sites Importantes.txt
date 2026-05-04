@@ -1,0 +1,17 @@
+Bootstrap
+
+Goblin tools é uma coleção de ferramentas pequenas, simples e focadas em uma única tarefa, projetadas principalmente para ajudar pessoas neurodivergentes com tarefas que consideram complexas ou difíceis. Acreditamos que todos merecem ter acesso a ferramentas úteis que facilitem o dia a dia.
+
+Link citado:
+https://goblin.tools/
+ (IA para atividade do dia a dia)
+
+Dicas: https://www.w3schools.com/ - Site para estudar html, css, JavaScript
+
+Leonard, Sora, Gamma (Criador de imagem)
+
+Chatgpt, Gemini (IA)
+
+Cursos e Editor para observar:
+Editor de imagem (Photoshop): Affinity
+Curso: Freecode camp

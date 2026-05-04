@@ -1,10 +1,5 @@
                                          AULA 03
 
-Goblin tools é uma coleção de ferramentas pequenas, simples e focadas em uma única tarefa, projetadas principalmente para ajudar pessoas neurodivergentes com tarefas que consideram complexas ou difíceis. Acreditamos que todos merecem ter acesso a ferramentas úteis que facilitem o dia a dia.
-
-Link citado:
-https://goblin.tools/
- (IA para atividade do dia a dia)
 
 Prompt de comparação de concorrentes
 

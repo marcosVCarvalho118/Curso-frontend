@@ -63,7 +63,3 @@ Dever de Casa:
 
 Tarefa: Acesse o color.adobe.com e explore combinações de cores.
 Traga uma paleta de 3 a 5 cores que representariam a identidade visual da inova web.
-
-Cursos e Editor para observar:
-Editor de imagem (Photoshop): Affinity
-Curso: Freecode camp
