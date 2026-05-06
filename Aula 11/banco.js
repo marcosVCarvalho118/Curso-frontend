@@ -74,11 +74,26 @@ console.log(` Saques: ${nSaques}`)
 console.log(` Total: ${qtdTransações}`)
 }
 // PAROU AQUI A AULA
+function simularTentativasSaque(valor, maxTentativas) {
+    const saldo = 1600.00;
+    let tentativasRestantes = maxTentativas;
+    let tentativaAtual = 1
+  
+    while (tentativasRestantes > 0 && valor > saldo) {
+        console.log(`🔄 Tentativa ${tentativaAtual}: R$ ${valor.toFixed(2)} — saldo insuficiente`);
+        valor = valor * 0.8; // Reduz o valor em 20%
+        tentativasRestantes--;
+        tentativaAtual++;
+    }
 
-function  simularTentativaSaque(valor, maxtemtativas){
-let tentativa = 0
-    while(tentativa atual <maxtemtativas) {}
+    if (tentativasRestantes === 0 && valor > saldo) {
+        console.log("❌ Tentativas esgotadas. Saque não realizado.");
+    } else if (valor <= saldo) {
+        console.log(`✅ Saque realizado com sucesso no valor de R$ ${valor.toFixed(2)}.`);
+    }
+
 }
+
 
 depositar(1000)
 depositar(200)
@@ -87,5 +102,9 @@ sacar(247)
 sacar(200)
 
 console.log (historico)
+
 verExtrato()
 verResumo ()
+
+simularTentativasSaque(5000,4);
+
