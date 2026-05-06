@@ -1,0 +1,13 @@
+vetores = É a forma de organizar itens/informações em um grupo ordenado
+Chamar itens de uma lista em vetores a contagem é iniciada com o número zero e segue em ordem crescente(1,2,3,4)
+listaCompras.push() - O "push" é uma atualização da constante atribuida anteriormente.
+console.log(variavel) - Está chamando os vetores anteriormente atribuidos.
+length(Comprimento) - Está contando os elementos do vetor e começará a contagem do 1 e seguirá na ordem crescente
+"pop" - ELe retira do vetor, o ultimo elemento dos seus itens.
+Variavel[0];[5] - = modifica ou acrescenta Elemento especifico aos elementos do vetor.
+
+for=
+while =
+
+n = numeros
+qtd = quantidades
