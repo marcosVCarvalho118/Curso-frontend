@@ -86,7 +86,7 @@ function sacar(valor) {
 
 function bloquearConta() {
     contaAtiva = false
-    exibirMensagem("Erro", `sucesso`)
+    exibirMensagem("Conta bloqueada com sucesso!", `sucesso`)
 }
 
 function verResumo() {
@@ -125,17 +125,17 @@ console.log(` Total: ${qtdTransações}`)
 function simularTentativasSaque(valor, maxTentativas= 5) {
     let tentativas = 0
     while (tentativas < maxTentativas && valor > saldo) {
-        console.log(`🔄 Tentativa ${tentativa+1}: R$ ${valor.toFixed(2)} — saldo insuficiente`);
-        valor = valor * 0.8; // Reduz o valor em 20%
-        tentativa++;
+        console.log(`🔄 Tentativa ${tentativas + 1}: R$ ${valor.toFixed(2)} — saldo insuficiente`);
+        valor = valor * 0.8 // Reduz o valor em 20%
+        tentativas++;
     }
 
     if (tentativas === maxTentativas) {
         console.log("❌ Tentativas esgotadas. Saque não realizado.");
-    } else 
+    } else {
         sacar(valor)
     }
-
+}
 
 // depositar(1000)
 // depositar(200)
@@ -158,5 +158,5 @@ function atualizarSaldo() {
 function exibirMensagem(texto, tipo) {
     elmensagem.textContent = texto
     elmensagem.style.display = `block`
-    elmensagem.className = tipo === `sucesso` ? `msg - sucesso` : `msg - erro`
+    elmensagem.className = tipo === `sucesso` ? `msg-sucesso` : `msg-erro`
 }
