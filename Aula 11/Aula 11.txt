@@ -11,3 +11,6 @@ while =
 
 n = numeros
 qtd = quantidades
+? = Chama o if no javascript ("if" : "else")
+addEventListener () = Adiciona uma ação ao botão (btn)
+() => - Sem função definida
