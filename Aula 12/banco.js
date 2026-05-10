@@ -121,7 +121,6 @@ console.log(` Depositos: ${nDepositos}`)
 console.log(` Saques: ${nSaques}`)
 console.log(` Total: ${qtdTransações}`)
 
-// PAROU AQUI A AULA
 function simularTentativasSaque(valor, maxTentativas= 5) {
     let tentativas = 0
     while (tentativas < maxTentativas && valor > saldo) {

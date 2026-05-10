@@ -6,11 +6,50 @@ length(Comprimento) - Está contando os elementos do vetor e começará a contag
 "pop" - ELe retira do vetor, o ultimo elemento dos seus itens.
 Variavel[0];[5] - = modifica ou acrescenta Elemento especifico aos elementos do vetor.
 
-for=
-while =
+for= é a repetição controlada (também chamada de laço ou loop).
 
-n = numeros
-qtd = quantidades
+Em vez de você escrever a mesma linha de código várias vezes, você usa o for para dizer ao computador: "Execute este bloco de código X vezes" ou "Execute este código para cada item desta lista
+
+while = (que significa "enquanto") é uma das estruturas de controle fundamentais na programação. Sua função principal é repetir um bloco de código enquanto uma condição específica for verdadeira.
+
+Diferente do "for", que geralmente é usado quando sabemos exatamente quantas vezes queremos repetir algo, o while é ideal para situações onde não sabemos de antemão quantas repetições serão necessárias.
+
+n = numeros. "ndepositos" é o numero depositos feitos
+qtd = quantidades. "qtdtransacoes" é o número de transações.
 ? = Chama o if no javascript ("if" : "else")
 addEventListener () = Adiciona uma ação ao botão (btn)
-() => - Sem função definida
+() => - Indica Sem função definida
+
+Funções:Funções são blocos de código reutilizáveis que realizam uma tarefa específica. Elas ajudam a organizar o código e evitar repetições. Também impedem que um código seja executado acidentalmente, pois só roda quando você chama a função.
+
+return: tem dois papéis principais: entregar um resultado para quem chamou a função e encerrar a execução daquela função imediatamente.
+- Se você quisesse que o sistema informasse ao programador se a operação deu certo ou errado para usar essa informação em outra parte do código, o return retornaria um Booleano (true ou false):
+Ex: function sacar(valor) {
+  if (valor > saldo) {
+  return false; // Retorna "falso" indicando que a operação falhou.
+
+QuerySelector(): vai selecionar o primeiro elemento (info-situacão)  com a denominação adequada ('#nome') que ele encontrar no estilo de página em CSS.
+- el = Elemento; btn = Botão
+
+&& - É a junção de duas variáveis para poder tirar o valor delas em conjunto.
+
+
+Number(): Como você não consegue fazer cálculos matemáticos confiáveis com textos, a função global Number() serve para converter (fazer o cast) dessa string para um número real.
+
+campValor (O campo de entrada inteiro (um objeto complexo).value (O texto ou número que o usuário digitou no momento)
+
+historico.push(...) é armazenar um registro da transação dentro de uma lista (um array), permitindo que você mantenha um rastro de todas as operações realizadas pelo usuário.
+
+"saldo -= valor", ele executa os seguintes passos:
+
+Pega o valor atual que está guardado na variável saldo.
+
+Subtrai o número contido na variável valor.
+
+Salva o novo resultado de volta dentro da variável saldo, substituindo o valor antigo.
+
+"let i = 1": O que faz: Cria uma variável de controle (geralmente chamada de i de index ou iterator) e define o valor inicial.
+
+"i <= 5": é uma Condição de Continuidade, o loop continuará rodando enquanto i for menor ou igual a 5. Isso garante que o código dentro das chaves { } seja executado exatamente 5 vezes.
+
+"i++": Atualiza a variável de controle após o final de cada repetição. No seu caso: i++ é o mesmo que i = i + 1. Ou seja, a cada volta, o valor de i aumenta em 1.
