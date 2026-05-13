@@ -72,6 +72,8 @@
       <div id="mensagem"></div>
 
       <button id="btn-bloquear">🔒 Bloquear conta</button>
+<p><br/></p>
+      <button id="btn-limpar">  Limpar Histórico</button>
     </div>
 
     <!-- ── Card de Histórico ──────────────────────────────── -->
@@ -85,6 +87,10 @@
         e adicioná-lo aqui com appendChild ou insertBefore.
         Equivale ao console.log do histórico.
       -->
+      <input type= "number" id="campo-valor" placeholder="Digite o valor" min="0" stop="0,01">
+      <input type = "text" id="titular-alterar" placeholder="alterar titular" min="0" stop="0,01">
+      <button id="btn-alterar-titular">Alterar</button>
+
       <ul id="lista-historico">
         <li class="historico-vazio">Nenhuma transação ainda.</li>
       </ul>
@@ -114,7 +120,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <script src="banco.js"></script>

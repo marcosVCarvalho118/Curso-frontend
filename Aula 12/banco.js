@@ -4,14 +4,19 @@ let saldo = 10000
 let contaAtiva = true
 let statusConta
 const historico = []
+const elTitular = document.querySelector(`#titular`)
 const elSaldo = document.querySelector(`#saldo`)
 const elmensagem = document.querySelector(`#mensagem`)
 const btnDepositar = document.querySelector(`#btn-depositar`)
 const btnSacar = document.querySelector(`#btn-sacar`)
 const btnBloquear = document.querySelector(`#btn-bloquear`)
+const btnLimpar = document.querySelector(`#btn-limpar`)
+const btnalterar = document.querySelector(`#btn-alterar`)
 const elTotalDepositos = document.querySelector('#total-depositos')
 const elTotalSaques = document.querySelector('#total-saques')
 const elTotalTransacoes = document.querySelector('#total-transacoes')
+const elListaHistorico = document.querySelector('#lista-historico')
+const inputTitular = document.querySelector('#titular-alterar')
 
 btnDepositar.addEventListener('click', () => {
     const campValor = document.querySelector(`#campo-valor`)
@@ -54,8 +59,8 @@ function depositar(valor) {
         saldo = saldo + valor
         //  console.log(`\ndeposito de R$ ${valor.toFixed(2)} realizado com sucesso!`)
         console.log(`Novo saldo:R$ ${saldo.toFixed(2)}`)
-        historico.push(`Depósito: R$ ${valor} | Saldo: R$ ${saldo}`)
-        atualizarSaldo()
+        atualizarextrato(`Depósito: R$ ${valor} | Saldo: R$ ${saldo}`)
+        atualizarSaldo(saldo)
         exibirMensagem(`Deposito de R$ ${valor} realizado com sucesso`, `sucesso`)
         verResumo()
     } else {
@@ -74,8 +79,8 @@ function sacar(valor) {
     if (valor > 0 && valor <= saldo) {
         saldo -= valor
         // console.log(`\nSaque de R$ ${valor.toFixed(2)} realizado com sucesso!\nNovo saldo: R$ ${valor.toFixed(2)}`)
-        historico.push(`Saque: R$ ${valor} | Saldo: R$ ${saldo}`)
-        atualizarSaldo()
+        atualizarextrato(`Saque: R$ ${valor} | Saldo: R$ ${saldo}`)
+        atualizarSaldo(saldo)
         exibirMensagem(`Saque de R$ ${valor} realizado com sucesso`, `sucesso`)
         verResumo()
     } else {
@@ -109,19 +114,21 @@ function verResumo() {
             nSaques++
         }
         qtdTransacoes++
+
+
     }
 
     elTotalDepositos.textContent = nDepositos
     elTotalSaques.textContent = nSaques
     elTotalTransacoes.textContent = qtdTransacoes
+    /* console.log("\n =====Resumo de Transações=====")
+    console.log(` Depositos: ${nDepositos}`)
+    console.log(` Saques: ${nSaques}`)
+    console.log(` Total: ${qtdTransações}`) */
 }
 
-console.log("\n =====Resumo de Transações=====")
-console.log(` Depositos: ${nDepositos}`)
-console.log(` Saques: ${nSaques}`)
-console.log(` Total: ${qtdTransações}`)
 
-function simularTentativasSaque(valor, maxTentativas= 5) {
+function simularTentativasSaque(valor, maxTentativas = 5) {
     let tentativas = 0
     while (tentativas < maxTentativas && valor > saldo) {
         console.log(`🔄 Tentativa ${tentativas + 1}: R$ ${valor.toFixed(2)} — saldo insuficiente`);
@@ -142,20 +149,65 @@ function simularTentativasSaque(valor, maxTentativas= 5) {
 // sacar(247)
 // sacar(200)
 
-console.log(historico)
+/* console.log(historico)
 
 verExtrato()
 verResumo()
 
-simularTentativasSaque(5000, 4);
+simularTentativasSaque(5000, 4); */
 
-
-function atualizarSaldo() {
-    elSaldo.textContent = `Saldo: R$ ${saldo.toFixed(2)}`
-}
 
 function exibirMensagem(texto, tipo) {
     elmensagem.textContent = texto
     elmensagem.style.display = `block`
     elmensagem.className = tipo === `sucesso` ? `msg-sucesso` : `msg-erro`
 }
+
+function atualizarextrato(transacao) {
+    historico.push(transacao)
+    const elListaVazia = document.querySelector('.historico-vazio')
+    if (elListaVazia) elListaVazia.remove()
+
+    const item = document.createElement('li')
+    item.textContent = transacao
+    elListaHistorico.insertBefore(item, elListaHistorico.firstChild)
+    while (elListaHistorico.children.length > 5) {
+        elListaHistorico.removeChild(elListaHistorico.lastChild)
+    }
+}
+
+btnLimpar.addEventListener('click', () => {
+    historico.length = 0;
+    elListaHistorico.innerHTML = '';
+    const ItemVazio = document.createElement('li');
+    ItemVazio.classList.add('historico-vazio');
+    ItemVazio.textContent = "Nenhuma transação realizada ainda";
+    elListaHistorico.appendChild(ItemVazio);
+});
+
+function atualizarSaldo(valor) {
+    elSaldo.textContent = `R$ ${valor.toFixed(2)}`
+    elSaldo.classList.remove('saldo-positivo', 'saldo-alerta', 'saldo-critico');
+
+    if (valor > 1000) {
+
+        elSaldo.classList.add('saldo-positivo');
+    } else if (valor > 500 && valor <= 1000) {
+
+        elSaldo.classList.add('saldo-alerta');
+    } else {
+
+        elSaldo.classList.add('saldo-critico');
+    }
+    elSaldo.style.color = 'blue'
+}
+
+btnalterar.addEventListener('click', () => {
+
+const novoTitular = inputTitular.value
+if (novoTitular!==''){
+    titular = novoTitular
+    elTitular.textContent = novoTitular
+    inputTitular.value = ''
+}
+})
