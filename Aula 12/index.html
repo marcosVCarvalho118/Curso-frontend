@@ -36,9 +36,17 @@
       </p>
     </div>
 
-    <!-- ── Card de Operações ──────────────────────────────── -->
+  
+     <!-- ── Card de Operações ──────────────────────────────── -->
     <div class="card">
+     <input type="text" id="titular-alterar" placeholder="Alterar Titular" style="width: 150px; padding: 10px;">
+<button id="btn-alterar" style="padding: 15px;">Alterar</button>
+<p><br/></p>
+
       <h2>Operações</h2>
+<input type="number" id="campo-valor" placeholder="Digite o valor (ex: 200.00)" min="0" step="0.01">
+      
+      
       <!--
         DOM — LENDO VALOR DE INPUT
         ───────────────────────────
@@ -47,7 +55,7 @@
           const valor = Number(document.querySelector('#campo-valor').value)
         Equivale ao parâmetro que antes passávamos direto: depositar(500)
       -->
-      <input type="number" id="campo-valor" placeholder="Digite o valor (ex: 200.00)" min="0" step="0.01">
+      
 
       <div class="botoes">
         <!--
@@ -87,10 +95,6 @@
         e adicioná-lo aqui com appendChild ou insertBefore.
         Equivale ao console.log do histórico.
       -->
-      <input type= "number" id="campo-valor" placeholder="Digite o valor" min="0" stop="0,01">
-      <input type = "text" id="titular-alterar" placeholder="alterar titular" min="0" stop="0,01">
-      <button id="btn-alterar-titular">Alterar</button>
-
       <ul id="lista-historico">
         <li class="historico-vazio">Nenhuma transação ainda.</li>
       </ul>
