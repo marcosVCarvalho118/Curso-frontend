@@ -17,6 +17,7 @@ const elTotalSaques = document.querySelector('#total-saques')
 const elTotalTransacoes = document.querySelector('#total-transacoes')
 const elListaHistorico = document.querySelector('#lista-historico')
 const inputTitular = document.querySelector('#titular-alterar')
+const elStatusConta = document.querySelector('#status-conta')
 
 btnDepositar.addEventListener('click', () => {
     const campValor = document.querySelector(`#campo-valor`)
@@ -90,8 +91,23 @@ function sacar(valor) {
 }
 
 function bloquearConta() {
-    contaAtiva = false
-    exibirMensagem("Conta bloqueada com sucesso!", `sucesso`)
+    contaAtiva = !contaAtiva; // Inverte o valor (true/false)
+
+    if (contaAtiva) {
+        // Se a conta voltou a ser ativa:
+        elStatusConta.textContent = "Ativa";
+        elStatusConta.classList.remove('status-bloqueada');
+        elStatusConta.classList.add('status-ativa');
+        btnBloquear.textContent = "Bloquear Conta";
+        exibirMensagem("Conta desbloqueada. Operações de saque e depósito estão ativas.", "sucesso");
+    } else {
+        // Se a conta foi bloqueada:
+        elStatusConta.textContent = "Bloqueada"; // ESTA LINHA MUDA O TEXTO
+        elStatusConta.classList.remove('status-ativa');
+        elStatusConta.classList.add('status-bloqueada');
+        btnBloquear.textContent = "Desbloquear Conta";
+        exibirMensagem("Conta bloqueada. Operações desativadas.", "erro");
+    }
 }
 
 function verResumo() {

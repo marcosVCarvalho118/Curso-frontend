@@ -1,26 +1,52 @@
+1. Conceitos:
+
 vetores = É a forma de organizar itens/informações em um grupo ordenado
-Chamar itens de uma lista em vetores a contagem é iniciada com o número zero e segue em ordem crescente(1,2,3,4)
-listaCompras.push() - O "push" é uma atualização da constante atribuida anteriormente.
-console.log(variavel) - Está chamando os vetores anteriormente atribuidos.
+
+Funções:Funções são blocos de código reutilizáveis que realizam uma tarefa específica. Elas ajudam a organizar o código e evitar repetições. Também impedem que um código seja executado acidentalmente, pois só roda quando você chama a função.
+
+2. Termos:
+
+"n" = numeros. "ndepositos" é o numero depositos feitos
+
+"qtd" = quantidades. "qtdtransacoes" é o número de transações.
+
+"?" = Chama o if no javascript ("if" : "else")
+
+&& - É a junção de duas variáveis para poder tirar o valor delas em conjunto.
+
+
+
+3. Elementos/itens/Botão:
+
+Obs: Chamar itens de uma lista em vetores a contagem é iniciada com o número zero e segue em ordem crescente(1,2,3,4)
+
 length(Comprimento) - Está contando os elementos do vetor e começará a contagem do 1 e seguirá na ordem crescente
+
 "pop" - ELe retira do vetor, o ultimo elemento dos seus itens.
-Variavel[0];[5] - = modifica ou acrescenta Elemento especifico aos elementos do vetor.
 
-for= é a repetição controlada (também chamada de laço ou loop).
-
-Em vez de você escrever a mesma linha de código várias vezes, você usa o for para dizer ao computador: "Execute este bloco de código X vezes" ou "Execute este código para cada item desta lista
-
-while = (que significa "enquanto") é uma das estruturas de controle fundamentais na programação. Sua função principal é repetir um bloco de código enquanto uma condição específica for verdadeira.
-
-Diferente do "for", que geralmente é usado quando sabemos exatamente quantas vezes queremos repetir algo, o while é ideal para situações onde não sabemos de antemão quantas repetições serão necessárias.
-
-n = numeros. "ndepositos" é o numero depositos feitos
-qtd = quantidades. "qtdtransacoes" é o número de transações.
-? = Chama o if no javascript ("if" : "else")
 addEventListener () = Adiciona uma ação ao botão (btn)
 () => - Indica Sem função definida
 
-Funções:Funções são blocos de código reutilizáveis que realizam uma tarefa específica. Elas ajudam a organizar o código e evitar repetições. Também impedem que um código seja executado acidentalmente, pois só roda quando você chama a função.
+4. For/While
+
+"for"= é a repetição controlada (também chamada de laço ou loop).
+
+Em vez de você escrever a mesma linha de código várias vezes, você usa o for para dizer ao computador: "Execute este bloco de código X vezes" ou "Execute este código para cada item desta lista
+
+"while" = (que significa "enquanto") é uma das estruturas de controle fundamentais na programação. Sua função principal é repetir um bloco de código enquanto uma condição específica for verdadeira.
+
+Diferente do "for", que geralmente é usado quando sabemos exatamente quantas vezes queremos repetir algo, o while é ideal para situações onde não sabemos de antemão quantas repetições serão necessárias.
+
+5. Lista/historico: 
+
+listaCompras.push() - O "push" é uma atualização da constante atribuida anteriormente.
+
+historico.push(...) é  uma atualização usada para adicionar uma nova entrada ao histórico de navegação do navegador sem recarregar a página
+
+
+
+
+6. Return/QuerySelector:
 
 return: tem dois papéis principais: entregar um resultado para quem chamou a função e encerrar a execução daquela função imediatamente.
 - Se você quisesse que o sistema informasse ao programador se a operação deu certo ou errado para usar essa informação em outra parte do código, o return retornaria um Booleano (true ou false):
@@ -31,14 +57,13 @@ Ex: function sacar(valor) {
 QuerySelector(): vai selecionar o primeiro elemento (info-situacão)  com a denominação adequada ('#nome') que ele encontrar no estilo de página em CSS.
 - el = Elemento; btn = Botão
 
-&& - É a junção de duas variáveis para poder tirar o valor delas em conjunto.
 
+
+7. Número/ Valor:
 
 Number(): Como você não consegue fazer cálculos matemáticos confiáveis com textos, a função global Number() serve para converter (fazer o cast) dessa string para um número real.
 
-campValor (O campo de entrada inteiro (um objeto complexo).value (O texto ou número que o usuário digitou no momento)
-
-historico.push(...) é armazenar um registro da transação dentro de uma lista (um array), permitindo que você mantenha um rastro de todas as operações realizadas pelo usuário.
+camp.value = Ela permite ler a entrada do usuário (var v = campo.value) ou alterar o conteúdo exibido (campo.value = "novo"), sendo fundamental para interatividade
 
 "saldo -= valor", ele executa os seguintes passos:
 
@@ -47,6 +72,12 @@ Pega o valor atual que está guardado na variável saldo.
 Subtrai o número contido na variável valor.
 
 Salva o novo resultado de volta dentro da variável saldo, substituindo o valor antigo.
+
+8. Variavel:
+
+console.log(variavel) - Está chamando os vetores anteriormente atribuidos.
+
+Variavel[0];[5] - = modifica ou acrescenta Elemento especifico aos elementos do vetor.
 
 "let i = 1": O que faz: Cria uma variável de controle (geralmente chamada de i de index ou iterator) e define o valor inicial.
 
