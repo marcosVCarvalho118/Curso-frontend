@@ -92,6 +92,7 @@ const btnReiniciar = document.querySelector('#btn-reiniciar')
 // ============================================================
 
 function criarTabuleiro() {
+  tabuleiro = [];
   for (let i = 0; i < 5; i++) {
     const linha = []
     for (let j = 0; j < 5; j++) {
@@ -170,29 +171,36 @@ function posicionarNavios() {
 //   console.log('Tentativas:', tentativas);
 // ============================================================
 
+
 function atirar(lin, col) {
-  const pos = tabuleiro[lin][col]
+  // Se o jogo acabou ou a posição já foi atingida, não faz nada
   if (!jogoAtivo) return;
-  if (pos === 2 || pos === 3){ 
-    elMensagem.textContent = "Você já atirou aí!";
- return;
-}
+  
+  const pos = tabuleiro[lin][col];
+  if (pos === 2 || pos === 3) return;
+
+  // 1. Incrementa a variável global
+  tentativas++;
+
+  // 2. ATUALIZA O HTML EM TEMPO REAL
+  // Usamos template string (crase) para facilitar a escrita
+  elTentativas.textContent = `Tentativas: ${tentativas}`;
+
+  // ... restante da sua lógica de acerto ou erro ...
   if (pos === 1) {
-    tabuleiro[lin][col] = 2
-    naviosRestantes--
-    tentativas++
-    console.log('Acertou!')
-  }
-  if (pos === 0) {
-    tabuleiro[lin][col] = 3
-    tentativas++
-    console.log('Água')
+    tabuleiro[lin][col] = 2;
+    naviosRestantes--;
+    elMensagem.textContent = "Acertou!";
+  } else {
+    tabuleiro[lin][col] = 3;
+    elMensagem.textContent = "Água!";
   }
 
+  // Verifica vitória
   if (naviosRestantes === 0) {
-  jogoAtivo = false; // Isso impede novos tiros
- elMensagem.textContent = "VITÓRIA! Todos os navios foram afundados!"
-}
+    jogoAtivo = false;
+    elMensagem.textContent = "🏆 VITÓRIA! Todos os navios afundados!";
+  }
 }
 
 
@@ -299,10 +307,6 @@ function renderizarTabuleiro() {
 
 
 
-
-
-
-
 // ============================================================
 // DESAFIO 6 — iniciarJogo()
 // ============================================================
@@ -323,36 +327,36 @@ function renderizarTabuleiro() {
 // ============================================================
 
 function iniciarJogo() {
-  naviosRestantes = 3;
-  tentativas = 0
-  jogoAtivo = true;
+  // Inicializa o estado lógico
   criarTabuleiro();
-  posicionarNavios()
-
-  elMensagem.textcontent = 'clique em uma celula para atirar'
-  elTentativas.textContent = 'Tentativas = 0'
-  renderizarTabuleiro()
-
+  posicionarNavios();
+  
+  // Reseta as variáveis
+  naviosRestantes = 3;
+  tentativas = 0;
+  jogoAtivo = true;
+  
+  // Constrói o visual
+  renderizarTabuleiro();
+  
+  elMensagem.textContent = "Boa sorte, capitão!";
+  elTentativas.textContent = "Tentativas: 0";
 }
 
 
 // ------------------------------------------------------------
 // EVENTOS
 // ------------------------------------------------------------
+ btnReiniciar.addEventListener('click', iniciarJogo);
+ 
 
-// btnReiniciar.addEventListener('click', function() {
-// Chame iniciarJogo() aqui 
-
-// });
-
+iniciarJogo()  
 
 // ------------------------------------------------------------
 // INICIO DO JOGO
 // ------------------------------------------------------------
 // Esta linha inicia o jogo quando a página carrega.
 // Nao altere.
-
-iniciarJogo();
 
 
 // ============================================================
