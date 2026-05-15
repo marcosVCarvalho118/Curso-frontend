@@ -1,0 +1,5 @@
+|| - ou em javascript
+
+"if" sem chaves [] é somente com uma instrução, quando houver mais de uma instrução é obrigatório ter chaves.
+dataset = É usado para atribuir valor exato a uma div / celula (posicionando exatamente em algum valor)
+
