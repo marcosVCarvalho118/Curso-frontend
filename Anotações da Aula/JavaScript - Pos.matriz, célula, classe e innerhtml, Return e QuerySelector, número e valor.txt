@@ -1,0 +1,45 @@
+
+1. Posicionar matriz :
+ Nome da variavel[linha] e [coluna]
+  "if (pos === 2 || pos === 3) return";  Se a posição clicada já for 2 (Acerto) ou 3 (Erro), o return bloqueia o clique para o jogador não pontuar duas vezes na mesma vaga.
+
+2. Celula
+  
+  dataset = É usado para atribuir valor exato a uma div / celula (posicionando exatamente em algum valor)
+
+ Obs:  As linhas e colunas do jogo batalha naval são "div" do javascript
+"celula" - representa um quadradinho ou um espaço individual dentro do seu tabuleiro na tela, onde pode alterar a sua cor, mostra um ícone e trava para nunca mais ser clicada.
+
+3. Classe
+classList.add adiciona uma classe CSS a um elemento HTML. Isso permite que você mude a cor de fundo, a borda ou o texto daquela célula instantaneamente usando estilos que você já criou no seu arquivo .css.
+
+4.innerHTML
+innerHTML, ele apaga o que estava lá antes e substitui pelo novo conteúdo
+
+
+5. Return/QuerySelector:
+
+return dentro de uma função, ele para tudo na hora e sai da função. Como não há nada depois do return, ele apenas encerra o código sem devolver nenhum valor.
+- Se você quisesse que o sistema informasse ao programador se a operação deu certo ou errado para usar essa informação em outra parte do código, o return retornaria um Booleano (true ou false):
+Ex: function sacar(valor) {
+  if (valor > saldo) {
+  return false; // Retorna "falso" indicando que a operação falhou.
+
+QuerySelector(): vai selecionar o primeiro elemento (info-situacão)  com a denominação adequada ('#nome') que ele encontrar no estilo de página em CSS.
+- el = Elemento; btn = Botão
+
+
+
+6. Número/ Valor:
+
+Number(): Como você não consegue fazer cálculos matemáticos confiáveis com textos, a função global Number() serve para converter (fazer o cast) dessa string para um número real.
+
+camp.value = Ela permite ler a entrada do usuário (var v = campo.value) ou alterar o conteúdo exibido (campo.value = "novo"), sendo fundamental para interatividade
+
+"saldo -= valor", ele executa os seguintes passos:
+
+Pega o valor atual que está guardado na variável saldo.
+
+Subtrai o número contido na variável valor.
+
+Salva o novo resultado de volta dentro da variável saldo, substituindo o valor antigo.

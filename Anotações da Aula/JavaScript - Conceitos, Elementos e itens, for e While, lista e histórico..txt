@@ -1,0 +1,37 @@
+1. Conceitos:
+
+vetores = É a forma de organizar itens/informações em um grupo ordenado
+
+Funções:Funções são blocos de código reutilizáveis que realizam uma tarefa específica. Elas ajudam a organizar o código e evitar repetições. Também impedem que um código seja executado acidentalmente, pois só roda quando você chama a função.
+
+Array é um objeto global usado para armazenar múltiplos valores em uma única variável. Arrays são objetos de alto nível, semelhantes a listas, que podem ser redimensionados e conter uma combinação de diferentes tipos de dados, incluindo números, strings e outros objetos
+
+2. Elementos/itens/Botão:
+
+Obs: Chamar itens de uma lista em vetores a contagem é iniciada com o número zero e segue em ordem crescente(1,2,3,4)
+
+length(Comprimento) - Está contando os elementos do vetor e começará a contagem do 1 e seguirá na ordem crescente
+
+"pop" - ELe retira do vetor, o ultimo elemento dos seus itens.
+
+addEventListener () = Adiciona uma ação ao botão (btn)
+() => - Indica Sem função definida
+
+3. For/While
+
+"for"= é a repetição controlada (também chamada de laço ou loop).
+
+Em vez de você escrever a mesma linha de código várias vezes, você usa o for para dizer ao computador: "Execute este bloco de código X vezes" ou "Execute este código para cada item desta lista
+
+"while" = (que significa "enquanto") é uma das estruturas de controle fundamentais na programação. Sua função principal é repetir um bloco de código enquanto uma condição específica for verdadeira.
+
+Diferente do "for", que geralmente é usado quando sabemos exatamente quantas vezes queremos repetir algo, o while é ideal para situações onde não sabemos de antemão quantas repetições serão necessárias.
+
+4. Lista/historico: 
+
+listaCompras.push() - O "push" é uma atualização da constante atribuida anteriormente.
+
+historico.push(...) é  uma atualização usada para adicionar uma nova entrada ao histórico de navegação do navegador sem recarregar a página
+
+
+

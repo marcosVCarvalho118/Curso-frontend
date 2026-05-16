@@ -2,41 +2,55 @@ Aula 10
 
 JavaScript
 
-Configuração Geral
+1. Configuração Geral
 
 &&(And): Ele ser para unir duas expressões no JavaScript.
 
+||: É o operador lógico OU (OR). Ele exige que apenas uma das condições seja verdadeira para validar o if.
+
 Function = é um bloco de código reutilizável projetado para executar uma tarefa específica. É um elemento fundamental que recebe entradas (parâmetros), executa uma lógica e, opcionalmente, retorna uma saída.
+"n" = numeros. "ndepositos" é o numero depositos feitos
+
+"qtd" = quantidades. "qtdtransacoes" é o número de transações.
+
+"?" = Chama o if no javascript ("if" : "else")
 
 Ler Java script no Virtual Studio Code: Toggle Painel - Run Code(Aplicativo)
 
+// ...... - Comentário em Java script
 
-Manipulação:
+2. Manipulação:
 
 - O Css é manipulado pelo html (solicita estilização), por isso vem antes da página html
 - Java script manipula os dados do html, por isso será inserido depois da página no body.
 
-1. Mensagem no console/Comentário::
-Console.log = Ele escreve uma mensagem no console do java script
-- Para resgatar uma variavel do let para o console JavaScript: Console.log (Texto: `${variável do let}`).
+3. Variavel:
+Console.log = Ele escreve uma mensagem no console do java 
 
-// ...... - Comentário em Java script
-
-
-Variável:
 Cost .... - É o valor/número que não sofrerá alteração no Java script
 
 let "variável" - Está declarando uma variável na java script. 
+
 - let permite que você declare variáveis (dentro do par de chaves ()) limitando seu escopo no bloco, instrução, ou em uma expressão na qual ela é usada. Isso é inverso da keyword "var", que define uma variável globalmente ou no escopo inteiro de uma função, independentemente do escopo de bloco.
+
 - Obs: A variável não pode ter espaço e a 2° palavra tem que ser iniciada por letra maiúscula.
 
 ${variável} é a forma de resgatar uma variável no let para o console JavaScript
 
-If ... Else:
+Variavel[0];[5] - = modifica ou acrescenta Elemento especifico aos elementos do vetor.
+
+"let i = 1": O que faz: Cria uma variável de controle (geralmente chamada de i de index ou iterator) e define o valor inicial.
+
+"i <= 5": é uma Condição de Continuidade, o loop continuará rodando enquanto i for menor ou igual a 5. Isso garante que o código dentro das chaves { } seja executado exatamente 5 vezes.
+
+"i++": Atualiza a variável de controle após o final de cada repetição. No seu caso: i++ é o mesmo que i = i + 1. Ou seja, a cada volta, o valor de i aumenta em 1.
+
+5. If ... Else:
 If é um valor de variável e o else é o valor contrario caso a variável do If seja falsa.
+"if" sem chaves [] é somente com uma instrução, quando houver mais de uma instrução é obrigatório ter chaves.
 
 
-Configuração de Texto:
+6. Configuração de Texto:
 
 "" somente para texto
 '' - Texto que contem variável de JavaScript. 
@@ -44,14 +58,12 @@ Configuração de Texto:
 "+" para texto concatena ou para números soma
 "\n": é usado no RegExp para corresponder a quebras de linha em textos
 
-Comparação:
+7. Comparação/Número:
 
 "==" é o igual(comparando) ignorando o tipo da informação (número, texto, etc.)
 "===" é o igual(comparando) exatamente
 "!" - é o valor contrario da sentença.
 "<=": O operador  é o operador de comparação "menor ou igual a". Ele retorna verdadeiro se o valor da esquerda for menor ou igual ao valor da direita; caso contrário, retorna falso.
-
-Conta/Números em JavaScript:
 
 "-=" em JavaScript é o operador de atribuição de subtração. Ele subtrai o valor da direita da variável à esquerda e atualiza a variável com o resultado
 
