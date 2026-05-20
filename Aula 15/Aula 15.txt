@@ -1,0 +1,13 @@
+Terminal  - New Terminal - Command Prompt -  cd "nome do arquivo"
+npm create vite@latest . -- --(nome da pasta)template react - Formula para criar o react
+
+* CTRL+ C - Finaliza a operação
+
+npm run dev - Recarrega a página react novamente.
+
+npm install -para instalar o node module para o virtual studio code de casa.
+o Nobe_modules é a configuração do react
+os componentes da função iniciam com letra maiuscula.
+className (= class no html) : serve para nomear a classe no react.
+export default App - Disponibilizar a exportação do trabalho para o "app"
+<> </> Tag anonima, é obrigatoria o uso para relacionar varios elementos dentro da função.
