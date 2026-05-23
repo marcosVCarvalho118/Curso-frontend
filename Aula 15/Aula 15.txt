@@ -1,17 +1,58 @@
-Passo a Passo para abrir um react: Terminal  - New Terminal - Command Prompt -  cd "nome do arquivo" - cd "nome da pasta" - npm install(Quando o node modules não está instalado) - npm run dev.
-npm create vite@latest . -- --(nome da pasta)template react - Formula para criar o react
 
-* CTRL+ C - Finaliza a operação
+1. React:
+
+React é uma biblioteca de JavaScript usada para criar telas de sites e aplicativos.
+
+Em vez de escrever códigos gigantes para cada página, o React funciona como um jogo de Lego: você divide a tela em blocos menores e reutilizáveis chamados Componentes (como um botão, uma barra de navegação ou um cartão de perfil).
+
+O resumo do seu sucesso se deve a duas coisas:
+
+Reutilização: Você cria um componente uma vez e o usa em vários lugares, mudando apenas os dados (como fez com a lista de funcionários).
+
+Velocidade: Quando algo muda na tela (um clique, um novo texto), o React atualiza apenas aquele pedacinho específico, sem precisar recarregar a página inteira.
+
+2. Passo a Passo para abrir um react: 
+
+Terminal  - New Terminal - Command Prompt -  cd "nome do arquivo" - cd "nome da pasta" - npm install(Quando o node modules não está iaanstalado) - npm run dev.
+
+npm create vite@latest . -- --(nome da pasta)template react - Formula para criar o react
 
 npm run dev - Recarrega a página react novamente.
 
 npm install -para instalar o node module para o virtual studio code de casa.
+
 o Nobe_modules é a configuração do react
+
+* CTRL+ C - Finaliza a operação
+
+
+3. Configurações gerais
+
 os componentes da função iniciam com letra maiuscula.
 className (= class no html) : serve para nomear a classe no react.
-export default App - Disponibilizar a exportação do trabalho para o "app"
+
+export default "..." - Disponibilizar a exportação do trabalho para o "app"
 <> </> Tag anonima, é obrigatoria o uso para relacionar varios elementos dentro da função.
 
+3. Return e App:
+
+Quando o React chama a função App(), ele está perguntando: "O que eu devo desenhar na tela para o usuário?"
+
+O return do App junta tudo isso (Header, título e a lista de cartões) e entrega a página inteira para o navegador renderizar.
+
+4. Map e return:
+O .map() passa de funcionário(objeto) em funcionário(objeto) na sua lista. A cada passada, o return cria um componente <CartaoPerfil/> preenchido com os dados daquele funcionário específico e o joga dentro da div "grade.
+
+O return do .map() cria e entrega cada cartão individual da equipe.
+
+6. Tags principais:
+
+Arrow Function: quando usamos uma "Arrow Function" (essa função com a setinha =>) e colocamos parênteses () logo em seguida em vez de chaves {}, o return acontece de forma automática (implícita).
+
 props -É a identificação do objeto, que pode ser substituido pela denominação dos itens
-Key - é apenas uma configuração do map, paa diferenciar dos outros elementos.
-map = 
+
+Key - é apenas uma configuração do map, para diferenciar dos outros elementos.
+
+map() - é uma ferramenta do JavaScript usada para transformar uma lista de coisas em outra lista.
+
+Ex: Fazer uma lista de dados brutos com diversos itens e o O .map() pega cada item, um por um, e faz alguma transformação nele. Ele te devolve uma nova lista prontinha do mesmo tamanho.
