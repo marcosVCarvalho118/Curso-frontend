@@ -1,0 +1,30 @@
+set contador =  O "set" atualiza a variavel com nome de "contador" declarada anteriormente na constante.
+() - Função anonima, em que é somente ativada quando eu clico no botão
+e = elemento; e.target.value - Trocar o valor do elemento
+preventDefault - Previna o comportamento padrão do submit, atualizar a página, quando clica no submit.
+a função handleSubmit é a clássica responsável por interceptar e gerenciar esse processo(formulário).
+ 
+Estrutura de uma function em react:
+
+import {useState} from "react"
+
+function .....(){
+
+
+return(
+<div>
+
+
+
+
+</div>
+
+
+
+)
+
+
+}
+
+export default ......
+
