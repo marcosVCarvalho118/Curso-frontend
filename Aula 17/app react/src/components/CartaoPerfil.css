@@ -2,15 +2,19 @@
     background: white;
     border-radius: 12px;
     padding: 32px;
-    max-width: 320px;
+    width: fit-content;
+    max-width: 280px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     font-family: sans-serif;
   }
   
   .cartao-foto {
-    border-radius: 50%;
-    margin-bottom: 16px;
+   width: 120px;       /* Define o tamanho da foto */
+  height: 120px;      /* Mantém a proporção 1:1 */
+  object-fit: cover;  /* Garante que o rosto não fique esticado */
+  border-radius: 50%;
+  margin-bottom: 16px;
   }
   
   .cartao-nome {
@@ -25,9 +29,48 @@
     margin: 0 0 12px;
   }
   
-  .cartao-bio {
+   .cartao-bio {
     color: #2d3436;
     font-size: 0.875rem;
     line-height: 1.6;
   }
+
+
+  .cartao img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cartao li {
+    list-style: none;
+  }
+
+  .cartao-habilidades {
+     background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  }
   
+   .cartao-habilidades ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+   .cartao-habilidades li {
+    margin-bottom: 6px;
+  }
+  .tag {
+    background: #636e72;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+  }
+  .cartao-habilidades .tag {
+    background: #0984e3;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }

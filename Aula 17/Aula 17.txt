@@ -3,7 +3,9 @@ set contador =  O "set" atualiza a variavel com nome de "contador" declarada ant
 e = elemento; e.target.value - Trocar o valor do elemento
 preventDefault - Previna o comportamento padrão do submit, atualizar a página, quando clica no submit.
 a função handleSubmit é a clássica responsável por interceptar e gerenciar esse processo(formulário).
- 
+ Com <input type="text">: O usuário poderia digitar qualquer coisa (ex: "Quero um site de receitas", "Urgente", ou até um texto aleatório).
+
+<select> controlado para que o usuário escolha entre as três opções pré-definidas por <option>.  (Landing Page, Site Institucional e E-commerce) e incluir essa escolha na tela de sucesso.
 Estrutura de uma function em react:
 
 import {useState} from "react"

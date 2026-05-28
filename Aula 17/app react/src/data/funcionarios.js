@@ -1,17 +1,17 @@
 const funcionarios = [
     {
-      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1UV35BLbf9yg6VdM8kzkk8mghz_wNfeyyKg&s',
-      nome: 'Diego Cezar',
-      cargo: 'Instrutor Senac RJ',
-      bio: 'Laura é uma criança',
-      habilidade:['JavaScript', 'css']
+      img:'https://randomuser.me/api/portraits/men/67.jpg',
+      nome: 'Carlos Oliveira',
+      cargo: 'Desenvolvedor de Jogos',
+      bio: 'Desenvolvedor de Jogos apaixonado por transformar ideias criativas em experiências interativas e mecânicas envolventes.',
+      habilidade:['Game Design & Mecânicas', 'Programação e Motores Gráficos (Unity, Unreal Engine)', 'Desenvolvimento de Jogos 2D e 3D.']
     },
     {
-      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1UV35BLbf9yg6VdM8kzkk8mghz_wNfeyyKg&s',
+      img:'https://randomuser.me/api/portraits/women/51.jpg',
       nome: 'Maria Silva',
       cargo: 'Desenvolverdora Front-end',
-      bio: 'Maria está zangada',
-     habilidade:['JavaScript', 'css']
+      bio: 'Apaixonada por transformar ideias complexas em interfaces digitais intuitivas, elegantes e de alta performance',
+     habilidade:['Core: HTML5 semântico', 'CSS3 estruturado (Sass/Less)', 'JavaScript moderno (ES6+).']
     },
   ]
 
