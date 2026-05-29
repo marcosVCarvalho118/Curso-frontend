@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header.jsx'
 import funcionarios from './data/funcionarios.js'
 import FormContato  from './components/FormContato.jsx'
+import SecaoEquipe from './components/secaoEquipe.jsx'
 // import Contador from './components/ExemploUseState.jsx'
 /* const habilidades = ['JavaScript', 'JavaScript', 'JavaScript',]
 const nome = "Diego Cezar"
@@ -16,18 +17,7 @@ function App() {
     <div className="app">
       <Header />
       <h1>Nossa Equipe</h1>
-      <div className="grade">
-        {funcionarios.map(funcionarios =>(
-          <CartaoPerfil
-          key={funcionarios.nome}
-          imagem = {funcionarios.img}
-          nome ={funcionarios.nome}
-          cargo = {funcionarios.cargo}
-          bio = {funcionarios.bio}
-          habilidades ={funcionarios.habilidade}
-          />
-        ))}
-  </div>  
+  <SecaoEquipe/>
 <h1> Formulário de Contato</h1>
 <FormContato/>
   </div>  
