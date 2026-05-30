@@ -33,14 +33,15 @@ className (= class no html) : serve para nomear a classe no react.
 
 export default "..." - Disponibilizar a exportação do trabalho para o "app"
 <> </> Tag anonima, é obrigatoria o uso para relacionar varios elementos dentro da função.
+() - Função anonima, em que é somente ativada quando eu clico no botão
 
-3. Return e App:
+4. Return e App:
 
 Quando o React chama a função App(), ele está perguntando: "O que eu devo desenhar na tela para o usuário?"
 
 O return do App junta tudo isso (Header, título e a lista de cartões) e entrega a página inteira para o navegador renderizar.
 
-4. Map e return:
+5. Map e return:
 O .map() passa de funcionário(objeto) em funcionário(objeto) na sua lista. A cada passada, o return cria um componente <CartaoPerfil/> preenchido com os dados daquele funcionário específico e o joga dentro da div "grade.
 
 O return do .map() cria e entrega cada cartão individual da equipe.
@@ -56,3 +57,9 @@ Key - é apenas uma configuração do map, para diferenciar dos outros elementos
 map() - é uma ferramenta do JavaScript usada para transformar uma lista de coisas em outra lista.
 
 Ex: Fazer uma lista de dados brutos com diversos itens e o O .map() pega cada item, um por um, e faz alguma transformação nele. Ele te devolve uma nova lista prontinha do mesmo tamanho.
+
+e = elemento; e.target.value - Trocar o valor do elemento
+set contador =  O "set" atualiza a variavel com nome de "contador" declarada anteriormente na constante.
+ 
+ Com <input type="text">: O usuário poderia digitar qualquer coisa (ex: "Quero um site de receitas", "Urgente", ou até um texto aleatório).
+

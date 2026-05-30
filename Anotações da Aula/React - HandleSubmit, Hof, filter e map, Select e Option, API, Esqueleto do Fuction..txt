@@ -1,12 +1,10 @@
-set contador =  O "set" atualiza a variavel com nome de "contador" declarada anteriormente na constante.
-() - Função anonima, em que é somente ativada quando eu clico no botão
-e = elemento; e.target.value - Trocar o valor do elemento
-preventDefault - Previna o comportamento padrão do submit, atualizar a página, quando clica no submit.
-a função handleSubmit é a clássica responsável por interceptar e gerenciar esse processo(formulário).
- Com <input type="text">: O usuário poderia digitar qualquer coisa (ex: "Quero um site de receitas", "Urgente", ou até um texto aleatório).
 
-<select> controlado para que o usuário escolha entre as três opções pré-definidas por <option>.  (Landing Page, Site Institucional e E-commerce) e incluir essa escolha na tela de sucesso.
-Estrutura de uma function em react:
+1. handleSubmit: 
+a função handleSubmit é a clássica responsável por interceptar o corportamento padrão do navegador de atualizar a página ao selecionar o submit e e nos dar o controle do que fazer com esses dados, gerenciando esse processo(formulário).
+
+preventDefault - Previna o comportamento padrão do submit, atualizar a página, quando clica no submit.
+
+2. HoF/Filter e map:
 uma HoF é uma função que recebe outra função como argumento ou que retorna uma função.
 
 Você, inclusive, acabou de usar HoFs nos códigos anteriores que me mandou! O JavaScript usa esse conceito o tempo todo, especialmente quando lidamos com arrays.
@@ -18,13 +16,18 @@ No seu componente React, você utilizou duas das HoFs mais famosas do JavaScript
 
 .map() é uma HoF: Ela também recebe uma função como argumento para transformar cada item do array em algo novo (no seu caso, transformou os dados brutos da API em objetos formatados e depois em elementos JSX).
 
+3. Select/Option:
+<select> controlado para que o usuário escolha entre as três opções pré-definidas por <option>.  (Landing Page, Site Institucional e E-commerce) e incluir essa escolha na tela de sucesso.
+
+4. API
+
 API - Conexão de um local com algumbanco de dados
 
 Fetch - Ele é uma tag que busca informação de algum lugar(banco de dados)
 
-import {useState} from "react"
 
-Esqueleto do function em react: 
+
+5. Esqueleto do function em react: 
 function .....(){
 
 
@@ -45,6 +48,5 @@ return(
 
 export default ......
 
+
 - Fazer o Pokedex (Pokemon)
-- Observar o Tailwindcss
-- Observar Redux

@@ -17,4 +17,90 @@
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
+/* Estilização do Formulário em Linha */
+form {
+  display: flex;
+  flex-direction: row;   /* Alinha os blocos um ao lado do outro */
+  flex-wrap: wrap;       /* Se a tela for pequena, os elementos quebram linha */
+  align-items: flex-end; /* Garante que as bases de todos os campos e botões fiquem alinhadas */
+  gap: 16px;             /* Espaço leve entre os blocos na horizontal e vertical */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Cada bloco (Label + Campo) */
+form label {
+  display: flex;
+  flex-direction: column; /* O texto do título ("Nome:") continua acima do seu próprio input */
+  gap: 6px;               
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  flex: 1;                /* Faz os campos crescerem igualmente para ocupar o espaço disponível */
+  min-width: 180px;       /* Impede que o campo fique espremido demais antes de quebrar linha */
+}
+/* Mantém os campos com um visual clean */
+form input,
+form textarea,
+form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;            /* Garante que o input ocupe todo o espaço do seu bloco <label> */
+  box-sizing: border-box;
+}
+
+/* O contêiner de botões também se alinha na mesma linha do formulário */
+.botoes-container {
+  display: flex;
+  gap: 12px;
+  /* Como o form usa 'align-items: flex-end', os botões já vão subir para a altura certa */
+}
+
+form button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  height: 38px;           /* Altura fixa combinando perfeitamente com os inputs + paddings */
+  white-space: nowrap;    /* Impede o texto do botão de quebrar em duas linhas */
+}
+
+/* Estilo do botão Enviar */
+form button[type="submit"] {
+  background-color: #0070f3;
+  color: white;
+}
+
+/* Estilo do botão Limpar */
+form button[type="button"] {
+  background-color: #e4e6eb;
+  color: #333;
+}
+.campo-busca {
+  display: block;      /* Garante que o input se comporte como bloco */
+  width: 30%;         /* Faz a barra ocupar toda a largura disponível */
+  max-width: 500px;    /* Limita o crescimento para não ficar gigante em telas grandes */
+  margin: 0 auto 30px auto; /* Centraliza a barra e mantém o espaço para os cartões abaixo */
+  
+  /* Aumentando o tamanho interno e o texto */
+  padding: 12px 16px;  /* Espaçamento interno (vertical e horizontal) */
+  font-size: 16px;
+
+border: 1px solid #ccc;
+  border-radius: 8px;  /* Bordas arredondadas */
+  outline: none;       /* Remove aquela borda padrão azul feia ao clicar */
+  transition: border-color 0.2s; /* Efeito suave ao focar */
+
+}
+/* Efeito visual quando o usuário clica para digitar */
+.campo-busca:focus {
+  border-color: #0070f3; /* Muda a cor da borda para destacar */
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2); /* Cria uma aura sutil azul */
+}
+

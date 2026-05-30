@@ -43,8 +43,8 @@ function SecaoEquipe() {
                 type="text"
                 placeholder="Buscar funcionário"
                 value={busca}
-                onChange={(e) => setBusca(e.target.value)} // Corrigido os parênteses e os pontos
-                className="campo-busca" // Corrigido o nome do atributo 'className'
+                onChange={(e) => setBusca(e.target.value)}
+                className="campo-busca" 
             />
             <div className="grade">
                 {equipeFormatada.map(funcionarios => (

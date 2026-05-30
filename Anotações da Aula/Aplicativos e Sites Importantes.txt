@@ -15,3 +15,5 @@ Chatgpt, Gemini (IA)
 Cursos e Editor para observar:
 Editor de imagem (Photoshop): Affinity
 Curso: Freecode camp
+Tailwindcss - O Tailwind CSS é um framework popular, focado em utilitários, que permite aos desenvolvedores criar sites modernos diretamente em HTML
+Redux - Redux é uma biblioteca JavaScript de código aberto usada para gerenciar o estado global de aplicações
