@@ -1,111 +1,188 @@
+
+/* ==========================================================================
+   1. TOKENS DE DESIGN (VARIÁVEIS GLOBAIS) E ESTILOS DA RAIZ
+   Aqui definimos a identidade visual do site. Centralizar essas variáveis 
+   facilita a manutenção e garante consistência visual (UI).
+   ========================================================================== */
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  /* Paleta de Cores (Tema Claro) */
+  --text: #6b6375;             /* Cinza arroxeado para o texto principal, mais suave que o preto puro */
+  --text-h: #08060d;           /* Roxo quase preto para títulos, garantindo alto contraste e leitura hierárquica */
+  --bg: #fff;                  /* Fundo limpo e branco para o modo claro */
+  --border: #e5e4e7;           /* Cor das bordas e divisórias sutis para organizar o layout */
+  --code-bg: #f4f3ec;          /* Fundo levemente areia/quente para destacar blocos de código */
+  --accent: #aa3bff;           /* Cor de destaque (Roxo vibrante) para links, botões e elementos de ação */
+  
+/* ==========================================================================
+     VARIÁVEIS DE SUPORTE E INTERAÇÃO (UI/UX)
+     Estas variáveis utilizam RGBA para aplicar transparência (canal Alpha).
+     Isso faz com que a cor se misture suavemente com qualquer fundo.
+     ========================================================================== */
+
   --accent-bg: rgba(170, 59, 255, 0.1);
+  /* // Perfeito para fundos de badges, alertas ou o estado 'hover' (passar o mouse) de um botão.
+     // Ele pega o roxo principal (#aa3bff) e o deixa com apenas 10% de opacidade. 
+     // O resultado é um tom lilás extremamente suave que indica relação com a cor de destaque,
+     // sem competir visualmente com o texto principal. // */
+
   --accent-border: rgba(170, 59, 255, 0.5);
+  /* // Ideal para bordas de elementos ativos, como um campo de input selecionado (foco).
+     // Usa o mesmo roxo principal, mas com 50% de opacidade.
+     // No web design, fazer a borda levemente translúcida impede que o layout pareça "pesado" 
+     // ou recortado demais, criando uma transição mais orgânica para o olho humano. // */
+
   --social-bg: rgba(244, 243, 236, 0.5);
+  /* // Usado especificamente para a área ou botões de redes sociais.
+     // Ele pega a cor de fundo do código (--code-bg, que é um tom areia/quente) e aplica 50% de opacidade.
+     // Designer tip: Usar opacidade em blocos de redes sociais serve para integrá-los suavemente ao layout.
+     // Como os ícones sociais já chamam muita atenção por si só, o fundo semi-transparente garante 
+     // que eles fiquem discretos e elegantes na página até que o usuário passe o mouse sobre eles. // */
+  
+  /* Sombra com camadas: cria profundidade e efeito de elevação realista (Neumorfismo/Material Design) */
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, 
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Tipografia: Fontes nativas do sistema para otimizar a velocidade de carregamento (sem dependência de fontes externas) */
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;    /* Stack para leitura corrida */
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif; /* Stack para títulos impactantes */
+  --mono: ui-monospace, Consolas, monospace;            /* Stack monoespaçada para códigos */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Configurações Base de Tipografia e Renderização */
+  font: 18px/145% var(--sans);          /* Define tamanho base de 18px e altura de linha de 145% para excelente legibilidade */
+  letter-spacing: 0.18px;               /* Ajuste sutil no espaçamento entre as letras do corpo do texto */
+  color-scheme: light dark;             /* Informa ao navegador que o site suporta nativamente modos claro e escuro */
+  color: var(--text);                   /* Aplica a cor de texto padrão no documento */
+  background: var(--bg);                 /* Aplica o fundo padrão no documento */
+  font-synthesis: none;                 /* Evita que o navegador force estilos negrito/itálico artificiais */
+  text-rendering: optimizeLegibility;   /* Ativa recursos avançados do motor de renderização para melhorar o desenho das letras */
+  -webkit-font-smoothing: antialiased;  /* Suavização de fontes em navegadores baseados em WebKit (Safari/Chrome no Mac) */
+  -moz-osx-font-smoothing: grayscale;   /* Suavização de fontes para o Firefox no macOS */
 
+  /* Responsividade Direta na Raiz */
   @media (max-width: 1024px) {
-    font-size: 16px;
+    /* // @media: Uma "condição" que o navegador lê. 
+       // Significa "Você pode ter 1024px de largura, DESDE QUE isso não seja  maior que a tela do usuário"..
+       // Na prática, esta regra entra em ação em tablets deitados, iPads, tablets em pé e telemóveis. // *
+    font-size: 16px;                    /* Em telas menores (tablets/mobile), reduz o tamanho base para o texto não ficar gigante */
   }
 }
+
+/* ==========================================================================
+   2. TEMA ESCURO AUTOMÁTICO (DARK MODE)
+   Ativado dinamicamente se o usuário preferir o modo escuro nas configurações do sistema.
+   ========================================================================== */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
+    /* Inversão sutil da paleta para garantir conforto visual no escuro, evitando fadiga ocular */
+    --text: #9ca3af;            /* Cinza claro para o texto corrido */
+    --text-h: #f3f4f6;          /* Branco texturizado para os títulos saltarem aos olhos */
+    --bg: #16171d;              /* Fundo escuro profundo, mas não preto puro (melhor UX) */
+    --border: #2e303a;          /* Bordas adaptadas para o cenário escuro */
+    --code-bg: #1f2028;         /* Fundo do código ligeiramente mais claro que o fundo geral */
+    --accent: #c084fc;          /* Roxo pastel suavizado (tons muito vibrantes ofuscam no escuro) */
+   --accent-bg: rgba(192, 132, 252, 0.15);
+    /* // Fundo de destaque para o modo escuro. 
+       // Utiliza o roxo pastel específico do dark mode (--accent: #c084fc) com apenas 15% de opacidade.
+       // Designer tip: No escuro, aumentamos ligeiramente a opacidade de 10% para 15% para que o 
+       // contraste fique perfeito e o fundo lilás sutil continue visível sobre a base escura do site. // */
+
     --accent-border: rgba(192, 132, 252, 0.5);
+    /* // Borda de destaque/foco para o modo escuro.
+       // Mantém os 50% de opacidade, mas agora usando o roxo pastel do tema escuro.
+       // Garante que, ao selecionar um campo ou passar o mouse em um botão, a borda brilhe de forma 
+       // elegante e suave, sem criar um contraste agressivo que machuque os olhos no escuro. // */
+
     --social-bg: rgba(47, 48, 58, 0.5);
+    /* // Fundo dos blocos de redes sociais para o modo escuro.
+       // Em vez de usar o tom quente do tema claro, aqui ele adota a cor cinza-azulada (--code-bg escuro) 
+       // com 50% de transparência.
+       // Isso faz com que os blocos sociais fiquem "camuflados" de forma sofisticada no fundo escuro, 
+       // ganhando o destaque correto apenas quando o usuário interagir com eles. // */
+    
+    /* Sombra mais densa e escura para ser perceptível sobre o fundo escuro do layout */
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, 
+      rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
+  /* Truque de Designer: Ajuste de ícones pretos em fundos escuros */
   #social .button-icon {
-    filter: invert(1) brightness(2);
+    filter: invert(1) brightness(2);    /* Inverte a cor de ícones pretos para branco e aumenta o brilho sem precisar trocar o arquivo de imagem */
   }
 }
 
+/* ==========================================================================
+   3. ESTRUTURA E ARQUITETURA DE LAYOUT (CORPO E CONTAINER)
+   ========================================================================== */
+
 body {
-  margin: 0;
+  margin: 0;                            /* Remove as margens padrão do navegador para o layout encostar nas bordas perfeitamente */
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  width: 1126px;                        /* Largura ideal de grid de design desktop para manter o conteúdo elegante */
+  max-width: 100%;                      /* Garante que o container encolha e não quebre a tela em dispositivos mobile */
+  margin: 0 auto;                       /* Centraliza o bloco inteiro horizontalmente na tela */
+  text-align: center;                   /* Centraliza por padrão os textos e elementos internos */
+  border-inline: 1px solid var(--border); /* Cria duas linhas verticais sutis nas laterais (esquerda e direita) delimitando o site */
+  min-height: 100svh;                   /* Ocupa no mínimo 100% da altura da tela, adaptando-se às barras dinâmicas do celular (Small Viewport Height) */
+  display: flex;                        /* Ativa o modelo Flexbox para organizar o conteúdo interno */
+  flex-direction: column;               /* Alinha os filhos do container em uma coluna vertical (útil para empurrar o rodapé para baixo) */
+  box-sizing: border-box;               /* Garante que bordas e paddings não aumentem o tamanho total calculado de 1126px */
 }
+
+/* ==========================================================================
+   4. TIPOGRAFIA COMPONENTIZADA (HIERARQUIA VISUAL)
+   ========================================================================== */
 
 h1,
 h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+  font-family: var(--heading);          /* Aplica a fonte de títulos definida nos tokens */
+  font-weight: 500;                     /* Peso médio, elegante e moderno, longe daquele negrito padrão pesado */
+  color: var(--text-h);                 /* Aplica a cor de alta prioridade para os títulos */
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: 56px;                      /* Título principal monumental para capturar a atenção imediata (Hero Text) */
+  letter-spacing: -1.68px;              /* Letras mais juntas para dar um aspecto estético editorial/premium */
+  margin: 32px 0;                       /* Margem simétrica em cima e embaixo para dar respiro ao título */
+  
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 36px;                    /* Em telas menores, reduz drasticamente o H1 para não quebrar linhas de forma errática */
+    margin: 20px 0;                     /* Reduz o espaçamento vertical para telas compactas */
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
 }
 
+h2 {
+  font-size: 24px;                      /* Subtítulo ou títulos de seção intermediários */
+  line-height: 118%;                    /* Altura de linha mais justa devido ao tamanho maior da fonte */
+  letter-spacing: -0.24px;              /* Leve aproximação das letras para manter a harmonia visual */
+  margin: 0 0 8px;                      /* Margem zerada acima e apenas 8px abaixo para colar visualmente ao parágrafo seguinte */
+  
+  @media (max-width: 1024px) {
+    font-size: 20px;                    /* Redução suave para telas menores */
+  }
+}
+
+p {
+  margin: 0;                            /* Zera a margem padrão para controle manual total do espaçamento via CSS */
+}
+
+/* Elementos Inline Especiais */
 code,
 .counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+  font-family: var(--mono);             /* Aplica a fonte monoespaçada para diferenciar dados e códigos do texto comum */
+  display: inline-flex;                 /* Comporta-se como texto, mas permite estilizações de bloco internas (como padding e alinhamento) */
+  border-radius: 4px;                   /* Cantos levemente arredondados para uma estética suave */
+  color: var(--text-h);                 /* Cor de destaque para facilitar a leitura rápida */
 }
 
 code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  font-size: 15px;                      /* Um pouco menor que o texto base (18px) para compensar a escala visual da fonte mono */
+  line-height: 135%;                    /* Altura de linha confortável para pequenas linhas de código */
+  padding: 4px 8px;                     /* Espaçamento interno fazendo o elemento parecer uma etiqueta/badge */
+  background: var(--code-bg);           /* Cor de fundo sutil para destacar o código do resto do parágrafo */
 }
