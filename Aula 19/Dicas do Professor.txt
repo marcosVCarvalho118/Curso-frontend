@@ -1,0 +1,25 @@
+Readme (Batalha Naval, react(home dos funcionários) e Site do Banco)
+
+Nome do Projeto
+Breve descrição do projeto. O que ele faz
+
+## Tecnologias
+
+- React?
+-Angular?
+-Query
+- JS/HTML/CSS
+
+## Como Rodar
+
+Explique como utilizar o projeto(instalar, rodar, etc).
+
+## Funcionalidades
+- Lista de Serviços com componentes react
+-Formulários de contato com validação
+- Consumo de API com useEffect
+
+
+Estuda
+React com reduct
+Relume(Site)
