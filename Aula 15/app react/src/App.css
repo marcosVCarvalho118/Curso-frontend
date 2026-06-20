@@ -1,20 +1,34 @@
-/* App.css */
+/* =========================
+   ESTILO GERAL DO APP
+========================= */
+
+/* Container principal da aplicação */
 .app {
-  min-height: 100vh;
-  background: #f0f4ff;
-  padding: 40px 20px;
-  font-family: sans-serif;
+  min-height: 100vh; /* ocupa 100% da altura da tela */
+  background: #f0f4ff; /* cor de fundo azul bem clara */
+  padding: 40px 20px; /* espaçamento interno (top/bottom 40px, laterais 20px) */
+  font-family: sans-serif; /* fonte padrão simples */
 }
 
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+
+/* Estilo do h1 dentro da classe .app */
 .app h1 {
-  text-align: center;
-  color: #004a99;
-  margin-bottom: 32px;
+  text-align: center; /* centraliza o texto */
+  color: #004a99; /* azul mais escuro para destaque */
+  margin-bottom: 32px; /* espaço abaixo do título */
 }
 
+/* =========================
+   GRADE (LAYOUT DOS CARDS)
+========================= */
+
+/* Container da grade de elementos */
 .grade {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
+  display: flex; /* ativa flexbox */
+  justify-content: center; /* centraliza os itens horizontalmente */
+  gap: 24px; /* espaço entre os itens */
+  flex-wrap: wrap; /* permite quebrar linha quando não couber */
 }

@@ -1,23 +1,31 @@
-/* App.css */
+/* =========================
+   ESTILO GERAL DO APP
+========================= */
+
 .app {
-  min-height: 100vh;
-  background: #f0f4ff;
-  padding: 40px 20px;
-  font-family: sans-serif;
+  min-height: 100vh; /* ocupa toda altura da tela */
+  background: #f0f4ff; /* fundo azul claro */
+  padding: 40px 20px; /* espaçamento interno (topo/baixo 40px, lados 20px) */
+  font-family: sans-serif; /* fonte padrão */
 }
 
+/* Título principal da aplicação */
 .app h1 {
-  text-align: center;
-  color: #004a99;
-  margin-bottom: 32px;
+  text-align: center; /* centraliza o texto */
+  color: #004a99; /* azul escuro */
+  margin-bottom: 32px; /* espaço abaixo do título */
 }
+
+/* =========================
+   GRADE DE ELEMENTOS
+========================= */
 
 .grade {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  display: flex; /* ativa flexbox */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 24px; /* espaço entre os itens */
+  flex-wrap: wrap; /* quebra linha quando não cabe */
+  margin-top: 20px; /* espaço acima da grade */
 }
 /* Estilização do Formulário em Linha */
 form {
@@ -26,62 +34,79 @@ form {
   flex-wrap: wrap;       /* Se a tela for pequena, os elementos quebram linha */
   align-items: flex-end; /* Garante que as bases de todos os campos e botões fiquem alinhadas */
   gap: 16px;             /* Espaço leve entre os blocos na horizontal e vertical */
-  width: 100%;
-  padding: 20px;
+  width: 100%;           /* ocupa toda largura disponível */
+  padding: 20px;         /* espaçamento interno */
 }
 
-/* Cada bloco (Label + Campo) */
+/* =========================
+   CAMPOS DO FORMULÁRIO
+========================= */
+
+/* Cada bloco label + input */
+
 form label {
-  display: flex;
+  display: flex; /* ativa flexbox no label */
   flex-direction: column; /* O texto do título ("Nome:") continua acima do seu próprio input */
-  gap: 6px;               
-  font-weight: 500;
-  font-size: 14px;
-  color: #333;
+   gap: 6px; /* espaço entre texto e input */
+  font-weight: 500; /* semi-negrito */
+  font-size: 14px; /* tamanho pequeno */
+  color: #333; /* cinza escuro */
   flex: 1;                /* Faz os campos crescerem igualmente para ocupar o espaço disponível */
   min-width: 180px;       /* Impede que o campo fique espremido demais antes de quebrar linha */
 }
-/* Mantém os campos com um visual clean */
+/* Inputs, textarea e select */
 form input,
 form textarea,
 form select {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-  outline: none;
-  width: 100%;            /* Garante que o input ocupe todo o espaço do seu bloco <label> */
-  box-sizing: border-box;
+  padding: 10px 12px; /* espaço interno */
+  border: 1px solid #ccc; /* borda cinza clara */
+  border-radius: 6px; /* bordas arredondadas */
+  font-size: 15px; /* tamanho do texto */
+  outline: none; /* remove contorno padrão ao clicar */
+
+  width: 100%; /* ocupa todo espaço do label */
+  box-sizing: border-box; /* inclui padding no cálculo do tamanho */
 }
 
-/* O contêiner de botões também se alinha na mesma linha do formulário */
+/* =========================
+   BOTÕES
+========================= */
+
+/* Container dos botões */
+
 .botoes-container {
-  display: flex;
-  gap: 12px;
+  display: flex; /* coloca botões lado a lado */
+  gap: 12px; /* espaço entre eles */
   /* Como o form usa 'align-items: flex-end', os botões já vão subir para a altura certa */
 }
 
+/* Estilo geral dos botões */
 form button {
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+  padding: 10px 20px; /* tamanho interno */
+  border-radius: 6px; /* bordas arredondadas */
+  border: none; /* remove borda padrão */
+  cursor: pointer; /* cursor de clique */
+  font-weight: bold; /* texto em negrito */
   height: 38px;           /* Altura fixa combinando perfeitamente com os inputs + paddings */
   white-space: nowrap;    /* Impede o texto do botão de quebrar em duas linhas */
 }
 
-/* Estilo do botão Enviar */
+/* Botão de enviar */
 form button[type="submit"] {
-  background-color: #0070f3;
-  color: white;
+  background-color: #0070f3; /* azul */
+  color: white; /* texto branco */
 }
 
-/* Estilo do botão Limpar */
+/* Botão de limpar */
 form button[type="button"] {
-  background-color: #e4e6eb;
-  color: #333;
+  background-color: #e4e6eb; /* cinza claro */
+  color: #333; /* texto escuro */
 }
+
+/* =========================
+   CAMPO DE BUSCA
+========================= */
+
 .campo-busca {
   display: block;      /* Garante que o input se comporte como bloco */
   width: 30%;         /* Faz a barra ocupar toda a largura disponível */
@@ -90,7 +115,7 @@ form button[type="button"] {
   
   /* Aumentando o tamanho interno e o texto */
   padding: 12px 16px;  /* Espaçamento interno (vertical e horizontal) */
-  font-size: 16px;
+  font-size: 16px; /* tamanho do texto */
 
 border: 1px solid #ccc;
   border-radius: 8px;  /* Bordas arredondadas */

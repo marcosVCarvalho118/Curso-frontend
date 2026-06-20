@@ -1,170 +1,233 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   RESET GLOBAL
+========================= */
+
+/* Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0; /* zera margem padrão */
+    padding: 0; /* zera padding padrão */
+    box-sizing: border-box; /* inclui borda e padding no tamanho total */
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
+/* =========================
+   ESTILO GERAL DO BODY
+========================= */
 
-    /* 🔴 FUNDO POKÉDEX */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
+
+    /* 🔴 fundo estilo Pokédex com degradê vermelho */
     background: linear-gradient(135deg, #ff3b3b, #b30000);
 
-    color:white;
-    min-height:100vh;
+    color: white; /* texto branco para contraste */
+    min-height: 100vh; /* ocupa toda altura da tela */
 }
 
-/* 🔴 HEADER ESTILIZADO */
-header{
+/* =========================
+   HEADER
+========================= */
+
+header {
+    /* fundo com gradiente vermelho mais escuro */
     background: linear-gradient(135deg, #b30000, #ff3b3b);
 
-    padding:25px 20px;
+    padding: 25px 20px; /* espaçamento interno */
 
-    text-align:center;
+    text-align: center; /* centraliza conteúdo */
 
-    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* sombra para profundidade */
 
-    border-bottom:4px solid rgba(255,255,255,0.2);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2); /* linha decorativa inferior */
 }
 
-header h1{
-    font-size:clamp(2rem, 5vw, 3rem);
-    font-weight:bold;
-    letter-spacing:2px;
-    color:white;
-    text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+/* =========================
+   TÍTULO DO HEADER
+========================= */
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem); 
+    /* tamanho responsivo:
+       mínimo 2rem, cresce com tela (5vw), máximo 3rem */
+
+    font-weight: bold; /* texto em negrito */
+
+    letter-spacing: 2px; /* espaçamento entre letras */
+
+    color: white; /* cor branca */
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
+    /* sombra no texto para destaque */
 }
 
-header p{
-    margin-top:8px;
-    font-size:1rem;
-    color:#ffe5e5;
+/* =========================
+   SUBTÍTULO DO HEADER
+========================= */
+
+header p {
+    margin-top: 8px; /* espaço acima do parágrafo */
+    font-size: 1rem; /* tamanho padrão */
+    color: #ffe5e5; /* vermelho bem claro */
 }
 
-/* DETALHE DECORATIVO */
-header::after{
-    content:"";
-    display:block;
+/* =========================
+   DETALHE DECORATIVO DO HEADER
+========================= */
 
-    width:60px;
-    height:6px;
+header::after {
+    content: ""; /* cria elemento vazio decorativo */
+    display: block; /* transforma em bloco */
 
-    background:white;
+    width: 60px; /* largura da barra */
+    height: 6px; /* altura da barra */
 
-    margin:15px auto 0;
+    background: white; /* cor branca */
 
-    border-radius:10px;
+    margin: 15px auto 0; /* centraliza e dá espaço superior */
 
-    opacity:0.8;
+    border-radius: 10px; /* bordas arredondadas */
+
+    opacity: 0.8; /* leve transparência */
 }
 
-/* CONTAINER */
-#pokemon-container{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
+/* =========================
+   CONTAINER DOS POKÉMONS
+========================= */
 
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
+#pokemon-container {
+    width: 90%; /* ocupa 90% da tela */
+    max-width: 1000px; /* limite máximo */
 
-    gap:20px;
+    margin: 40px auto; /* centraliza e cria espaço superior */
 
-    justify-items:center;
+    display: grid; /* usa grid layout */
+
+    grid-template-columns: repeat(5, 1fr); 
+    /* 5 colunas iguais */
+
+    gap: 20px; /* espaço entre cards */
+
+    justify-items: center; /* centraliza itens dentro da grid */
 }
 
-/* RESPONSIVO */
-@media (max-width: 1000px){
-    #pokemon-container{
-        grid-template-columns: repeat(4, 1fr);
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* telas menores que 1000px */
+@media (max-width: 1000px) {
+    #pokemon-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
     }
 }
 
-@media (max-width: 800px){
-    #pokemon-container{
-        grid-template-columns: repeat(3, 1fr);
+/* telas menores que 800px */
+@media (max-width: 800px) {
+    #pokemon-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     }
 }
 
-@media (max-width: 600px){
-    #pokemon-container{
-        grid-template-columns: repeat(2, 1fr);
+/* telas menores que 600px */
+@media (max-width: 600px) {
+    #pokemon-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     }
 }
 
-@media (max-width: 400px){
-    #pokemon-container{
-        grid-template-columns: 1fr;
+/* telas menores que 400px */
+@media (max-width: 400px) {
+    #pokemon-container {
+        grid-template-columns: 1fr; /* 1 coluna */
     }
 }
 
-/* CARD */
-.card{
-    width:180px;
-    min-height:260px;
+/* =========================
+   CARD DOS POKÉMONS
+========================= */
 
-    border-radius:20px;
-    padding:15px;
+.card {
+    width: 180px; /* largura fixa */
+    min-height: 260px; /* altura mínima */
 
-    color:white;
+    border-radius: 20px; /* bordas arredondadas */
+    padding: 15px; /* espaçamento interno */
 
-    /* efeito vidro */
-    background:rgba(0,0,0,0.3);
+    color: white; /* texto branco */
 
-    backdrop-filter: blur(6px);
+    /* efeito vidro (glassmorphism) */
+    background: rgba(0, 0, 0, 0.3);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    backdrop-filter: blur(6px); /* desfoque do fundo */
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra */
 
-    transition:.3s;
+    display: flex; /* layout flex */
+    flex-direction: column; /* coluna vertical */
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: space-between; /* distribui espaço */
+
+    transition: 0.3s; /* animação suave */
 }
 
-/* HOVER */
-.card:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow:0 12px 30px rgba(0,0,0,.5);
+/* =========================
+   EFEITO HOVER DO CARD
+========================= */
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03); /* levanta e aumenta */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* sombra mais forte */
 }
 
-/* IMAGEM */
-.card img{
-    width:100%;
-    max-width:120px;
-    height:auto;
-    object-fit:contain;
+/* =========================
+   IMAGEM DO POKÉMON
+========================= */
+
+.card img {
+    width: 100%; /* ocupa largura do card */
+    max-width: 120px; /* limite máximo */
+    height: auto; /* mantém proporção */
+    object-fit: contain; /* evita distorção */
 }
 
-/* NOME */
-.card h2{
-    text-align:center;
-    text-transform:capitalize;
-    font-size:1.2rem;
-    margin:10px 0;
+/* =========================
+   NOME DO POKÉMON
+========================= */
+
+.card h2 {
+    text-align: center; /* centraliza texto */
+    text-transform: capitalize; /* primeira letra maiúscula */
+    font-size: 1.2rem; /* tamanho médio */
+    margin: 10px 0; /* espaçamento vertical */
 }
 
-/* TIPO */
-.tipo{
-    background:rgba(255,255,255,.2);
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:0.8rem;
-    margin-bottom:10px;
-    text-align:center;
+/* =========================
+   TIPO DO POKÉMON
+========================= */
+
+.tipo {
+    background: rgba(255, 255, 255, 0.2); /* fundo transparente */
+    padding: 5px 10px; /* espaçamento interno */
+    border-radius: 20px; /* formato pill */
+    font-size: 0.8rem; /* texto pequeno */
+    margin-bottom: 10px; /* espaço abaixo */
+    text-align: center; /* centraliza texto */
 }
 
-/* INFO */
-.info{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:5px;
+/* =========================
+   INFORMAÇÕES DO POKÉMON
+========================= */
+
+.info {
+    width: 100%; /* ocupa largura total do card */
+    display: flex; /* flexbox */
+    flex-direction: column; /* empilha verticalmente */
+    gap: 5px; /* espaço entre itens */
 }
 
-.info p{
-    background:rgba(0,0,0,.35);
-    padding:5px;
-    border-radius:6px;
-    font-size:0.8rem;
+/* cada linha de info */
+.info p {
+    background: rgba(0, 0, 0, 0.35); /* fundo escuro leve */
+    padding: 5px; /* espaçamento interno */
+    border-radius: 6px; /* bordas arredondadas */
+    font-size: 0.8rem; /* texto pequeno */
 }

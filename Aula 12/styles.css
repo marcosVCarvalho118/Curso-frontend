@@ -1,191 +1,224 @@
+/* Reset geral para todos os elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    background: #f0f4ff;
-    min-height: 100vh;
-    padding: 40px 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #004a99;
-    font-size: 1.8rem;
-    margin-bottom: 24px;
-  }
-  
-  .container {
-    max-width: 480px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 2px 12px rgba(0, 74, 153, 0.08);
-  }
-  
-  .card h2 {
-    color: #004a99;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  
-  /* Card de saldo */
-  #saldo {
-    font-size: 2.4rem;
-    font-weight: bold;
-    color: #004a99;
-    text-align: center;
-    margin: 8px 0;
-  }
-  
-  .info-conta {
-    text-align: center;
-    color: #636e72;
-    font-size: 0.875rem;
-  }
-  
-  /* Status da conta */
-  #status-conta {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-  
-  .status-ativa {
-    background: #d1fae5;
-    color: #065f46;
-  }
-  
-  .status-bloqueada {
-    background: #fee2e2;
-    color: #991b1b;
-  }
-  
-  /* Operações */
-  input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-size: 1rem;
-    margin-bottom: 12px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  
-  input[type="number"]:focus {
-    border-color: #004a99;
-  }
-  
-  .botoes {
-    display: flex;
-    gap: 8px;
-  }
-  
-  button {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-  
-  button:hover { opacity: 0.85; }
-  
-  #btn-depositar { background: #004a99; color: white; }
-  #btn-sacar     { background: #dc3545; color: white; }
-  #btn-bloquear  {
-    width: 100%;
-    background: #f8f9fa;
-    color: #636e72;
-    border: 1px solid #dee2e6;
-    margin-top: 8px;
-  }
-  
-  /* Mensagem de feedback */
-  #mensagem {
-    min-height: 40px;
-    margin-top: 12px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    display: none; /* escondido por padrão */
-  }
-  
-  .msg-sucesso {
-    background: #d1fae5;
-    color: #065f46;
-  }
-  
-  .msg-erro {
-    background: #fee2e2;
-    color: #991b1b;
-  }
-  
-  /* Histórico */
-  #lista-historico {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  #lista-historico li {
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f4ff;
-    font-size: 0.875rem;
-    color: #2d3436;
-  }
-  
-  #lista-historico li:last-child {
+    margin: 0;              /* Remove margens padrão */
+    padding: 0;             /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
+}
+
+/* Estilo base da página */
+body {
+    font-family: sans-serif; /* Fonte padrão simples */
+    background: #f0f4ff;     /* Fundo azul bem claro */
+    min-height: 100vh;       /* Altura mínima igual à tela inteira */
+    padding: 40px 20px;      /* Espaçamento interno (vertical e horizontal) */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;   /* Centraliza o texto */
+    color: #004a99;       /* Azul escuro */
+    font-size: 1.8rem;    /* Tamanho do texto */
+    margin-bottom: 24px;  /* Espaço abaixo */
+}
+
+/* Container principal */
+.container {
+    max-width: 480px;        /* Largura máxima */
+    margin: 0 auto;          /* Centraliza horizontalmente */
+    display: flex;           /* Usa flexbox */
+    flex-direction: column;  /* Organiza em coluna */
+    gap: 16px;               /* Espaço entre elementos */
+}
+
+/* Cartões (cards) */
+.card {
+    background: white;                             /* Fundo branco */
+    border-radius: 12px;                           /* Cantos arredondados */
+    padding: 24px;                                 /* Espaçamento interno */
+    box-shadow: 0 2px 12px rgba(0, 74, 153, 0.08); /* Sombra suave */
+}
+
+/* Título dentro do card */
+.card h2 {
+    color: #004a99;        /* Azul */
+    font-size: 0.8rem;     /* Texto pequeno */
+    text-transform: uppercase; /* Tudo maiúsculo */
+    letter-spacing: 1px;   /* Espaço entre letras */
+    margin-bottom: 8px;    /* Espaço abaixo */
+}
+
+/* Card de saldo */
+#saldo {
+    font-size: 2.4rem;   /* Texto grande */
+    font-weight: bold;   /* Negrito */
+    color: #004a99;      /* Azul */
+    text-align: center;  /* Centralizado */
+    margin: 8px 0;       /* Espaçamento vertical */
+}
+
+/* Informações da conta */
+.info-conta {
+    text-align: center;  /* Centraliza */
+    color: #636e72;      /* Cinza */
+    font-size: 0.875rem; /* Texto menor */
+}
+
+/* Status da conta (base) */
+#status-conta {
+    display: inline-block; /* Permite padding e largura ajustada */
+    padding: 2px 10px;     /* Espaçamento interno */
+    border-radius: 20px;   /* Formato de cápsula */
+    font-size: 0.8rem;     /* Texto pequeno */
+    font-weight: bold;     /* Negrito */
+}
+
+/* Conta ativa */
+.status-ativa {
+    background: #d1fae5; /* Verde claro */
+    color: #065f46;      /* Verde escuro */
+}
+
+/* Conta bloqueada */
+.status-bloqueada {
+    background: #fee2e2; /* Vermelho claro */
+    color: #991b1b;      /* Vermelho escuro */
+}
+
+/* Campo de entrada numérica */
+input[type="number"] {
+    width: 100%;                /* Ocupa toda largura */
+    padding: 12px;              /* Espaçamento interno */
+    border: 1px solid #dee2e6;  /* Borda leve */
+    border-radius: 8px;         /* Cantos arredondados */
+    font-size: 1rem;            /* Tamanho padrão */
+    margin-bottom: 12px;        /* Espaço abaixo */
+    outline: none;              /* Remove borda padrão ao focar */
+    transition: border-color 0.2s; /* Animação suave */
+}
+
+/* Efeito ao focar no input */
+input[type="number"]:focus {
+    border-color: #004a99; /* Muda cor da borda */
+}
+
+/* Container dos botões */
+.botoes {
+    display: flex; /* Layout flexível */
+    gap: 8px;      /* Espaço entre botões */
+}
+
+/* Estilo geral dos botões */
+button {
+    flex: 1;                /* Todos ocupam o mesmo espaço */
+    padding: 12px;          /* Espaçamento interno */
+    border: none;           /* Remove borda */
+    border-radius: 8px;     /* Cantos arredondados */
+    font-size: 0.95rem;     /* Tamanho do texto */
+    font-weight: bold;      /* Negrito */
+    cursor: pointer;        /* Cursor de clique */
+    transition: opacity 0.2s; /* Animação suave */
+}
+
+/* Efeito hover nos botões */
+button:hover { 
+    opacity: 0.85; /* Deixa levemente transparente */
+}
+
+/* Botão de depositar */
+#btn-depositar { 
+    background: #004a99; /* Azul */
+    color: white;        /* Texto branco */
+}
+
+/* Botão de sacar */
+#btn-sacar {     
+    background: #dc3545; /* Vermelho */
+    color: white;        
+}
+
+/* Botão de bloquear */
+#btn-bloquear  {
+    width: 100%;                  /* Ocupa toda largura */
+    background: #f8f9fa;          /* Cinza claro */
+    color: #636e72;               /* Cinza escuro */
+    border: 1px solid #dee2e6;    /* Borda leve */
+    margin-top: 8px;              /* Espaço acima */
+}
+
+/* Mensagem de feedback */
+#mensagem {
+    min-height: 40px;         /* Altura mínima */
+    margin-top: 12px;         /* Espaço acima */
+    padding: 10px 14px;       /* Espaçamento interno */
+    border-radius: 8px;       /* Cantos arredondados */
+    font-size: 0.9rem;        /* Texto menor */
+    display: none;            /* Escondido por padrão */
+}
+
+/* Mensagem de sucesso */
+.msg-sucesso {
+    background: #d1fae5; /* Verde claro */
+    color: #065f46;      /* Verde escuro */
+}
+
+/* Mensagem de erro */
+.msg-erro {
+    background: #fee2e2; /* Vermelho claro */
+    color: #991b1b;      /* Vermelho escuro */
+}
+
+/* Lista de histórico */
+#lista-historico {
+    list-style: none;   /* Remove marcadores */
+    padding: 0;         /* Remove padding */
+    margin: 0;          /* Remove margem */
+    max-height: 200px;  /* Altura máxima */
+    overflow-y: auto;   /* Scroll vertical se necessário */
+}
+
+/* Itens do histórico */
+#lista-historico li {
+    padding: 10px 0;                     /* Espaçamento vertical */
+    border-bottom: 1px solid #f0f4ff;    /* Linha separadora */
+    font-size: 0.875rem;                 /* Texto menor */
+    color: #2d3436;                      /* Cor do texto */
+}
+
+/* Remove borda do último item */
+#lista-historico li:last-child {
     border-bottom: none;
-  }
-  
-  .historico-vazio {
-    color: #b2bec3;
-    font-style: italic;
-    text-align: center;
-    padding: 16px 0;
-  }
-  
-  /* Resumo */
-  .resumo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    text-align: center;
-  }
-  
-  .resumo-item span:first-child {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #004a99;
-  }
-  
-  .resumo-item span:last-child {
-    font-size: 0.75rem;
-    color: #636e72;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+}
+
+/* Mensagem quando não há histórico */
+.historico-vazio {
+    color: #b2bec3;     /* Cinza claro */
+    font-style: italic; /* Itálico */
+    text-align: center; /* Centralizado */
+    padding: 16px 0;    /* Espaçamento vertical */
+}
+
+/* Grid de resumo */
+.resumo-grid {
+    display: grid;                        /* Usa grid layout */
+    grid-template-columns: 1fr 1fr 1fr;   /* 3 colunas iguais */
+    gap: 12px;                            /* Espaço entre itens */
+    text-align: center;                   /* Centraliza texto */
+}
+
+/* Primeiro texto do item (valor) */
+.resumo-item span:first-child {
+    display: block;        /* Ocupa linha inteira */
+    font-size: 1.5rem;     /* Texto maior */
+    font-weight: bold;     /* Negrito */
+    color: #004a99;        /* Azul */
+}
+
+/* Segundo texto do item (label) */
+.resumo-item span:last-child {
+    font-size: 0.75rem;     /* Texto pequeno */
+    color: #636e72;         /* Cinza */
+    text-transform: uppercase; /* Maiúsculo */
+    letter-spacing: 0.5px;  /* Espaçamento entre letras */
+}
   
  

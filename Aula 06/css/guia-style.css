@@ -1,99 +1,111 @@
 /* Reset básico */
+/* Aplica a todos os elementos da página */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;              /* Remove margens padrão do navegador */
+  padding: 0;             /* Remove espaçamentos internos padrão */
+  box-sizing: border-box; /* Faz largura/altura incluir padding e bordas */
 }
 
+/* Estilo geral do corpo da página */
 body {
-  font-family: sans-serif;
-  color: #2e2e2e;
-  line-height: 1.6;
-  padding: 40px;
-  background: #f8f9fa;
+  font-family: sans-serif; /* Define uma fonte simples e padrão */
+  color: #2e2e2e;          /* Cor principal do texto */
+  line-height: 1.6;        /* Espaçamento entre linhas para melhor leitura */
+  padding: 40px;           /* Espaçamento interno da página */
+  background: #f8f9fa;     /* Cor de fundo clara */
 }
 
+/* Título principal */
 h1 {
-  font-size: 2rem;
-  color: #0066cc;
-  margin-bottom: 8px;
+  font-size: 2rem;        /* Tamanho do texto */
+  color: #0066cc;         /* Cor azul */
+  margin-bottom: 8px;     /* Espaço abaixo do título */
 }
 
+/* Subtítulo principal de seção */
 h2 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin: 40px 0 16px;
-  border-left: 4px solid #0066cc;
-  padding-left: 12px;
+  font-size: 1.5rem;         /* Tamanho médio */
+  color: #003366;            /* Azul mais escuro */
+  margin: 40px 0 16px;       /* Espaço acima e abaixo */
+  border-left: 4px solid #0066cc; /* Barra decorativa à esquerda */
+  padding-left: 12px;        /* Espaço entre a barra e o texto */
 }
 
+/* Subtítulos menores */
 h3 {
-  font-size: 1rem;
-  color: #0066cc;
-  margin: 24px 0 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1rem;        /* Tamanho menor */
+  color: #0066cc;         /* Azul */
+  margin: 24px 0 8px;     /* Espaçamento vertical */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  letter-spacing: 1px;    /* Espaço entre letras */
 }
 
+/* Parágrafos */
 p {
-  margin-bottom: 12px;
-  max-width: 700px;
+  margin-bottom: 12px;  /* Espaço abaixo do parágrafo */
+  max-width: 700px;     /* Limita largura para melhor leitura */
 }
 
 /* Caixa de exemplo visual */
 .exemplo {
-  background: #ffffff;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 24px;
-  margin: 16px 0 32px;
+  background: #ffffff;       /* Fundo branco */
+  border: 1px solid #dee2e6; /* Borda leve cinza */
+  border-radius: 8px;        /* Cantos arredondados */
+  padding: 24px;             /* Espaçamento interno */
+  margin: 16px 0 32px;       /* Espaçamento externo */
 }
 
 /* Caixas coloridas para demonstração */
 .caixa {
-  background: #0066cc;
-  color: white;
-  padding: 16px;
-  margin: 8px;
-  font-weight: bold;
-  border-radius: 4px;
+  background: #0066cc; /* Fundo azul */
+  color: white;        /* Texto branco */
+  padding: 16px;       /* Espaçamento interno */
+  margin: 8px;         /* Espaço externo */
+  font-weight: bold;   /* Texto em negrito */
+  border-radius: 4px;  /* Cantos levemente arredondados */
 }
 
+/* Variação da caixa com cor diferente */
 .caixa-b {
-  background: #6c63ff;
+  background: #6c63ff; /* Roxo */
 }
+
+/* Outra variação de cor */
 .caixa-c {
-  background: #00b4d8;
+  background: #00b4d8; /* Azul claro */
 }
 
 /* Separador de seção */
 section {
-  border-bottom: 2px solid #dee2e6;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #dee2e6; /* Linha inferior */
+  padding-bottom: 20px;             /* Espaço interno abaixo */
+  margin-bottom: 20px;              /* Espaço externo abaixo */
 }
 
+/* Técnica clearfix para corrigir elementos com float */
 .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.caixa-flutuante{
-  background-color:Blue; 
-  font-family:'Times New Roman';
-  color: white; 
-  float: left;
-  margin: 10px 10px 10px 0;
-  padding: 5px;
-  border-radius: 5px; 
+  content: "";        /* Cria um elemento vazio */
+  display: table;     /* Faz o elemento se comportar como tabela */
+  clear: both;        /* Limpa floats à esquerda e direita */
 }
 
-.caixa-flutuante:hover{
-  background-color:black; 
-  color: white; 
-  transition: color 0.8s ease;
-  position: relative;
-  top: 10px;
-  transform: scale(1.2);
+/* Caixa com comportamento flutuante */
+.caixa-flutuante {
+  background-color: Blue;     /* Fundo azul */
+  font-family: 'Times New Roman'; /* Fonte diferente */
+  color: white;               /* Texto branco */
+  float: left;                /* Faz a caixa flutuar à esquerda */
+  margin: 10px 10px 10px 0;   /* Espaçamento externo */
+  padding: 5px;               /* Espaçamento interno */
+  border-radius: 5px;         /* Cantos arredondados */
 }
 
+/* Efeito ao passar o mouse */
+.caixa-flutuante:hover {
+  background-color: black;    /* Muda fundo para preto */
+  color: white;               /* Mantém texto branco */
+  transition: color 0.8s ease; /* Animação suave na cor */
+  position: relative;         /* Permite mover a posição */
+  top: 10px;                  /* Move para baixo */
+  transform: scale(1.2);      /* Aumenta o tamanho (zoom) */
+}

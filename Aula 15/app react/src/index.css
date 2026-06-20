@@ -1,111 +1,161 @@
+/* =========================
+   VARIÁVEIS GLOBAIS (TEMA CLARO)
+========================= */
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #6b6375; /* cor padrão do texto */
+  --text-h: #08060d; /* cor dos títulos (mais escura) */
+  --bg: #fff; /* cor de fundo do site */
+  --border: #e5e4e7; /* cor das bordas */
+  --code-bg: #f4f3ec; /* fundo de blocos de código */
+
+  --accent: #aa3bff; /* cor principal de destaque */
+  --accent-bg: rgba(170, 59, 255, 0.1); /* fundo suave do accent */
+  --accent-border: rgba(170, 59, 255, 0.5); /* borda do accent */
+
+  --social-bg: rgba(244, 243, 236, 0.5); /* fundo de área social */
+
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px; /* sombra suave em camadas */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* fontes */
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif; /* fonte principal */
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif; /* fonte dos títulos */
+  --mono: ui-monospace, Consolas, monospace; /* fonte de código */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* estilo base do documento */
+  font: 18px/145% var(--sans); /* tamanho 18px + line-height 145% */
+  letter-spacing: 0.18px; /* espaçamento entre letras */
 
+  color-scheme: light dark; /* suporte automático a tema claro/escuro */
+  color: var(--text); /* cor padrão do texto */
+  background: var(--bg); /* cor de fundo */
+
+  font-synthesis: none; /* evita geração automática de negrito/itálico */
+  text-rendering: optimizeLegibility; /* melhora leitura de texto */
+  -webkit-font-smoothing: antialiased; /* suaviza fonte no Chrome */
+  -moz-osx-font-smoothing: grayscale; /* suaviza fonte no Firefox/macOS */
+
+  /* responsividade para telas menores */
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 16px; /* reduz tamanho base da fonte */
   }
 }
 
+/* =========================
+   TEMA ESCURO AUTOMÁTICO
+========================= */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
+    --text: #9ca3af; /* texto mais claro no dark mode */
+    --text-h: #f3f4f6; /* títulos mais claros */
+    --bg: #16171d; /* fundo escuro */
+    --border: #2e303a; /* bordas escuras */
+    --code-bg: #1f2028; /* fundo de código escuro */
+
+    --accent: #c084fc; /* cor de destaque ajustada */
+    --accent-bg: rgba(192, 132, 252, 0.15); /* fundo accent escuro */
+    --accent-border: rgba(192, 132, 252, 0.5); /* borda accent escura */
+
+    --social-bg: rgba(47, 48, 58, 0.5); /* fundo social no dark */
+
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+      rgba(0, 0, 0, 0.25) 0 4px 6px -2px; /* sombra mais forte */
   }
 
+  /* ajusta ícones sociais para dark mode */
   #social .button-icon {
-    filter: invert(1) brightness(2);
+    filter: invert(1) brightness(2); /* inverte cores do ícone */
   }
 }
 
+/* =========================
+   RESET GLOBAL
+========================= */
 body {
-  margin: 0;
+  margin: 0; /* remove margem padrão do navegador */
 }
 
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  width: 1126px; /* largura máxima fixa */
+  max-width: 100%; /* não ultrapassa tela menor */
+  margin: 0 auto; /* centraliza horizontalmente */
+
+  text-align: center; /* centraliza texto */
+
+  border-inline: 1px solid var(--border); /* bordas laterais */
+  min-height: 100svh; /* altura mínima da tela (mobile safe) */
+
+  display: flex; /* usa flexbox */
+  flex-direction: column; /* organiza em coluna */
+
+  box-sizing: border-box; /* inclui borda no cálculo de tamanho */
 }
 
+/* =========================
+   TÍTULOS
+========================= */
 h1,
 h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+  font-family: var(--heading); /* fonte dos títulos */
+  font-weight: 500; /* peso médio */
+  color: var(--text-h); /* cor mais forte */
 }
 
+/* -------- H1 -------- */
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: 56px; /* tamanho grande */
+  letter-spacing: -1.68px; /* aproxima letras */
+
+  margin: 32px 0; /* espaçamento vertical */
+
+  /* responsivo */
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 36px; /* menor no mobile */
     margin: 20px 0;
   }
 }
+
+/* -------- H2 -------- */
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  font-size: 24px; /* tamanho médio */
+  line-height: 118%; /* altura da linha */
+  letter-spacing: -0.24px; /* leve ajuste de espaçamento */
+
+  margin: 0 0 8px; /* só margem inferior */
+
+  /* responsivo */
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
+/* =========================
+   PARÁGRAFOS
+========================= */
 p {
-  margin: 0;
+  margin: 0; /* remove espaçamento padrão */
 }
 
+/* =========================
+   CÓDIGO E CONTADOR
+========================= */
 code,
 .counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+  font-family: var(--mono); /* fonte monoespaçada */
+  display: inline-flex; /* comportamento inline flexível */
+  border-radius: 4px; /* cantos arredondados */
+  color: var(--text-h); /* cor destacada */
 }
 
+/* -------- código -------- */
 code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  font-size: 15px; /* tamanho menor */
+  line-height: 135%; /* melhor leitura */
+  padding: 4px 8px; /* espaçamento interno */
+  background: var(--code-bg); /* fundo diferenciado */
 }
