@@ -1,0 +1,18 @@
+<div>
+<h2>{{ nomeTime }}</h2>
+
+<p [style.color]="cor()">
+  {{ pontos() }}
+</p>
+
+<div>
+  <button (click)="adicionarPontos()">+1 Ponto</button>
+
+  <button
+    (click)="resetarPontos()"
+    [disabled]="pontos() === 0"
+  >
+    Zerar
+  </button>
+</div>
+</div>
