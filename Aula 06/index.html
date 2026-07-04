@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Define HTML5 -->
 <html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia CSS: Float e Position</title>
-  <link rel="stylesheet" href="css/guia-style.css"> <!-- Link para o arquivo CSS externo. -->
+  <meta charset="UTF-8"> <!-- Codificação de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+  <title>Guia CSS: Float e Position</title> <!-- Título da aba -->
+  <link rel="stylesheet" href="css/guia-style.css"> <!-- CSS externo -->
 
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
@@ -13,79 +13,70 @@
 <mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
+<!-- Configurações Microsoft Office (ignorar em web comum) -->
 </head>
+
 <body>
 
-  <h1>Guia CSS: Float e Position</h1>
-  <!-- Float é uma propriedade CSS que usamos para posicionar algo na tela, seja um elemento em bloco ou em linha. --> 
-  <!-- Position é uma propriedade CSS que define o tipo de posicionamento para um elemento. --> 
-  <p>Construído em aula — seu guia de referência pessoal.</p>
+  <h1>Guia CSS: Float e Position</h1> <!-- Título principal -->
+  <!-- Float posiciona elementos lateralmente -->
+  <!-- Position define o tipo de posicionamento -->
+  <p>Construído em aula — seu guia de referência pessoal.</p> <!-- Subtítulo -->
 
   <div class="clearfix" style="border: 5px solid red; position: relative;">
-    <!--Clearfix: é uma técnica CSS essencial usada para garantir que um elemento pai envolva totalmente seus filhos flutuantes (float), impedindo que o layout "quebre" ou colapse--->
+    <!-- clearfix evita colapso de float -->
+    <!-- border: borda vermelha -->
+    <!-- relative define referência para absolute -->
+    
 <h3>sem Float</h3>
-<div class="caixa-flutuante" style="position:relative; top: 20px; left: 10px"> Exemplo 01</div>
-<!--Relativo: Move o elemento em relação (da forma que deseja) a sua posição original. O espaço original é preservado. Para mover o elemento tem que ser atribuída as coordenadas(top, bottom, left, right.)-->
-<div class="caixa-flutuante"style="position:absolute; top: -15px; right: -15px"> Exemplo 02</div>
-<!--Absoluto: Remove o elemento do fluxo. Posiciona em relação ao ancestral posicionado mais próximo (desde que não seja posição estática)-->
-<div class="caixa-flutuante"style="position:fixed; top:-10px; left: 0px"> Exemplo 03</div>
-<!--Fixed: Remove o fluxo e fixa na viewport(a janela do navegador). não se move ao rolar a página.-->
-<div class="caixa-flutuante"> Exemplo 04</div>
+
+<div class="caixa-flutuante" style="position:relative; top: 20px; left: 10px">
+  Exemplo 01
 </div>
-<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ducimus. Aliquam commodi, rerum sunt inventore officia labore! Architecto rerum quidem perferendis accusantium, voluptates perspiciatis, necessitatibus quaerat commodi quisquam provident iste.   
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore ratione adipisci excepturi explicabo doloribus obcaecati saepe ipsa magni dicta corporis possimus ullam, tempora, optio placeat, eum provident quam accusamus.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint voluptatibus dolore iusto exercitationem, ab at fugit facilis quae cupiditate nostrum, ipsa a cum aspernatur placeat quod et numquam, aliquam voluptatem!
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut rerum, enim, accusamus veritatis quidem doloremque dolore, aliquid modi atque asperiores earum nisi expedita aspernatur amet iure dolores illo! Nesciunt, doloribus!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti aspernatur at perferendis in, expedita beatae optio consequatur ipsum officiis eaque pariatur alias molestias aperiam magnam velit inventore totam deserunt.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque laborum, adipisci amet beatae fugiat aspernatur doloribus est ullam nobis! Aut incidunt qui voluptatum ullam quibusdam sint quia blanditiis eaque ipsa?
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi sunt ipsa quae optio quaerat aspernatur, beatae dolorum ipsam quam, ullam quod quidem! Recusandae nulla a qui, ea perspiciatis at architecto!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, error iure. Distinctio sapiente maiores amet minus vel delectus possimus minima corporis quas. Fugit saepe obcaecati quod iure incidunt beatae error!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum nihil amet. Hic ad non aspernatur rerum explicabo voluptates, suscipit, sed id blanditiis quo officia praesentium ea, rem nihil consequatur.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ducimus. Aliquam commodi, rerum sunt inventore officia labore! Architecto rerum quidem perferendis accusantium, voluptates perspiciatis, necessitatibus quaerat commodi quisquam provident iste.   
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore ratione adipisci excepturi explicabo doloribus obcaecati saepe ipsa magni dicta corporis possimus ullam, tempora, optio placeat, eum provident quam accusamus.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint voluptatibus dolore iusto exercitationem, ab at fugit facilis quae cupiditate nostrum, ipsa a cum aspernatur placeat quod et numquam, aliquam voluptatem!
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut rerum, enim, accusamus veritatis quidem doloremque dolore, aliquid modi atque asperiores earum nisi expedita aspernatur amet iure dolores illo! Nesciunt, doloribus!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti aspernatur at perferendis in, expedita beatae optio consequatur ipsum officiis eaque pariatur alias molestias aperiam magnam velit inventore totam deserunt.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque laborum, adipisci amet beatae fugiat aspernatur doloribus est ullam nobis! Aut incidunt qui voluptatum ullam quibusdam sint quia blanditiis eaque ipsa?
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi sunt ipsa quae optio quaerat aspernatur, beatae dolorum ipsam quam, ullam quod quidem! Recusandae nulla a qui, ea perspiciatis at architecto!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, error iure. Distinctio sapiente maiores amet minus vel delectus possimus minima corporis quas. Fugit saepe obcaecati quod iure incidunt beatae error!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum nihil amet. Hic ad non aspernatur rerum explicabo voluptates, suscipit, sed id blanditiis quo officia praesentium ea, rem nihil consequatur.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ducimus. Aliquam commodi, rerum sunt inventore officia labore! Architecto rerum quidem perferendis accusantium, voluptates perspiciatis, necessitatibus quaerat commodi quisquam provident iste.   
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore ratione adipisci excepturi explicabo doloribus obcaecati saepe ipsa magni dicta corporis possimus ullam, tempora, optio placeat, eum provident quam accusamus.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint voluptatibus dolore iusto exercitationem, ab at fugit facilis quae cupiditate nostrum, ipsa a cum aspernatur placeat quod et numquam, aliquam voluptatem!
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut rerum, enim, accusamus veritatis quidem doloremque dolore, aliquid modi atque asperiores earum nisi expedita aspernatur amet iure dolores illo! Nesciunt, doloribus!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti aspernatur at perferendis in, expedita beatae optio consequatur ipsum officiis eaque pariatur alias molestias aperiam magnam velit inventore totam deserunt.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque laborum, adipisci amet beatae fugiat aspernatur doloribus est ullam nobis! Aut incidunt qui voluptatum ullam quibusdam sint quia blanditiis eaque ipsa?
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi sunt ipsa quae optio quaerat aspernatur, beatae dolorum ipsam quam, ullam quod quidem! Recusandae nulla a qui, ea perspiciatis at architecto!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, error iure. Distinctio sapiente maiores amet minus vel delectus possimus minima corporis quas. Fugit saepe obcaecati quod iure incidunt beatae error!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum nihil amet. Hic ad non aspernatur rerum explicabo voluptates, suscipit, sed id blanditiis quo officia praesentium ea, rem nihil consequatur.
+<!-- relative: move mantendo espaço original -->
+
+<div class="caixa-flutuante" style="position:absolute; top: -15px; right: -15px">
+  Exemplo 02
+</div>
+<!-- absolute: sai do fluxo e usa o pai como referência -->
+
+<div class="caixa-flutuante" style="position:fixed; top:-10px; left: 0px">
+  Exemplo 03
+</div>
+<!-- fixed: fixa na tela (viewport) -->
+
+<div class="caixa-flutuante">
+  Exemplo 04
+</div>
+<!-- static padrão (sem posicionamento) -->
+
+</div>
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit...
+<!-- texto apenas para simular conteúdo e rolagem -->
 </p>
 
 <div class="exemplo">
-    <p style="margin-bottom: 12px"> <!--margin-bottom: define a margem área na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima. -->
+
+    <p style="margin-bottom: 12px">
+      <!-- margin-bottom: espaço abaixo -->
       Role dentro da caixa abaixo para ver o sticky:
     </p>
-    <div
-      style="
-        height: 200px;
-        overflow-y: scroll;
-        border: 1px solid #dee2e6;
-        border-radius: 4px;
-      "
-    > <!--Border -radius: Arredonda as bordas do elemento.-->
-      <div
-        style="
-          position: sticky;
-          top: 0; 
-          background: #0984e3;
-          color: white;
-          padding: 10px 16px;
-          font-weight: bold;
-        "
-      >
-        📌 Cabeçalho Sticky — gruda aqui ao rolar <!--Sticky: Hibrido entre relative e fixed. Age como relative até atingir o ponto definido - então gruda como fixed, mas apenas dentro do seu conteiner(cabeçalho) pai.-->
+
+    <div style="height: 200px; overflow-y: scroll; border: 1px solid #dee2e6; border-radius: 4px;">
+      <!-- height: altura fixa -->
+      <!-- overflow-y: rolagem vertical -->
+      <!-- border-radius: bordas arredondadas -->
+
+      <div style="position: sticky; top: 0; background: #0984e3; color: white; padding: 10px 16px; font-weight: bold;">
+        📌 Cabeçalho Sticky — gruda aqui ao rolar
+        <!-- sticky: fixa ao chegar no topo dentro do container -->
       </div>
+
       <div style="padding: 16px">
+        <!-- padding: espaçamento interno -->
+
         <p>Linha de conteúdo 1</p>
         <p>Linha de conteúdo 2</p>
         <p>Linha de conteúdo 3</p>
@@ -94,12 +85,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum n
         <p>Linha de conteúdo 6</p>
         <p>Linha de conteúdo 7</p>
         <p>Linha de conteúdo 8</p>
+        <!-- conteúdo para gerar rolagem -->
       </div>
    </div>
+
     <p style="margin-top: 8px; font-style: italic; color: #636e72">
-      Usos comuns: cabeçalho de tabela, menu lateral, barra de progresso de
-      leitura.
+      <!-- margin-top: espaço acima -->
+      <!-- font-style: itálico -->
+      <!-- color: cor do texto -->
+      Usos comuns: cabeçalho de tabela, menu lateral, barra de leitura.
     </p>
-  </div>
+
+</div>
+
 </body>
 </html>
