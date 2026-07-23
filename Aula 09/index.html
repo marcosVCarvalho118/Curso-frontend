@@ -1,127 +1,227 @@
-<!DOCTYPE html> 
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> <!-- Define que o documento utiliza HTML5 -->
+
+<html lang="pt-br"> <!-- Início do documento HTML e define o idioma como português do Brasil -->
+
+<head> <!-- Cabeçalho da página (configurações e importações) -->
+
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar a diferentes tamanhos de tela (responsividade) -->
+
+    <!-- Importa a biblioteca de ícones Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-  <title>Destino do Brasil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Destino do Brasil</title>
+
+    <!-- Importa o CSS do Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+
 </head>
-  <body>
+
+<body> <!-- Início do conteúdo visível da página -->
+
+    <!-- ALERTA DE SUCESSO -->
     <div class="alert alert-success">
+        <!-- Ícone de confirmação -->
         <i class="bi bi-check-circle me-2"></i>
-        <strong>alert-success</strong> - Mensagem enviada com sucesso!
+
+        <!-- Texto em negrito -->
+        <strong>alert-success</strong>
+
+        <!-- Mensagem do alerta -->
+        - Mensagem enviada com sucesso!
     </div>
+
+    <!-- ALERTA DE ERRO -->
     <div class="alert alert-danger">
         <i class="bi bi-x-circle me-2"></i>
-        <strong>alert-danger</strong> - Erro ao processar sua solicitação
-</div>
-<div class="alert alert-warning">
-        <i class="bi bi-exclamation-triangle me-2"></i>
-        <strong>alert-warning</strong> - Atenção! Verifique os dados informados
-</div>
-<div class="alert alert-info">
-        <i class="bi bi-info-circle me-2"></i>
-        <strong>alert-info</strong> - Seus dados estão sendo processados
-</div>
-        <div class="alert alert-success alert-dismissible fade show mt-3">
-            <i class="bi bi-check-circle me-2"></i>
-            <strong>Sucesso!</strong> - Sua operação foi concluída com êxito.
-            <button
-            type="button" 
-            class="btn-close" 
-            data-bs-dismiss="alert" 
-            aria-label="Fechar"> 
-            </button>
-    </div> 
-    <img
-    src="https://placehold.co/600x400/green/white" 
-    class="card-img-top" 
-    alt="banner do serviço de desenvolvimento web da inovaweb">
+        <strong>alert-danger</strong>
+        - Erro ao processar sua solicitação.
     </div>
+
+    <!-- ALERTA DE AVISO -->
+    <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle me-2"></i>
+        <strong>alert-warning</strong>
+        - Atenção! Verifique os dados informados.
+    </div>
+
+    <!-- ALERTA DE INFORMAÇÃO -->
+    <div class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i>
+        <strong>alert-info</strong>
+        - Seus dados estão sendo processados.
+    </div>
+
+    <!-- ALERTA FECHÁVEL -->
+    <div class="alert alert-success alert-dismissible fade show mt-3">
+
+        <!-- Ícone -->
+        <i class="bi bi-check-circle me-2"></i>
+
+        <!-- Texto em destaque -->
+        <strong>Sucesso!</strong>
+
+        <!-- Mensagem -->
+        - Sua operação foi concluída com êxito.
+
+        <!-- Botão para fechar o alerta -->
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Fechar">
+        </button>
+
+    </div>
+
+    <!-- IMAGEM -->
+    <img
+        src="https://placehold.co/600x400/green/white"
+        class="card-img-top"
+        alt="banner do serviço de desenvolvimento web da inovaweb">
+    <!-- Exibe uma imagem de exemplo -->
+
+    <!-- CARROSSEL -->
     <div id="carrosselRef" class="carousel slide" data-bs-ride="carousel">
 
+        <!-- Indicadores (bolinhas inferiores) -->
         <div class="carousel-indicators">
-          <button data-bs-target="#carrosselRef" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-          <button data-bs-target="#carrosselRef" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button data-bs-target="#carrosselRef" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+            <!-- Primeiro slide -->
+            <button
+                data-bs-target="#carrosselRef"
+                data-bs-slide-to="0"
+                class="active"
+                aria-label="Slide 1">
+            </button>
+
+            <!-- Segundo slide -->
+            <button
+                data-bs-target="#carrosselRef"
+                data-bs-slide-to="1"
+                aria-label="Slide 2">
+            </button>
+
+            <!-- Terceiro slide -->
+            <button
+                data-bs-target="#carrosselRef"
+                data-bs-slide-to="2"
+                aria-label="Slide 3">
+            </button>
+
         </div>
 
+        <!-- Área onde ficam os slides -->
         <div class="carousel-inner">
 
+            <!-- PRIMEIRO SLIDE -->
+            <div class="carousel-item active">
 
-          <div class="carousel-item active">
-            <img
-              src="https://placehold.co/900x300/004a99/ffffff?text=Slide+1+Desenvolvimento+Web"
-              class="d-block w-100"
-              alt="Slide 1: Desenvolvimento Web">
-            <!--
-              carousel-caption: legenda sobreposta à imagem (posição absoluta)
-              d-none d-md-block: esconde em mobile, exibe tablet+ (≥768px)
-              Motivo: em telas pequenas a imagem fica comprimida e
-              a legenda torna-se ilegível ou sobrepõe muito o conteúdo.
-            -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Desenvolvimento Web</h5>
-              <p>Sites modernos e responsivos com IA.</p>
+                <img
+                    src="https://placehold.co/900x300/004a99/ffffff?text=Slide+1+Desenvolvimento+Web"
+                    class="d-block w-100"
+                    alt="Slide 1: Desenvolvimento Web">
+
+                <!-- Legenda sobre a imagem -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Desenvolvimento Web</h5>
+                    <p>Sites modernos e responsivos com IA.</p>
+                </div>
+
             </div>
-          </div>
 
-          <!-- SLIDE 2 -->
-          <div class="carousel-item">
-            <img
-              src="https://placehold.co/900x300/6C63FF/ffffff?text=Slide+2+Design+com+IA"
-              class="d-block w-100"
-              alt="Slide 2: Design com IA">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Design com Inteligência Artificial</h5>
-              <p>Layouts gerados e otimizados com IA.</p>
+            <!-- SEGUNDO SLIDE -->
+            <div class="carousel-item">
+
+                <img
+                    src="https://placehold.co/900x300/6C63FF/ffffff?text=Slide+2+Design+com+IA"
+                    class="d-block w-100"
+                    alt="Slide 2: Design com IA">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Design com Inteligência Artificial</h5>
+                    <p>Layouts gerados e otimizados com IA.</p>
+                </div>
+
             </div>
-          </div>
 
-          <!-- SLIDE 3 -->
-          <div class="carousel-item">
-            <img
-              src="https://placehold.co/900x300/003366/ffffff?text=Slide+3+Consultoria+Digital"
-              class="d-block w-100"
-              alt="Slide 3: Consultoria Digital">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Consultoria Digital</h5>
-              <p>Estratégia de presença digital para seu negócio.</p>
+            <!-- TERCEIRO SLIDE -->
+            <div class="carousel-item">
+
+                <img
+                    src="https://placehold.co/900x300/003366/ffffff?text=Slide+3+Consultoria+Digital"
+                    class="d-block w-100"
+                    alt="Slide 3: Consultoria Digital">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Consultoria Digital</h5>
+                    <p>Estratégia de presença digital para seu negócio.</p>
+                </div>
+
             </div>
-          </div>
 
-        </div><!-- /carousel-inner -->
+        </div>
+        <!-- Fim do carousel-inner -->
 
+        <!-- Botão para voltar ao slide anterior -->
         <button
-          class="carousel-control-prev"
-          data-bs-target="#carrosselRef"
-          data-bs-slide="prev"
-          aria-label="Slide anterior">
-          <span class="carousel-control-prev-icon"></span>
+            class="carousel-control-prev"
+            data-bs-target="#carrosselRef"
+            data-bs-slide="prev"
+            aria-label="Slide anterior">
+
+            <span class="carousel-control-prev-icon"></span>
+
         </button>
 
+        <!-- Botão para avançar para o próximo slide -->
         <button
-          class="carousel-control-next"
-          data-bs-target="#carrosselRef"
-          data-bs-slide="next"
-          aria-label="Próximo slide">
-          <span class="carousel-control-next-icon"></span>
+            class="carousel-control-next"
+            data-bs-target="#carrosselRef"
+            data-bs-slide="next"
+            aria-label="Próximo slide">
+
+            <span class="carousel-control-next-icon"></span>
+
         </button>
 
-      </div><!-- /carrossel -->
+    </div>
+    <!-- Fim do carrossel -->
+
+    <!-- Rodapé do cartão -->
     <div class="card-footer text-muted">
+
         <small>
-        <i class="bi bi-calendar-event me-2"></i>
-    </small>
+
+            <!-- Ícone de calendário -->
+            <i class="bi bi-calendar-event me-2"></i>
+
+        </small>
+
+        <!-- Data de publicação -->
         Publicado em 20 de junho de 2024
 
-    </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </div>
+
+    <!-- Importa o JavaScript do Bootstrap.
+         Necessário para componentes interativos como
+         alertas, carrossel, modal, dropdown e collapse. -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
 </body>
+
 </html>

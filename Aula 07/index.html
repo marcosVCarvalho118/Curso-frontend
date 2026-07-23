@@ -1,67 +1,194 @@
 <!DOCTYPE html>
+<!-- Define que o documento utiliza o padrão HTML5. -->
+
 <html lang="pt-br">
+<!-- Elemento raiz da página.
+     lang="pt-br" informa que o idioma principal é português do Brasil. -->
+
 <head>
+  <!-- Área de configurações da página (não aparece para o usuário). -->
+
   <meta charset="UTF-8">
+  <!-- Define a codificação UTF-8, permitindo acentos e caracteres especiais. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Torna a página responsiva em celulares, tablets e computadores. -->
+
   <title>Teste Bootstrap</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Texto exibido na aba do navegador. -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+  <!-- Importa a biblioteca Bootstrap pelo CDN.
+       O Bootstrap fornece componentes e estilos prontos. -->
+
 </head>
+
 <body class="p-4">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- Corpo da página.
+     p-4 adiciona padding (espaçamento interno) em todo o conteúdo. -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Barra de navegação.
+         navbar = componente Bootstrap
+         navbar-expand-lg = expande o menu em telas grandes
+         navbar-dark = texto claro
+         bg-primary = fundo azul -->
+
     <div class="container">
-      <a class="navbar-brand fw-bold fs-4" href="#">InovaWeb</a>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
+      <!-- Centraliza o conteúdo da navbar. -->
+
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        InovaWeb
+      </a>
+      <!-- Logo ou nome da empresa.
+           fw-bold = texto em negrito
+           fs-4 = tamanho da fonte -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
         data-bs-target="#menuNav">
+        <!-- Botão exibido em telas pequenas para abrir o menu. -->
+
         <span class="navbar-toggler-icon"></span>
+        <!-- Ícone do botão (hambúrguer). -->
       </button>
+
       <div class="collapse navbar-collapse" id="menuNav">
+        <!-- Área do menu recolhível em dispositivos móveis. -->
+
         <ul class="navbar-nav ms-auto gap-2">
+          <!-- Lista de links.
+               ms-auto empurra o menu para a direita.
+               gap-2 adiciona espaço entre os itens. -->
+
           <li class="nav-item">
             <a class="nav-link active" href="#">Home</a>
+            <!-- Link ativo da página atual. -->
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#servicos">Serviços</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#contato">Contato</a>
           </li>
+
         </ul>
       </div>
+
     </div>
   </nav>
+
   <h1>Olá Bootstrap!</h1>
-  <p class="lead">Esse parágrafo já tem estilo Bootstrap.</p>
-  <button class="btn btn-primary">Botão primário</button>
-  <button class="btn btn-outline-danger">Botão outline</button>
+  <!-- Título principal da página. -->
+
+  <p class="lead">
+    Esse parágrafo já tem estilo Bootstrap.
+  </p>
+  <!-- lead aumenta o tamanho da fonte e melhora a leitura. -->
+
+  <button class="btn btn-primary">
+    Botão primário
+  </button>
+  <!-- Botão azul padrão do Bootstrap. -->
+
+  <button class="btn btn-outline-danger">
+    Botão outline
+  </button>
+  <!-- Botão apenas com borda vermelha. -->
 
   <div class="container mt-4">
+    <!-- Container centralizado.
+         mt-4 adiciona margem superior. -->
+
     <div class="row">
-      <div class="col-6 bg-primary">col-6</div>
-      <div class="col-6 bg-success">col-6</div>
+      <!-- Linha do sistema de grid. -->
+
+      <div class="col-6 bg-primary">
+        col-6
+      </div>
+      <!-- Ocupa metade da largura (6 de 12 colunas). -->
+
+      <div class="col-6 bg-success">
+        col-6
+      </div>
+      <!-- Ocupa a outra metade da linha. -->
+
     </div>
   </div>
 
   <div class="container mt-4">
+
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-3 bg-primary">col-4</div>
-      <div class="col-12 col-md-6 col-lg-3 bg-warning">col-4</div>
-      <div class="col-12 col-md-6 col-lg-3 bg-secondary">col-4</div>
-      <div class="col-12 col-md-6 col-lg-3 bg-primary">col-4</div>
-    </div>  
-  </div> 
+
+      <div class="col-12 col-md-6 col-lg-3 bg-primary">
+        col-4
+      </div>
+      <!-- Mobile = 12 colunas
+           Tablet = 6 colunas
+           Desktop = 3 colunas -->
+
+      <div class="col-12 col-md-6 col-lg-3 bg-warning">
+        col-4
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 bg-secondary">
+        col-4
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 bg-primary">
+        col-4
+      </div>
+
+    </div>
+
+  </div>
 
   <div class="container mt-4">
+
     <div class="row">
-      <!-- Mobile: coluna única | Tablet: 2 col | Desktop: 4 col -->
-      <div class="col-3 bg-primary">Card 1</div>
-      <div class="col-2 bg-secondary">Card 2</div>
-      <div class="col-1 bg-warning">Card 3</div>
-      <div class="col-6 bg-danger" style="color:pink;">Card 4</div>
+      <!-- Exemplo de divisão personalizada das 12 colunas do Bootstrap. -->
+
+      <div class="col-3 bg-primary">
+        Card 1
+      </div>
+      <!-- Ocupa 3 colunas. -->
+
+      <div class="col-2 bg-secondary">
+        Card 2
+      </div>
+      <!-- Ocupa 2 colunas. -->
+
+      <div class="col-1 bg-warning">
+        Card 3
+      </div>
+      <!-- Ocupa 1 coluna. -->
+
+      <div class="col-6 bg-danger" style="color:pink;">
+        Card 4
+      </div>
+      <!-- Ocupa 6 colunas.
+           style altera apenas a cor do texto. -->
+
     </div>
-  </div> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+  <!-- Importa o JavaScript do Bootstrap.
+       Necessário para componentes interativos como navbar, modal,
+       accordion, dropdown, carousel e collapse. -->
+
 </body>
 </html>

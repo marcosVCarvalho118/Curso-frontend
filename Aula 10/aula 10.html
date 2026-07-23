@@ -1,19 +1,53 @@
 <!DOCTYPE html>
+<!-- Informa ao navegador que este documento utiliza a versão HTML5. -->
+
 <html lang="en">
+<!-- Início do documento HTML.
+     O atributo "lang" define o idioma da página.
+     "en" significa inglês. Se a página for em português, o ideal é usar "pt-BR". -->
+
 <head>
+    <!-- A seção <head> contém informações sobre a página.
+         Essas informações não aparecem diretamente na tela,
+         mas são utilizadas pelo navegador e pelos mecanismos de busca. -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <!-- Define a codificação de caracteres como UTF-8,
+         permitindo o uso correto de acentos e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar ao tamanho da tela do dispositivo,
+         tornando-a responsiva em celulares, tablets e computadores. -->
+
     <title>Document</title>
+    <!-- Define o título da página que será exibido na aba do navegador. -->
+
 </head>
+
 <body>
-    
+    <!-- A seção <body> contém todo o conteúdo visível da página.
+         Tudo o que aparecer para o usuário fica dentro desta tag. -->
+
     <script>
+        <!-- A tag <script> permite escrever código JavaScript dentro da página HTML. -->
 
-let nome= "Marcos"
-let idade = 30
+        let nome = "Marcos";
+        // Cria uma variável chamada "nome" e armazena o texto "Marcos".
 
-console.log (`meu nome é ${nome}, eu tenho ${idade}.`)
+        let idade = 30;
+        // Cria uma variável chamada "idade" e armazena o número 30.
+
+        console.log(`Meu nome é ${nome}, eu tenho ${idade}.`);
+        // Exibe uma mensagem no Console do navegador.
+        // As crases (` `) permitem utilizar Template Literals.
+        // ${nome} substitui pelo valor da variável "nome".
+        // ${idade} substitui pelo valor da variável "idade".
 
     </script>
+    <!-- Fim do código JavaScript. -->
+
 </body>
+<!-- Fim do conteúdo visível da página. -->
+
 </html>
+<!-- Fim do documento HTML. -->

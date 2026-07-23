@@ -1,103 +1,266 @@
-const numeroConta = 1
-let titular = "Marcos"
-let saldo = 1000
-let contaAtiva = true
-let statusConta
-const historico = []
+// ==============================
+// VARIÁVEIS DO SISTEMA
+// ==============================
+
+// Constante que armazena o número da conta.
+// Como é "const", seu valor não pode ser alterado.
+const numeroConta = 1;
+
+// Variável que armazena o nome do titular da conta.
+let titular = "Marcos";
+
+// Variável que armazena o saldo atual da conta.
+let saldo = 1000;
+
+// Variável booleana que informa se a conta está ativa.
+// true = conta ativa
+// false = conta bloqueada
+let contaAtiva = true;
+
+// Variável que armazenará o status da conta.
+let statusConta;
+
+// Array utilizado para guardar o histórico das transações.
+const historico = [];
+
+
+// ==============================
+// FUNÇÃO PARA EXIBIR O EXTRATO
+// ==============================
 
 function verExtrato() {
+
+    // Verifica se a conta está ativa.
     if (contaAtiva) {
-        statusConta = "Ativa"
+
+        // Se estiver ativa, define o status como "Ativa".
+        statusConta = "Ativa";
+
     } else {
-        statusConta = "Bloqueado"
+
+        // Caso contrário, define o status como "Bloqueado".
+        statusConta = "Bloqueado";
+
     }
 
+    // Exibe o nome do banco.
+    console.log("======Banco InovaBank===== ");
 
-    console.log("======Banco InovaBank===== ")
-    console.log(`Conta: ${numeroConta}`)
-    console.log(`Titular: ${titular}`)
-    console.log(`Saldo: R$ ${saldo.toFixed(2)}`)
-    console.log(`Status: ${statusConta}`)
+    // Exibe o número da conta.
+    console.log(`Conta: ${numeroConta}`);
 
-    for (let i = 1; i <6; i++){
-        const indiceAtual= historico.length-i
-        console.log(`${[i]}. ${historico[indiceAtual]}`)
-        }
+    // Exibe o nome do titular.
+    console.log(`Titular: ${titular}`);
+
+    // Exibe o saldo com duas casas decimais.
+    console.log(`Saldo: R$ ${saldo.toFixed(2)}`);
+
+    // Exibe o status da conta.
+    console.log(`Status: ${statusConta}`);
+
+    // Percorre as cinco últimas posições do histórico.
+    for (let i = 1; i < 6; i++) {
+
+        // Calcula o índice da transação mais recente.
+        const indiceAtual = historico.length - i;
+
+        // Exibe cada transação armazenada.
+        console.log(`${i}. ${historico[indiceAtual]}`);
+    }
 
 }
+
+
+// ==============================
+// FUNÇÃO DE DEPÓSITO
+// ==============================
 
 function depositar(valor) {
+
+    // Verifica se o valor informado é maior que zero.
     if (valor > 0) {
-        saldo = saldo + valor
-        console.log(`\ndeposito de R$ ${valor.toFixed(2)} realizado com sucesso!`)
-        console.log(`Novo saldo:R$ ${saldo.toFixed(2)}`)
-        historico.push(`Deposito: R$ ${valor} | Saldo: R$ ${saldo}`)
+
+        // Soma o valor ao saldo atual.
+        saldo = saldo + valor;
+
+        // Exibe mensagem informando o depósito.
+        console.log(`\ndeposito de R$ ${valor.toFixed(2)} realizado com sucesso!`);
+
+        // Exibe o novo saldo.
+        console.log(`Novo saldo:R$ ${saldo.toFixed(2)}`);
+
+        // Adiciona a operação ao histórico.
+        historico.push(`Deposito: R$ ${valor} | Saldo: R$ ${saldo}`);
+
     } else {
-        console.log("\nValor de deposito invalido, o valor deve ser maior que zero.")
+
+        // Caso o valor seja inválido.
+        console.log("\nValor de deposito invalido, o valor deve ser maior que zero.");
+
     }
+
 }
 
-/* depositar(500)
+
+/*
+// Testes de depósito.
+// Estão comentados e não serão executados.
+
+depositar(500)
 depositar(3000)
 depositar(-100)
-depositar(-500) */
+depositar(-500)
+*/
 
+
+// ==============================
+// FUNÇÃO DE SAQUE
+// ==============================
 
 function sacar(valor) {
+
+    // Verifica se o valor é positivo
+    // e se existe saldo suficiente.
     if (valor > 0 && valor <= saldo) {
-        saldo -= valor
-        console.log(`\nSaque de R$ ${valor.toFixed(2)} realizado com sucesso!\nNovo saldo: R$ ${valor.toFixed(2)}`)
-        historico.push(`Saque: R$ ${valor} | Saldo: R$ ${saldo}`)
+
+        // Subtrai o valor do saldo.
+        saldo -= valor;
+
+        // Exibe mensagem de sucesso.
+        console.log(`\nSaque de R$ ${valor.toFixed(2)} realizado com sucesso!\nNovo saldo: R$ ${valor.toFixed(2)}`);
+
+        // Registra o saque no histórico.
+        historico.push(`Saque: R$ ${valor} | Saldo: R$ ${saldo}`);
+
     } else {
-        console.log("\nValor de saque invalido. o Valor deve ser maior que maior que zero e menor ou igual ao saldo")
+
+        // Exibe mensagem caso o saque seja inválido.
+        console.log("\nValor de saque invalido. o Valor deve ser maior que maior que zero e menor ou igual ao saldo");
+
     }
+
+}
+
+
+// ==============================
+// FUNÇÃO RESUMO DAS TRANSAÇÕES
+// ==============================
+
+function verResumo() {
+
+    // Contador de depósitos.
+    let nDepositos = 0;
+
+    // Contador de saques.
+    let nSaques = 0;
+
+    // Contador total de transações.
+    let qtdTransações = 0;
+
+    // Percorre todas as posições do histórico.
+    for (let i = 0; i < historico.length; i++) {
+
+        // Verifica se a transação contém a palavra "Deposito".
+        if (historico[i].includes("Deposito")) {
+
+            // Soma um depósito.
+            nDepositos++;
+
+        } else {
+
+            // Caso contrário, considera um saque.
+            nSaques++;
+
+        }
+
+        // Soma uma transação ao total.
+        qtdTransações++;
+
+    }
+
+    // Exibe o título do resumo.
+    console.log("\n =====Resumo de Transações=====");
+
+    // Exibe a quantidade de depósitos.
+    console.log(` Depositos: ${nDepositos}`);
+
+    // Exibe a quantidade de saques.
+    console.log(` Saques: ${nSaques}`);
+
+    // Exibe o total de operações.
+    console.log(` Total: ${qtdTransações}`);
+
 }
 
 
-function verResumo(){
-let nDepositos = 0
-let nSaques = 0
-let qtdTransações = 0
+// ==============================
+// FUNÇÃO PARA SIMULAR SAQUES
+// ==============================
 
-for(let i=0;i< historico.length; i++){
-if(historico[i].includes("Deposito")) {
-    nDepositos++
-} else{
-    nSaques++
-}
-qtdTransações++
+function simularTentativasSaque(valor, maxTentativas = 5) {
 
-}
-console.log("\n =====Resumo de Transações=====")
-console.log(` Depositos: ${nDepositos}`)
-console.log(` Saques: ${nSaques}`)
-console.log(` Total: ${qtdTransações}`)
-}
-// PAROU AQUI A AULA
+    // Contador de tentativas.
+    let tentativas = 0;
 
-function simularTentativasSaque(valor, maxTentativas= 5) {
-    let tentativas = 0
+    // Executa enquanto houver tentativas
+    // e o valor for maior que o saldo.
     while (tentativas < maxTentativas && valor > saldo) {
+
+        // Exibe a tentativa atual.
         console.log(`🔄 Tentativa ${tentativas + 1}: R$ ${valor.toFixed(2)} — saldo insuficiente`);
-        valor = valor * 0.8 // Reduz o valor em 20%
+
+        // Reduz o valor do saque em 20%.
+        valor = valor * 0.8;
+
+        // Incrementa o contador.
         tentativas++;
+
     }
 
+    // Se atingir o limite de tentativas.
     if (tentativas === maxTentativas) {
+
+        // Informa que o saque não foi realizado.
         console.log("❌ Tentativas esgotadas. Saque não realizado.");
+
     } else {
-        sacar(valor)
+
+        // Caso exista saldo suficiente, realiza o saque.
+        sacar(valor);
+
     }
+
 }
 
+
+// ==============================
+// EXECUÇÃO DO PROGRAMA
+// ==============================
+
+// Deposita R$ 1000.
 depositar(1000);
+
+// Deposita R$ 200.
 depositar(200);
+
+// Deposita R$ 300.
 depositar(300);
+
+// Realiza um saque de R$ 247.
 sacar(247);
+
+// Realiza um saque de R$ 200.
 sacar(200);
 
+// Simula um saque iniciando em R$ 5000
+// com no máximo 4 tentativas.
 simularTentativasSaque(5000, 4);
 
-console.log (historico);
+// Exibe todo o histórico armazenado no array.
+console.log(historico);
+
+// Mostra o extrato completo.
 verExtrato();
-verResumo ();
+
+// Mostra o resumo das transações.
+verResumo();

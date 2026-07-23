@@ -1,41 +1,306 @@
 <!DOCTYPE html>
+<!--
+Declara que o documento utiliza o padrão HTML5.
+
+Essa declaração informa ao navegador que ele deve
+interpretar o código usando as regras modernas do HTML.
+-->
+
+
 <html lang="pt-br">
+<!--Elemento raiz da página.
+
+lang="pt-br":
+Define o idioma principal do documento como
+Português do Brasil.
+
+Essa informação ajuda:
+- navegadores;
+- mecanismos de busca;
+- leitores de tela;
+- ferramentas de acessibilidade.
+-->
+
+
 <head>
+<!--Área de configurações da página.
+
+Tudo que fica dentro do <head> normalmente
+não aparece diretamente para o usuário.
+
+Aqui ficam:
+- configurações de caracteres;
+- responsividade;
+- título da página;
+- arquivos externos de estilo.
+-->
+
+
   <meta charset="UTF-8">
+  <!--Define a codificação de caracteres da página.
+
+  UTF-8 permite utilizar corretamente:- letras com acentos;- cedilha;- símbolos;  - caracteres especiais.
+
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!- Configuração de responsividade.
+  
+  width=device-width:
+  Faz a página utilizar a largura real
+  da tela do dispositivo.
+
+  initial-scale=1.0:
+  Define o nível inicial de zoom.
+
+  Essencial para celulares e tablets.
+  -->
+
+
   <title>Teste Bootstrap</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!--
+  Define o título exibido na aba do navegador.
+
+  Neste caso: A aba mostrará "Teste Bootstrap".
+  -->
+
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+  
+    <!--Importa o arquivo CSS do Bootstrap através de CDN.
+
+  href: Endereço onde está localizado o arquivo CSS.
+
+  rel="stylesheet": Informa que o arquivo carregado é uma folha de estilos CSS.
+
+  Bootstrap: Biblioteca que fornece estilos prontos, componentes e sistema responsivo.
+
+  integrity: Verifica se o arquivo baixado não foi alterado.
+
+  crossorigin: Permite carregamento seguro de arquivo externo.
+  -->
+
+
 </head>
+<!-- Fim da área de configurações da página. -->
+
+
+
 <body>
-<!-- Tabela básica Bootstrap -->
-  <div class="table-responsive">
-  <table class="table table-striped table-hover table-bordered table-dark table-sm">
-    <thead>
-      <tr>
-        <th>Serviço</th>
-        <th>Prazo</th>
-        <th>Valor</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Serviço A</td>
-        <td>7 dias</td>
-        <td>R$ 1.500</td>
-      </tr>
-      <tr>
-        <td>Serviço B</td>
-        <td>3 dias</td>
-        <td>R$ 1.500</td>
-      </tr>
-      <tr>
-        <td>Serviço C</td>
-        <td>10 dias</td>
-        <td>R$ 1.500</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!--Início do corpo da página.
+
+Tudo que aparece visualmente para o usuário fica dentro do <body>.
+-->
+
+
+
+<!-- ========================= -->
+<!-- Tabela Bootstrap -->
+<!-- ========================= -->
+
+
+<div class="table-responsive">
+<!-- Container responsável pela responsividade da tabela.
+
+table-responsive:
+Classe do Bootstrap que cria uma área
+com rolagem horizontal automática quando
+a tabela ultrapassa o tamanho da tela.
+-->
+
+
+
+<table class="table table-striped table-hover table-bordered table-dark table-sm">
+<!-- Tabela estilizada pelo Bootstrap.
+
+table: Ativa o estilo padrão de tabela Bootstrap.
+
+table-striped: Aplica linhas alternadas com cores diferentes, facilitando a leitura.
+
+table-hover: Cria efeito visual quando o mouse passa sobre uma linha.
+
+table-bordered: Adiciona bordas em todas as células.
+
+table-dark: Aplica tema escuro:- fundo escuro; - texto claro.
+
+table-sm: Diminui o espaçamento interno das células,deixando a tabela mais compacta.
+-->
+
+
+
+<thead>
+<!--Define o cabeçalho da tabela.
+Normalmente contém os títulos das colunas.
+-->
+
+
+<tr>
+<!-- Cria uma linha da tabela.
+
+tr significa: Table Row (linha da tabela).
+-->
+
+
+<th>Serviço</th>
+<!-- Cria uma célula de cabeçalho.
+
+th significa: Table Header.
+
+Por padrão: - texto em negrito; - maior destaque semântico.
+-->
+
+
+<th>Prazo</th>
+<!--
+Segunda coluna do cabeçalho.
+
+Representa o tempo necessário para realizar o serviço.
+-->
+
+
+<th>Valor</th>
+<!-- Terceira coluna do cabeçalho.
+Representa o preço ou custo do serviço.
+-->
+
+
+</tr>
+<!--Fim da linha do cabeçalho.
+-->
+
+
+</thead>
+<!--Fim do cabeçalho da tabela.
+-->
+
+
+
+<tbody>
+<!--Início do corpo da tabela.
+
+Aqui ficam os dados reais apresentados ao usuário.
+-->
+
+
+
+<tr>
+<!--Primeira linha de dados.
+-->
+
+
+<td>Serviço A</td>
+<!--Célula comum da tabela.
+
+td significa:Table Data.
+
+Representa um dado dentro da linha.
+-->
+
+
+<td>7 dias</td>
+<!--Prazo de execução do Serviço A.
+-->
+
+
+<td>R$ 1.500</td>
+<!--Valor do Serviço A. -->
+
+
+</tr>
+<!--Fim da primeira linha.-->
+
+
+
+<tr>
+<!--Segunda linha de dados. -->
+
+
+<td>Serviço B</td>
+<!-- Nome do segundo serviço. -->
+
+
+<td>3 dias</td>
+<!--Prazo do segundo serviço. -->
+
+
+<td>R$ 1.500</td>
+<!--Valor do segundo serviço.-->
+
+
+</tr>
+<!--Fim da segunda linha. -->
+
+
+
+<tr>
+<!-- Terceira linha de dados. -->
+
+
+<td>Serviço C</td>
+<!-- Nome do terceiro serviço. -->
+
+
+<td>10 dias</td>
+<!-- Prazo do terceiro serviço. -->
+
+
+<td>R$ 1.500</td>
+<!-- Valor do terceiro serviço. -->
+
+
+</tr>
+<!-- Fim da terceira linha. -->
+
+
+</tbody>
+<!-- Fim do corpo da tabela. -->
+
+
+
+</table>
+<!-- Fim da tabela Bootstrap. -->
+
+
+
+</div>
+<!-- Fim do container responsivo da tabela. -->
+
+
+
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+crossorigin="anonymous">
+</script>
+<!--
+Importa o JavaScript do Bootstrap.
+
+bootstrap.bundle.min.js:
+Inclui: - JavaScript do Bootstrap; - Popper.js.
+
+Necessário para componentes interativos como:
+- Navbar;
+- Dropdown;
+- Modal;
+- Tooltip;
+- Collapse.
+
+-->
+
+
+
 </body>
+<!-- Fim do corpo da página.
+
+Todos os elementos visíveis devem estar antes desta tag.
+-->
+
+
+
 </html>
+<!-- Fim do documento HTML. -->
