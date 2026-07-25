@@ -1,18 +1,36 @@
+<!-- Container principal do componente -->
 <div>
-<h2>{{ nomeTime }}</h2>
 
-<p [style.color]="cor()">
-  {{ pontos() }}
-</p>
+  <!-- Exibe o nome do time -->
+  <h2>
+    {{ nomeTime }}
+  </h2>
 
-<div>
-  <button (click)="adicionarPontos()">+1 Ponto</button>
+  <!-- Exibe a quantidade de pontos.
+       A cor do texto é definida dinamicamente pela função cor(). -->
+  <p [style.color]="cor()">
+    {{ pontos() }}
+  </p>
 
-  <button
-    (click)="resetarPontos()"
-    [disabled]="pontos() === 0"
-  >
-    Zerar
-  </button>
-</div>
+  <!-- Agrupa os botões de ação -->
+  <div>
+
+    <!-- Botão que adiciona 1 ponto ao time.
+         Ao ser clicado, chama a função adicionarPontos(). -->
+    <button (click)="adicionarPontos()">
+      +1 Ponto
+    </button>
+
+    <!-- Botão que zera a pontuação.
+         Ao ser clicado, chama a função resetarPontos().
+         Fica desabilitado quando a pontuação é igual a 0. -->
+    <button
+      (click)="resetarPontos()"
+      [disabled]="pontos() === 0"
+    >
+      Zerar
+    </button>
+
+  </div>
+
 </div>

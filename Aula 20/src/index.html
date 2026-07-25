@@ -1,14 +1,58 @@
+<!-- Declara que o documento utiliza o padrão HTML5 -->
 <!DOCTYPE html>
+
+<!-- Elemento principal da página.
+     O atributo lang define o idioma principal do documento como inglês. -->
 <html lang="en">
+
+  <!-- Cabeçalho do documento.
+       Contém configurações e informações que não aparecem diretamente na página. -->
   <head>
+
+    <!-- Define o título que aparece na aba do navegador -->
     <title>My app</title>
+
+    <!-- Define a codificação de caracteres como UTF-8,
+         permitindo acentos e caracteres especiais -->
     <meta charset="UTF-8" />
+
+    <!-- Define o caminho base para os arquivos e rotas da aplicação.
+         O "/" indica que a aplicação começa na raiz do domínio. -->
     <base href="/">
-    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+
+    <!-- Define a imagem padrão exibida quando o link da aplicação
+         é compartilhado em redes sociais (Open Graph) -->
+    <meta 
+      property="og:image" 
+      content="https://bolt.new/static/og_default.png" 
+    />
+
+    <!-- Define o formato do cartão exibido no Twitter/X
+         quando a página é compartilhada -->
+    <meta 
+      name="twitter:card" 
+      content="summary_large_image" 
+    />
+
+    <!-- Define a imagem usada no compartilhamento pelo Twitter/X -->
+    <meta 
+      name="twitter:image" 
+      content="https://bolt.new/static/og_default.png" 
+    />
+
   </head>
+
+  <!-- Corpo da página.
+       Todo conteúdo visual da aplicação é carregado aqui. -->
   <body>
-    <app-root>Loading...</app-root>
+
+    <!-- Componente principal do Angular.
+         O Angular substitui essa tag pelo conteúdo do componente AppComponent.
+         Enquanto a aplicação carrega, exibe o texto "Loading...". -->
+    <app-root>
+      Loading...
+    </app-root>
+
   </body>
+
 </html>

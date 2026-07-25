@@ -1,27 +1,52 @@
 <!DOCTYPE html>
+<!-- Informa ao navegador que o documento utiliza HTML5. -->
+
 <html lang="pt-BR">
+<!-- Início do documento HTML.
+Define o idioma da página como Português do Brasil. -->
 
 <head>
+<!-- Contém as configurações da página. -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+<meta charset="UTF-8">
+<!-- Define a codificação UTF-8, permitindo o uso de acentos e caracteres especiais. -->
 
-    <link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Faz a página se adaptar corretamente a celulares, tablets e computadores. -->
+
+<title>Pokédex</title>
+<!-- Define o título exibido na aba do navegador. -->
+
+<link rel="stylesheet" href="styles.css">
+<!-- Importa o arquivo CSS responsável pelo estilo da página. -->
+
 </head>
 
 <body>
+<!-- Início da parte visível da página. -->
 
-    <header>
-        <h1>PokeDesk</h1>
-    </header>
+<header>
+<!-- Cabeçalho da página. -->
 
-    <main>
-        <div id="pokemon-container"></div>
-    </main>
+<h1>PokeDesk</h1>
+<!-- Título principal exibido no topo da página. -->
 
-    <script src="app.js"></script>
+</header>
+
+<main>
+<!-- Área principal da página. -->
+
+<div id="pokemon-container"></div>
+<!-- Container onde os cards dos Pokémon serão inseridos pelo JavaScript. -->
+
+</main>
+
+<script src="app.js"></script>
+<!-- Importa o arquivo JavaScript que contém toda a lógica da Pokédex.
+Ele busca os dados da PokéAPI e cria os cards dos Pokémon. -->
 
 </body>
+<!-- Fim da parte visível da página. -->
 
 </html>
+<!-- Fim do documento HTML. -->

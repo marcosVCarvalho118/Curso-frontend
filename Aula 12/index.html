@@ -5,13 +5,11 @@
 -->
 <html lang="pt-br">
 
-
 <!--
     A tag head guarda configurações da página.
     Essas informações não aparecem diretamente para o usuário.
 -->
 <head>
-
 
 <!--
     Define o conjunto de caracteres utilizado.
@@ -26,8 +24,6 @@
 -->
 <meta charset="UTF-8">
 
-
-
 <!--
     Configura a página para funcionar em diferentes dispositivos.
 
@@ -41,14 +37,10 @@
 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
 <!--
     Define o texto que aparece na aba do navegador.
 -->
 <title>Banco InovaWeb</title>
-
-
 
 <!--
     Faz a ligação do HTML com o arquivo CSS.
@@ -68,8 +60,6 @@
 -->
 <body>
 
-
-
 <!--
     h1 representa o título principal da página.
 
@@ -79,9 +69,6 @@
     Banco InovaWeb
 -->
 <h1>Banco InovaWeb</h1>
-
-
-
 
 <!--
     Cria um bloco de organização.
@@ -104,7 +91,6 @@
 <!-- CARD DE SALDO -->
 <!-- ================================================= -->
 
-
 <!--
     Cria um cartão visual.
 
@@ -115,8 +101,6 @@
 -->
 <div class="card">
 
-
-
 <!--
     Título secundário.
 
@@ -125,9 +109,6 @@
     Aqui identifica que esse card mostra o saldo.
 -->
 <h2>Saldo disponível</h2>
-
-
-
 
 <!--
     Cria uma área onde será mostrado o saldo.
@@ -139,15 +120,11 @@
     document.querySelector("#saldo")
 
     Depois alterar:
-
     elemento.textContent = "R$ 5000"
 -->
 <div id="saldo">
     R$ 10000.00
 </div>
-
-
-
 
 <!--
     Cria um parágrafo contendo informações da conta.
@@ -156,8 +133,6 @@
     permite aplicar estilo CSS.
 -->
 <p class="info-conta">
-
-
 
 <!--
     strong deixa o texto em negrito.
@@ -171,9 +146,6 @@
 -->
 Conta <strong id="numero-conta">1</strong>
 
-
-
-
 <!--
     &nbsp;
 
@@ -182,9 +154,6 @@ Conta <strong id="numero-conta">1</strong>
     Usado para criar espaçamento.
 -->
 —
-
-
-
 <!--
     Mostra o nome do titular.
 
@@ -201,8 +170,6 @@ Conta <strong id="numero-conta">1</strong>
 <strong id="titular">
     Diego
 </strong>
-
-
 
 
 <!--
@@ -232,7 +199,6 @@ Conta <strong id="numero-conta">1</strong>
 <!-- CARD DE OPERAÇÕES -->
 <!-- ================================================= -->
 
-
 <!--
     Cria outro cartão da página.
 
@@ -244,8 +210,6 @@ Conta <strong id="numero-conta">1</strong>
     - limpar histórico.
 -->
 <div class="card">
-
-
 
 <!--
     Campo de texto para alterar o nome do titular.
@@ -279,10 +243,6 @@ Conta <strong id="numero-conta">1</strong>
     placeholder="Alterar Titular" 
     style="width: 150px; padding: 10px;">
 
-
-
-
-
 <!--
     Botão usado para alterar o titular.
 
@@ -294,7 +254,6 @@ Conta <strong id="numero-conta">1</strong>
     const btnalterar =
     document.querySelector("#btn-alterar")
 
-
     style="padding:15px":
     cria espaço interno no botão.
 -->
@@ -305,9 +264,6 @@ Conta <strong id="numero-conta">1</strong>
     Alterar
 
 </button>
-
-
-
 
 <!--
     Cria uma quebra de linha.
@@ -322,17 +278,12 @@ Conta <strong id="numero-conta">1</strong>
 </p>
 
 
-
-
 <!--
     Título da área de operações.
 -->
 <h2>
     Operações
 </h2>
-
-
-
 
 
 <!--
@@ -375,10 +326,6 @@ Conta <strong id="numero-conta">1</strong>
     min="0" 
     step="0.01">
 
-
-
-
-
 <!--
     Cria uma divisão para agrupar os botões.
 
@@ -392,10 +339,6 @@ Conta <strong id="numero-conta">1</strong>
     ajustar tamanho.
 -->
 <div class="botoes">
-
-
-
-
 
 <!--
     Botão responsável pelo depósito.
@@ -415,7 +358,6 @@ Conta <strong id="numero-conta">1</strong>
         depositar
     )
 
-
     O símbolo ⬆ é apenas visual.
 -->
 <button id="btn-depositar">
@@ -423,9 +365,6 @@ Conta <strong id="numero-conta">1</strong>
     ⬆ Depositar
 
 </button>
-
-
-
 
 <!--
     Botão responsável pelo saque.
@@ -452,10 +391,6 @@ Conta <strong id="numero-conta">1</strong>
 
 </div>
 
-
-
-
-
 <!--
     Área onde aparecem mensagens para o usuário.
 
@@ -479,10 +414,6 @@ Conta <strong id="numero-conta">1</strong>
 -->
 <div id="mensagem"></div>
 
-
-
-
-
 <!--
     Botão para bloquear ou desbloquear a conta.
 
@@ -493,7 +424,6 @@ Conta <strong id="numero-conta">1</strong>
     document.querySelector(
         "#btn-bloquear"
     )
-
 
     Quando clicado chama:
 
@@ -507,20 +437,12 @@ Conta <strong id="numero-conta">1</strong>
 
 </button>
 
-
-
-
-
 <!--
     Espaçamento vertical usando quebra de linha.
 -->
 <p>
     <br/>
 </p>
-
-
-
-
 
 <!--
     Botão para apagar o histórico.
@@ -533,7 +455,6 @@ Conta <strong id="numero-conta">1</strong>
         "click",
         limpar
     )
-
 
     Ele remove:
     - lista de transações;
@@ -554,7 +475,6 @@ Conta <strong id="numero-conta">1</strong>
 <!-- CARD DE HISTÓRICO -->
 <!-- ================================================= -->
 
-
 <!--
     Cria um novo cartão visual.
 
@@ -565,8 +485,6 @@ Conta <strong id="numero-conta">1</strong>
 -->
 <div class="card">
 
-
-
 <!--
     Título da seção de histórico.
 
@@ -575,9 +493,6 @@ Conta <strong id="numero-conta">1</strong>
 <h2>
     Últimas transações
 </h2>
-
-
-
 
 <!--
     Lista não ordenada.
@@ -594,10 +509,6 @@ Conta <strong id="numero-conta">1</strong>
     Depósito: R$ 100
 -->
 <ul id="lista-historico">
-
-
-
-
 
 <!--
     Item inicial da lista.
@@ -623,22 +534,15 @@ Conta <strong id="numero-conta">1</strong>
 
 </ul>
 
-
 <!--
     Fecha o card de histórico.
 -->
 </div>
 
 
-
-
-
-
-
 <!-- ================================================= -->
 <!-- CARD DE RESUMO -->
 <!-- ================================================= -->
-
 
 <!--
     Cria outro cartão visual.
@@ -648,18 +552,12 @@ Conta <strong id="numero-conta">1</strong>
 -->
 <div class="card">
 
-
-
 <!--
     Título da seção de resumo.
 -->
 <h2>
     Resumo
 </h2>
-
-
-
-
 
 <!--
     Cria uma área para organizar
@@ -679,10 +577,6 @@ Conta <strong id="numero-conta">1</strong>
 -->
 <div class="resumo-grid">
 
-
-
-
-
 <!--
     Primeiro bloco de informação.
 
@@ -692,10 +586,6 @@ Conta <strong id="numero-conta">1</strong>
     seu próprio estilo.
 -->
 <div class="resumo-item">
-
-
-
-
 
 <!--
     Mostra a quantidade de depósitos.
@@ -712,7 +602,6 @@ Conta <strong id="numero-conta">1</strong>
     Depois:
     5
 
-
     Código JavaScript:
 
     elTotalDepositos.textContent = 5
@@ -723,9 +612,6 @@ Conta <strong id="numero-conta">1</strong>
 
 </span>
 
-
-
-
 <!--
     Texto identificando o número acima.
 -->
@@ -735,19 +621,10 @@ Conta <strong id="numero-conta">1</strong>
 
 </span>
 
-
-
-
 <!--
     Fecha o primeiro item do resumo.
 -->
 </div>
-
-
-
-
-
-
 
 <!--
     Segundo item do resumo.
@@ -755,10 +632,6 @@ Conta <strong id="numero-conta">1</strong>
     Mostra quantidade de saques.
 -->
 <div class="resumo-item">
-
-
-
-
 
 <!--
     Valor que será atualizado pelo JavaScript.
@@ -773,9 +646,6 @@ Conta <strong id="numero-conta">1</strong>
 
 </span>
 
-
-
-
 <!--
     Nome do indicador.
 -->
@@ -789,12 +659,6 @@ Conta <strong id="numero-conta">1</strong>
 
 
 </div>
-
-
-
-
-
-
 
 <!--
     Terceiro item do resumo.
@@ -853,10 +717,6 @@ Conta <strong id="numero-conta">1</strong>
 -->
 </div>
 
-
-
-
-
 <!--
     Fecha o container principal.
 
@@ -868,12 +728,6 @@ Conta <strong id="numero-conta">1</strong>
     - Card de resumo.
 -->
 </div>
-
-
-
-
-
-
 
 <!-- ================================================= -->
 <!-- CONEXÃO COM JAVASCRIPT -->
@@ -889,7 +743,6 @@ Conta <strong id="numero-conta">1</strong>
 
     banco.js
 
-
     Esse arquivo contém:
 
     - funções de depósito;
@@ -897,7 +750,6 @@ Conta <strong id="numero-conta">1</strong>
     - bloqueio de conta;
     - atualização do DOM;
     - eventos dos botões.
-
 
     É recomendado colocar o script
     no final do body para:
