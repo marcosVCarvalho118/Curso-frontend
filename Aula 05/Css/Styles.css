@@ -217,9 +217,10 @@ th {
     background-color: #f1f2f6;
     /* Fundo levemente cinza */
     text-transform: uppercase;
-    /* Texto em maiúsculas */
+    /* text-transform do CSS serve para controlar como as letras de um texto aparecem na tela 
+    Uppercase: Deixa todas as letras maiúsculas. */
     font-size: 0.8rem;
-    /* Texto menor */
+    /* font-size em CSS serve para definir o tamanho do texto em uma página web */
     letter-spacing: 1px;
     /* Espaço entre letras */
 }
