@@ -1,119 +1,183 @@
 /* 1. Reset e Variáveis 
    Usar variáveis facilita a manutenção e garante consistência visual. */
 :root {
-    --primary-color: #2d3436;     /* Define a cor principal (cinza escuro), usada em títulos e botões */
-    --accent-color: #6c5ce7;      /* Cor de destaque (roxo moderno), usada em interações e links */
-    --bg-light: #f9f9f9;          /* Cor de fundo clara da página */
-    --text-main: #2d3436;         /* Cor principal do texto */
-    --text-muted: #636e72;        /* Cor de texto secundário (mais suave) */
-    --border-color: #dfe6e9;      /* Cor padrão para bordas */
-    --font-main: 'Roboto', sans-serif; /* Fonte padrão do conteúdo */
-    --font-title: 'Exo 2', sans-serif; /* Fonte usada em títulos */
+    /* Define variáveis CSS globais que podem ser reutilizadas em todo o projeto. */
+    /* Isso facilita a organização e a manutenção das cores, fontes e demais estilos. */
+    --primary-color: #2d3436;
+    /* Define a cor principal (cinza escuro), usada em títulos e botões */
+    --accent-color: #6c5ce7;
+    /* Cor de destaque (roxo moderno), usada em interações e links */
+    --bg-light: #f9f9f9;
+    /* Cor de fundo clara da página */
+    --text-main: #2d3436;
+    /* Cor principal do texto */
+    --text-muted: #636e72;
+    /* Cor de texto secundário (mais suave) */
+    --border-color: #dfe6e9;
+    /* Cor padrão para bordas */
+    --font-main: 'Roboto', sans-serif;
+    /* Fonte padrão do conteúdo */
+    --font-title: 'Exo 2', sans-serif;
+    /* Fonte usada em títulos */
 }
 
 /* Reset geral para remover espaçamentos padrões do navegador */
 * {
-    margin: 0;              /* Remove margens padrão */
-    padding: 0;             /* Remove espaçamentos internos padrão */
-    box-sizing: border-box; /* Faz largura/altura incluir padding e borda */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove espaçamentos internos padrão */
+    box-sizing: border-box;
+    /* Faz largura/altura incluir padding e borda */
+    /* box-sizing é uma propriedade CSS que define como o navegador calcula a largura e a altura de um elemento */
 }
 
 /* Estilo base da página */
 body {
-    background-color: var(--bg-light); /* Define fundo usando variável */
-    color: var(--text-main);           /* Cor padrão do texto */
-    font-family: var(--font-main);     /* Fonte principal */
-    line-height: 1.6;                  /* Espaçamento entre linhas para melhor leitura */
-    padding: 40px;                    /* Espaço interno geral da página */
+    /* O body define a aparência e o espaçamento do conteúdo principal da página */
+    background-color: var(--bg-light);
+    /* Define fundo usando variável */
+    color: var(--text-main);
+    /* Cor padrão do texto */
+    font-family: var(--font-main);
+    /* Fonte principal */
+    line-height: 1.6;
+    /* Espaçamento entre linhas para melhor leitura */
+    padding: 40px;
+    /* Espaço interno geral da página */
 }
 
 /* 2. Tipografia */
 
 /* Estilo para todos os títulos */
-h1, h2, h3 {
-    font-family: var(--font-title); /* Usa fonte de destaque */
-    font-weight: 700;               /* Texto em negrito */
-    color: var(--primary-color);    /* Cor principal */
-    margin-bottom: 1rem;            /* Espaço abaixo do título */
+h1,
+h2,
+h3 {
+    /* seleciona os três níveis de título */
+    font-family: var(--font-title);
+    /* Usa fonte de destaque */
+    font-weight: 700;
+    /* Texto em negrito */
+    color: var(--primary-color);
+    /* Cor principal */
+    margin-bottom: 1rem;
+    /* Espaço abaixo do título */
 }
 
 /* Estilo específico para h1 */
 h1 {
-    font-size: 3.5rem;     /* Tamanho grande e responsivo */
-    letter-spacing: -1px;  /* Diminui espaço entre letras */
-    line-height: 1.1;      /* Altura da linha mais compacta */
+    /* h1 é a tag HTML usada para representar o título principal de uma página ou seção */
+    font-size: 3.5rem;
+    /* Define o tamanho da fonte do título principal. 3.5rem corresponde a 3,5 vezes o tamanho da fonte raiz. */
+    letter-spacing: -1px;
+    /* Diminui levemente o espaço entre as letras do título, deixando o texto mais compacto. */
+    line-height: 1.1;
+    /* Define a altura das linhas como 1,1 vezes o tamanho da fonte, deixando o título mais compacto verticalmente. */
 }
 
 /* 3. Navegação Minimalista */
 
 /* Container da navegação */
 nav {
-    margin: 40px 0;  /* Espaçamento vertical */
-    display: flex;   /* Layout flexível */
-    gap: 20px;       /* Espaço entre os links */
+    /*nav é uma tag HTML usada para representar uma área de navegação da página.*/
+    margin: 40px 0;
+    /* Cria 40px de espaço acima e abaixo do menu de navegação. 
+    O primeiro valor representa o topo e o segundo, a parte inferior. */
+    display: flex;
+    /* Ativa o Flexbox, permitindo organizar os links de forma mais prática e flexível. */
+    gap: 20px;
+    /* Define um espaço de 20px entre os elementos dentro do nav, como os links do menu. */
 }
 
 /* Links dentro da navegação */
 nav a {
-    text-decoration: none;              /* Remove sublinhado */
-    color: var(--text-muted);           /* Cor neutra */
-    font-weight: 500;                  /* Peso médio */
-    transition: all 0.3s ease;         /* Animação suave */
-    border-bottom: 2px solid transparent; /* Linha invisível inicialmente */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links. */
+    color: var(--text-muted);
+    /* Define a cor dos links usando a variável --text-muted, deixando-os com uma aparência mais discreta. */
+    font-weight: 500;
+    /* Define o peso da fonte como 500, deixando o texto um pouco mais destacado que o peso normal. */
+    transition: all 0.3s ease;
+    /* Cria uma transição suave de 0,3 segundo para as mudanças de propriedades, como cor ou borda, quando houver interação. */
+    border-bottom: 2px solid transparent;
+    /* Cria uma borda inferior de 2px transparente.  Ela fica invisível inicialmente e pode receber uma cor posteriormente, 
+    por exemplo, quando o usuário passar o mouse. */
 }
 
 /* Efeito ao passar o mouse */
 nav a:hover {
-    color: var(--accent-color);              /* Muda cor do texto */
-    border-bottom: 2px solid var(--accent-color); /* Mostra linha inferior */
+    color: var(--accent-color);
+ /* Quando o mouse passar sobre o link, muda a cor do texto para a cor de destaque. */
+    border-bottom: 2px solid var(--accent-color);
+  /* Adiciona uma linha de 2px na parte inferior do link, usando a mesma cor de destaque. */
 }
 
 /* 4. Links e Botões */
 
 /* Estilo geral de links */
 a {
-    color: var(--accent-color); /* Cor padrão de destaque */
-    transition: 0.3s;           /* Transição suave */
+    color: var(--accent-color);
+    /* Cor padrão de destaque */
+    transition: 0.3s;
+    /* Transição suave */
 }
 
 /* Classe base para botões */
 .button-base {
-    display: inline-block;          /* Permite definir tamanho e padding */
-    padding: 10px 24px;             /* Espaçamento interno */
-    background: var(--primary-color); /* Cor de fundo */
-    color: white;                   /* Cor do texto */
-    border-radius: 6px;             /* Cantos arredondados */
-    text-decoration: none;          /* Remove sublinhado */
-    transition: transform 0.2s, background 0.3s; /* Animações */
+    display: inline-block;
+    /* Permite definir tamanho e padding */
+    padding: 10px 24px;
+    /* Espaçamento interno */
+    background: var(--primary-color);
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+    border-radius: 6px;
+    /* Cantos arredondados */
+    text-decoration: none;
+    /* Remove sublinhado */
+    transition: transform 0.2s, background 0.3s;
+    /* Animações */
 }
 
 /* Efeito ao passar o mouse no botão */
 .button-base:hover {
-    background: var(--accent-color); /* Muda cor */
-    transform: translateY(-2px);     /* Move levemente para cima */
+    background: var(--accent-color);
+    /* Muda cor */
+    transform: translateY(-2px);
+    /* Move levemente para cima */
 }
 
 /* 5. Listas e Componentes */
 
 /* Itens de lista */
 li {
-    list-style: none; /* Remove marcadores (bolinhas) */
-    padding: 8px 0;   /* Espaçamento vertical */
-    border-bottom: 1px solid var(--border-color); /* Linha separadora */
+    list-style: none;
+    /* Remove marcadores (bolinhas) */
+    padding: 8px 0;
+    /* Espaçamento vertical */
+    border-bottom: 1px solid var(--border-color);
+    /* Linha separadora */
 }
 
 /* Classe para destacar texto */
 .destaque {
-    background-color: #fff9c4; /* Fundo amarelo suave */
-    padding: 2px 6px;          /* Espaçamento interno */
-    border-radius: 4px;        /* Bordas arredondadas */
-    font-weight: bold;         /* Texto em negrito */
+    background-color: #fff9c4;
+    /* Fundo amarelo suave */
+    padding: 2px 6px;
+    /* Espaçamento interno */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    font-weight: bold;
+    /* Texto em negrito */
 }
 
 /* Texto em itálico estilizado */
 .italicoLegal {
-    font-style: italic;           /* Aplica itálico */
-    color: var(--text-muted);     /* Cor suave */
+    font-style: italic;
+    /* Aplica itálico */
+    color: var(--text-muted);
+    /* Cor suave */
 }
 
 /* 6. Tabela Profissional 
@@ -121,31 +185,47 @@ li {
 
 /* Estilo geral da tabela */
 table {
-    width: 100%;                        /* Ocupa toda largura */
-    border-collapse: collapse;          /* Remove espaço entre bordas */
-    margin: 20px 0;                     /* Espaçamento externo */
-    background: white;                  /* Fundo branco */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra leve */
-    border-radius: 8px;                 /* Cantos arredondados */
-    overflow: hidden;                   /* Garante que o arredondamento funcione */
+    width: 100%;
+    /* Ocupa toda largura */
+    border-collapse: collapse;
+    /* Remove espaço entre bordas */
+    margin: 20px 0;
+    /* Espaçamento externo */
+    background: white;
+    /* Fundo branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Sombra leve */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    overflow: hidden;
+    /* Garante que o arredondamento funcione */
 }
 
 /* Células da tabela */
-th, td {
-    padding: 16px;                           /* Espaçamento interno */
-    text-align: left;                         /* Alinhamento à esquerda */
-    border-bottom: 1px solid var(--border-color); /* Linha separadora */
+th,
+td {
+    padding: 16px;
+    /* Espaçamento interno */
+    text-align: left;
+    /* Alinhamento à esquerda */
+    border-bottom: 1px solid var(--border-color);
+    /* Linha separadora */
 }
 
 /* Cabeçalho da tabela */
 th {
-    background-color: #f1f2f6; /* Fundo levemente cinza */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    font-size: 0.8rem;         /* Texto menor */
-    letter-spacing: 1px;       /* Espaço entre letras */
+    background-color: #f1f2f6;
+    /* Fundo levemente cinza */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    font-size: 0.8rem;
+    /* Texto menor */
+    letter-spacing: 1px;
+    /* Espaço entre letras */
 }
 
 /* Efeito ao passar o mouse na linha */
 tr:hover {
-    background-color: #fdfdfd; /* Leve destaque */
+    background-color: #fdfdfd;
+    /* Leve destaque */
 }
